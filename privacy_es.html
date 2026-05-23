@@ -41,56 +41,58 @@
 <body>
 <h1>Política de Privacidad</h1>
 <div class="meta">
-<div><strong>App</strong>: IPcamVision Pro</div>
+<div><strong>Aplicación</strong>: IPcamVision Pro</div>
 <div><strong>Desarrollador</strong>: Lorenzo May</div>
-<div><strong>Contacto</strong>: <a href="mailto:lorys.lg@hotmail.it">lorys.lg@hotmail.it</a></div>
+<div><strong>Contacto</strong>: lorys.lg@hotmail.it</div>
 <div><strong>Última actualización</strong>: 23 de mayo de 2026</div>
 </div>
 <h2>Resumen</h2>
-<p>IPcamVision Pro es una app <strong>local</strong>. No recopilamos ningún dato personal, no enviamos tus datos a ningún servidor y no utilizamos analíticas, rastreadores publicitarios ni servicios de elaboración de perfiles. Todo lo que configuras (cámaras, credenciales, grabaciones, capturas) permanece exclusivamente en tu Mac.</p>
-<h2>Datos gestionados por la app</h2>
-<p>La app gestiona los siguientes datos en tu dispositivo, todos <strong>necesarios para su funcionamiento</strong>:</p>
+<p>IPcamVision Pro es una aplicación <strong>local</strong>. No recopilamos ningún dato personal, no enviamos tus datos a ningún servidor y no utilizamos análisis, rastreadores publicitarios ni servicios de elaboración de perfiles. Todo lo que configures (cámaras, credenciales, grabaciones, capturas) permanece exclusivamente en tu Mac.</p>
+<h2>Datos gestionados por la aplicación</h2>
+<p>La aplicación gestiona los siguientes datos en tu dispositivo, todos <strong>necesarios para su funcionamiento</strong>:</p>
 <ul>
-<li><strong>Direcciones y configuración de tus cámaras / NVR / DVR</strong> (IP o hostname, puertos, perfiles de stream, marca PTZ, opciones). Se guardan sin cifrar en las preferencias de la app (UserDefaults), ya que no son información secreta.</li>
-<li><strong>Nombres de usuario ONVIF</strong>. Se guardan como arriba.</li>
-<li><strong>Contraseñas ONVIF</strong>. Se guardan en el <strong>Llavero (Keychain) de macOS</strong>, protegido por el sistema operativo. Las contraseñas nunca se escriben en texto plano en archivos de preferencias ni en registros, y nunca se comparten con nosotros ni con terceros.</li>
-<li><strong>Grabaciones de vídeo y capturas</strong> generadas por el usuario. Se guardan en la carpeta que tú elijas. No se suben a ningún sitio.</li>
-<li><strong>Preferencias de interfaz</strong> (disposición de la cuadrícula, tamaño de la ventana, atajos). Se guardan en las preferencias de la app.</li>
+<li><strong>Direcciones y configuración de tus cámaras/NVR/DVR</strong> (IP o nombre de host, puertos, perfiles de transmisión, marca PTZ, opciones). Almacenados en las preferencias privadas de la aplicación (UserDefaults), aisladas por el sandbox de macOS.</li>
+<li><strong>Nombres de usuario ONVIF</strong>. Almacenados de la misma forma.</li>
+<li><strong>Contraseñas ONVIF</strong>. Almacenadas en las <strong>preferencias privadas de la aplicación (UserDefaults)</strong>, codificadas y accesibles únicamente por esta aplicación gracias al sandbox de macOS. Las contraseñas nunca se escriben en texto claro en disco o registros, y nunca se comparten con nosotros ni con terceros. No se muestra ningún aviso de acceso del sistema.</li>
+<li><strong>Grabaciones de vídeo y capturas</strong> generadas por el usuario. Guardadas en la carpeta que elijas. No se cargan en ningún lugar.</li>
+<li><strong>Preferencias de interfaz</strong> (diseño de cuadrícula, tamaño de ventana, atajos). Almacenadas en las preferencias de la aplicación.</li>
 </ul>
-<h2>Lo que la app NO hace</h2>
+<h2>Lo que la aplicación NO hace</h2>
 <ul>
-<li><strong>No</strong> recopila identificadores (UDID, IDFA, dirección MAC, e-mail).</li>
+<li><strong>No</strong> recopila identificadores (UDID, IDFA, dirección MAC, correo electrónico).</li>
 <li><strong>No</strong> envía telemetría, estadísticas de uso ni informes de fallos a nosotros ni a terceros.</li>
-<li><strong>No</strong> utiliza SDK de analíticas (p. ej. Google Analytics, Firebase, Mixpanel).</li>
-<li><strong>No</strong> utiliza SDK publicitarios.</li>
-<li><strong>No</strong> elabora perfiles del usuario de ninguna manera.</li>
-<li><strong>No</strong> se comunica con ningún servidor de nuestra propiedad: no tenemos.</li>
+<li><strong>No</strong> utiliza SDKs de análisis (p. ej. Google Analytics, Firebase, Mixpanel).</li>
+<li><strong>No</strong> utiliza SDKs publicitarios.</li>
+<li><strong>No</strong> elabora perfiles del usuario.</li>
+<li><strong>No</strong> se comunica con ningún servidor nuestro: no tenemos ninguno.</li>
 </ul>
 <h2>Comunicaciones de red</h2>
-<p>La app solo se conecta a:</p>
+<p>La aplicación solo se conecta a:</p>
 <ol>
-<li><strong>Las cámaras, NVRs y DVRs que tú configuras</strong>, en tu red local o a través de DDNS / reenvío de puertos en la red pública. Estas conexiones usan los protocolos ONVIF (HTTP/HTTPS) y RTSP con las credenciales que has introducido. El tráfico va directamente desde tu app a la cámara, sin pasar por ningún servidor nuestro.</li>
-<li><strong>El servicio de Compra dentro de la app de Apple</strong>, gestionado íntegramente por el sistema operativo para gestionar las compras de funciones Pro. No recibimos ninguna información personal tuya: Apple solo nos comunica que un determinado identificador de compra ha sido activado.</li>
+<li><strong>Las cámaras, NVR y DVR que configures</strong>, en tu red local o a través de DDNS/reenvío de puertos. Estas conexiones utilizan ONVIF (HTTP/HTTPS) y RTSP con tus credenciales. El tráfico va directamente de tu aplicación a la cámara, sin pasar por ningún servidor nuestro.</li>
+<li><strong>El servicio de compras integradas de Apple</strong>, gestionado íntegramente por el sistema operativo. No recibimos ninguna información personal tuya.</li>
 </ol>
-<h2>Compras dentro de la app</h2>
-<p>Las funciones Pro se desbloquean a través del sistema de compras dentro de la app de Apple (StoreKit). La verificación ocurre localmente en tu dispositivo a través de las API de Apple (<code>Transaction.currentEntitlements</code>); no guardamos ni recibimos información sobre tu Apple ID, tu tarjeta o tu método de pago.</p>
-<h2>Permisos solicitados por la app</h2>
+<h2>Compras integradas</h2>
+<p>Las funciones Pro se desbloquean a través del sistema de compras integradas de Apple (StoreKit). La verificación se realiza localmente mediante las API de Apple (<code>Transaction.currentEntitlements</code>). No conservamos ni recibimos información sobre tu Apple ID, tarjeta o método de pago.</p>
+<h2>Permisos solicitados</h2>
 <ul>
-<li><strong>Red local</strong>: requerido por macOS para el descubrimiento de cámaras a través de ONVIF/WS-Discovery y Bonjour en la LAN. Tú lo concedes en el primer uso y puedes revocarlo desde <em>Ajustes del Sistema → Privacidad y Seguridad → Red local</em>.</li>
-<li><strong>Acceso a archivos seleccionados por el usuario</strong>: la app puede guardar grabaciones y capturas solo en la carpeta que selecciones explícitamente a través del panel del sistema. No tiene acceso al resto del disco.</li>
+<li><strong>Red local</strong>: requerido por macOS para el descubrimiento de cámaras mediante ONVIF/WS-Discovery y Bonjour. Lo otorgas tú en el primer uso y puedes revocarlo desde <em>Configuración del sistema → Privacidad y seguridad → Red local</em>.</li>
+<li><strong>Acceso a archivos seleccionados</strong>: la aplicación solo puede guardar en la carpeta que selecciones explícitamente. No tiene acceso al resto del disco.</li>
 </ul>
-<h2>Exportación y respaldo de configuraciones</h2>
-<p>La app te permite exportar las configuraciones de tus cámaras a un archivo <code>.ipcamvisionprobackup</code>. Por defecto, este archivo <strong>no</strong> contiene las contraseñas ONVIF (que viven solo en el Llavero de tu Mac). Si importas un archivo de copia de seguridad creado con versiones anteriores de la app que contienen contraseñas en texto plano, la app mueve automáticamente esas contraseñas al Llavero en el primer inicio. El archivo de copia de seguridad sigue siendo un archivo que tú generas y gestionas: eres responsable del lugar donde lo conservas.</p>
-<h2>Función "Informar de un error"</h2>
-<p>Desde la app puedes abrir una ventana de informe de errores. Cuando pulsas "Enviar", la app <strong>no envía nada por la red</strong>: abre tu cliente de correo predeterminado con un correo electrónico precompletado dirigido a <code>lorys.lg@hotmail.it</code>. Tú decides si enviarlo o no. El correo contiene solo lo que has escrito, además de la versión de la app y la versión de macOS (información útil para depuración).</p>
+<h2>Exportación y copia de seguridad de configuraciones</h2>
+<p>La aplicación permite exportar configuraciones a un archivo <code>.ipcamvisionprobackup</code>. Este archivo <strong>no</strong> contiene contraseñas ONVIF. Eres responsable del lugar donde lo guardas.</p>
+<h2>Función «Informar de un error»</h2>
+<p>Desde la aplicación puedes abrir una ventana de informe de error. Al pulsar «Enviar», la aplicación <strong>no envía nada por la red</strong>: abre tu cliente de correo predeterminado con un correo prellenado dirigido a <code>lorys.lg@hotmail.it</code>. Tú decides si enviarlo.</p>
 <h2>Menores</h2>
-<p>La app está dirigida a un público adulto general. No recopilamos intencionadamente datos de menores porque no recopilamos datos de nadie.</p>
+<p>La aplicación está destinada a un público adulto general. No recopilamos intencionadamente datos de menores porque no recopilamos datos de nadie.</p>
 <h2>Conservación de datos</h2>
-<p>Todos los datos gestionados por la app residen exclusivamente en tu Mac. Puedes eliminarlos en cualquier momento desde el panel "Ajustes → Restablecer datos" de la app, o desinstalando la app. La eliminación incluye también las entradas guardadas en el Llavero.</p>
+<p>Todos los datos gestionados permanecen exclusivamente en tu Mac. Puedes eliminarlos en cualquier momento desde «Ajustes → Restablecer datos» o desinstalando la aplicación.</p>
 <h2>Cambios en esta política</h2>
-<p>Cualquier cambio futuro se publicará en esta página y dentro de la app, con la fecha "Última actualización" en la parte superior del documento actualizada en consecuencia.</p>
+<p>Cualquier cambio futuro se publicará en esta página y dentro de la aplicación, con la fecha de actualización al inicio del documento.</p>
 <h2>Contacto</h2>
-<p>Para preguntas relativas a esta política puedes escribir a <strong>lorys.lg@hotmail.it</strong>.</p>
+<p>Para preguntas sobre esta política escribe a <strong>lorys.lg@hotmail.it</strong>.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versión canónica en línea</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
 <!-- canonical-online-footer -->
 
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">

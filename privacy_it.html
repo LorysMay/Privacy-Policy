@@ -43,7 +43,7 @@
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Sviluppatore</strong>: Lorenzo May</div>
-<div><strong>Contatto</strong>: <a href="mailto:lorys.lg@hotmail.it">lorys.lg@hotmail.it</a></div>
+<div><strong>Contatto</strong>: lorys.lg@hotmail.it</div>
 <div><strong>Ultimo aggiornamento</strong>: 23 maggio 2026</div>
 </div>
 <h2>In breve</h2>
@@ -51,10 +51,10 @@
 <h2>Dati gestiti dall'app</h2>
 <p>L'app gestisce sul tuo dispositivo i seguenti dati, <strong>necessari per il suo funzionamento</strong>:</p>
 <ul>
-<li><strong>Indirizzi e configurazione delle tue telecamere/NVR/DVR</strong> (IP o hostname, porte, profili stream, brand PTZ, opzioni). Salvati in modo non cifrato nelle preferenze dell'app (UserDefaults), perché non sono informazioni segrete.</li>
+<li><strong>Indirizzi e configurazione delle tue telecamere/NVR/DVR</strong> (IP o hostname, porte, profili stream, brand PTZ, opzioni). Salvati nelle preferenze private dell'app (UserDefaults), isolate da questa app grazie alla sandbox di macOS.</li>
 <li><strong>Nome utente delle telecamere ONVIF</strong>. Salvato come sopra.</li>
-<li><strong>Password delle telecamere ONVIF</strong>. Salvate nel <strong>Portachiavi (Keychain) di macOS</strong>, protetto dal sistema operativo. Le password non vengono mai scritte in chiaro nei file di preferenze, nei log, né condivise con noi o con terze parti.</li>
-<li><strong>Registrazioni video e snapshot</strong> generati dall'utente. Salvati nella cartella che l'utente sceglie. Non vengono caricati da nessuna parte.</li>
+<li><strong>Password delle telecamere ONVIF</strong>. Salvate nelle <strong>preferenze private dell'app (UserDefaults)</strong>, codificate e accessibili solo da questa app grazie alla sandbox di macOS. Le password non vengono mai scritte in chiaro su disco o nei log, né condivise con noi o con terze parti. Non viene mai mostrato alcun prompt di accesso di sistema.</li>
+<li><strong>Registrazioni video e snapshot</strong> generati dall'utente. Salvati nella cartella che scegli tu. Non vengono caricati da nessuna parte.</li>
 <li><strong>Preferenze d'interfaccia</strong> (layout griglia, dimensioni finestra, scorciatoie). Salvate nelle preferenze dell'app.</li>
 </ul>
 <h2>Cosa l'app NON fa</h2>
@@ -80,17 +80,19 @@
 <li><strong>Accesso a file scelti dall'utente</strong>: l'app può salvare registrazioni e snapshot solo nella cartella che selezioni esplicitamente tramite il pannello di sistema. Non ha accesso al resto del disco.</li>
 </ul>
 <h2>Esportazione e backup delle configurazioni</h2>
-<p>L'app ti consente di esportare le configurazioni delle telecamere in un file <code>.ipcamvisionprobackup</code>. Per impostazione predefinita questo file <strong>non</strong> contiene le password ONVIF (che vivono solo nel Keychain del tuo Mac). Se importi un file di backup creato con versioni precedenti dell'app che contengono password in chiaro, l'app sposta automaticamente quelle password nel Keychain al primo avvio. Il file di backup resta comunque un file generato e gestito da te: sei responsabile del luogo in cui lo conservi.</p>
+<p>L'app ti consente di esportare le configurazioni delle telecamere in un file <code>.ipcamvisionprobackup</code>. Questo file <strong>non</strong> contiene le password ONVIF. Il file di backup è generato e gestito da te: sei responsabile del luogo in cui lo conservi.</p>
 <h2>Funzione "Segnala bug"</h2>
 <p>Dall'app puoi aprire una finestra di segnalazione bug. Quando premi "Invia", l'app <strong>non invia nulla via rete</strong>: apre il tuo client di posta predefinito con un'email precompilata indirizzata a <code>lorys.lg@hotmail.it</code>. Sei tu a decidere se inviarla o meno. L'email contiene solo ciò che hai scritto, più la versione dell'app e la versione di macOS (informazione utile per il debug).</p>
 <h2>Minori</h2>
 <p>L'app è destinata a un pubblico adulto generico. Non raccoglie intenzionalmente dati di minori perché non raccoglie dati di nessuno.</p>
 <h2>Conservazione dei dati</h2>
-<p>Tutti i dati gestiti dall'app risiedono esclusivamente sul tuo Mac. Puoi cancellarli in qualsiasi momento dal pannello "Impostazioni → Reset dati" dell'app, oppure disinstallando l'app. La cancellazione include anche le voci salvate nel Portachiavi.</p>
+<p>Tutti i dati gestiti dall'app risiedono esclusivamente sul tuo Mac. Puoi cancellarli in qualsiasi momento dal pannello "Impostazioni → Reset dati" dell'app, oppure disinstallando l'app.</p>
 <h2>Modifiche a questa informativa</h2>
 <p>Eventuali modifiche future verranno pubblicate in questa pagina e all'interno dell'app, con la data dell'ultimo aggiornamento aggiornata in testa al documento.</p>
 <h2>Contatti</h2>
 <p>Per domande relative a questa informativa puoi scrivere a <strong>lorys.lg@hotmail.it</strong>.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versione online canonica</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
 <!-- canonical-online-footer -->
 
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
