@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 — IPcamVision Pro</title>
+<style>
+
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+        text-align: left;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code {
+        background: #f1f1f1; padding: 1px 5px; border-radius: 3px;
+        font-size: .9em;
+      }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+    
+</style>
+</head>
+<body>
+<h1>隐私政策</h1>
+<div class="meta">
+<div><strong>应用</strong>: IPcamVision Pro</div>
+<div><strong>开发者</strong>: Lorenzo May</div>
+<div><strong>联系方式</strong>: <a href="mailto:lorys.lg@hotmail.it">lorys.lg@hotmail.it</a></div>
+<div><strong>最后更新</strong>: 2026 年 5 月 23 日</div>
+</div>
+<h2>概要</h2>
+<p>IPcamVision Pro 是一款<strong>本地</strong>应用。我们不收集任何个人数据,不会将您的数据发送到任何服务器,也不使用分析工具、广告跟踪器或任何画像服务。您配置的所有内容(摄像头、凭据、录像、快照)都仅保存在您的 Mac 上。</p>
+<h2>应用处理的数据</h2>
+<p>应用在您的设备上处理以下数据,所有这些数据都是<strong>其正常运行所必需的</strong>:</p>
+<ul>
+<li><strong>您的摄像头/NVR/DVR 的地址和配置</strong>(IP 或主机名、端口、流配置文件、PTZ 品牌、选项)。以未加密形式存储在应用偏好设置中(UserDefaults),因为这些不是机密信息。</li>
+<li><strong>ONVIF 用户名</strong>。按照上述方式存储。</li>
+<li><strong>ONVIF 密码</strong>。存储在 macOS 的 <strong>钥匙串(Keychain)</strong> 中,由操作系统保护。密码绝不会以明文形式写入偏好设置文件或日志,也不会与我们或任何第三方共享。</li>
+<li><strong>用户生成的视频录像和快照</strong>。保存在您选择的文件夹中。它们不会被上传到任何地方。</li>
+<li><strong>界面偏好设置</strong>(网格布局、窗口大小、快捷键)。存储在应用偏好设置中。</li>
+</ul>
+<h2>应用不会做的事情</h2>
+<ul>
+<li><strong>不</strong>收集标识符(UDID、IDFA、MAC 地址、电子邮件)。</li>
+<li><strong>不</strong>向我们或任何第三方发送遥测数据、使用统计或崩溃报告。</li>
+<li><strong>不</strong>使用分析 SDK(例如 Google Analytics、Firebase、Mixpanel)。</li>
+<li><strong>不</strong>使用广告 SDK。</li>
+<li><strong>不</strong>以任何方式为用户建立画像。</li>
+<li><strong>不</strong>与我们拥有的任何服务器通信:我们没有服务器。</li>
+</ul>
+<h2>网络通信</h2>
+<p>应用仅连接到:</p>
+<ol>
+<li><strong>您配置的摄像头、NVR 和 DVR</strong>,通过本地网络或通过公网上的 DDNS/端口转发。这些连接使用 ONVIF(HTTP/HTTPS)和 RTSP 协议以及您输入的凭据。流量直接从您的应用传送到摄像头,不会经过我们的任何服务器。</li>
+<li><strong>Apple 的应用内购买服务</strong>,完全由操作系统管理,用于处理 Pro 功能的购买。我们不会收到您的任何个人信息:Apple 仅告知我们某个购买标识符已被激活。</li>
+</ol>
+<h2>应用内购买</h2>
+<p>Pro 功能通过 Apple 的应用内购买系统(StoreKit)解锁。验证在您的设备上本地进行,通过 Apple 的 API(<code>Transaction.currentEntitlements</code>);我们不保留也不接收有关您的 Apple ID、银行卡或支付方式的任何信息。</p>
+<h2>应用请求的权限</h2>
+<ul>
+<li><strong>本地网络</strong>:macOS 要求用于通过 LAN 上的 ONVIF/WS-Discovery 和 Bonjour 发现摄像头。您在首次使用时授予,可以从<em>系统设置 → 隐私与安全 → 本地网络</em>中撤销。</li>
+<li><strong>访问用户选择的文件</strong>:应用只能将录像和快照保存到您通过系统面板明确选择的文件夹中。它无法访问磁盘的其余部分。</li>
+</ul>
+<h2>导出和备份配置</h2>
+<p>应用允许您将摄像头配置导出到 <code>.ipcamvisionprobackup</code> 文件。默认情况下,此文件<strong>不包含</strong> ONVIF 密码(密码仅存储在您 Mac 的钥匙串中)。如果您导入由包含明文密码的应用早期版本创建的备份文件,应用会在首次启动时自动将这些密码移至钥匙串。备份文件仍是由您生成和管理的文件:您需要对其存储位置负责。</p>
+<h2>“报告问题”功能</h2>
+<p>您可以从应用中打开问题报告窗口。当您按下“发送”时,应用<strong>不会通过网络发送任何内容</strong>:它会打开您的默认邮件客户端,并使用预填好的电子邮件,收件人为 <code>lorys.lg@hotmail.it</code>。您可以决定是否发送。邮件仅包含您所写的内容,以及应用版本和 macOS 版本(对调试有用的信息)。</p>
+<h2>未成年人</h2>
+<p>本应用面向一般成年用户。我们不会有意收集未成年人的数据,因为我们不收集任何人的数据。</p>
+<h2>数据保留</h2>
+<p>应用处理的所有数据仅保存在您的 Mac 上。您可以随时从应用的“设置 → 重置数据”面板中删除它们,或卸载应用。删除还包括钥匙串中保存的条目。</p>
+<h2>本政策的变更</h2>
+<p>未来的任何变更将在此页面和应用内发布,并相应更新文档顶部的“最后更新”日期。</p>
+<h2>联系方式</h2>
+<p>如有与本政策相关的问题,您可以写信至 <strong>lorys.lg@hotmail.it</strong>。</p>
+<!-- canonical-online-footer -->
+
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em">
+  <em>在线规范版本</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a>
+</p>
+</body></html>
