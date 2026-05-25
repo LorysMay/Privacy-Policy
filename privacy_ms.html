@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ms" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dasar Privasi — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Dasar Privasi</h1>
+<div class="meta">
+<div><strong>Apl</strong>: IPcamVision Pro</div>
+<div><strong>pemaju</strong>: Lorenzo May</div>
+<div><strong>Kenalan</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Kemas kini terakhir</strong>: May 25, 2026</div>
+</div>
+<h2>Ringkasan</h2>
+<p>IPcamVision Pro ialah aplikasi macOS tempatan untuk melihat, merakam dan mengurus kamera IP yang dikonfigurasikan pengguna, NVRs dan DVRs. Apl ini tidak mengumpul data peribadi untuk pembangun, tidak menggunakan analitik, penjejak pengiklanan atau perkhidmatan pemprofilan dan tidak menghantar data kamera anda ke mana-mana pelayan yang dimiliki oleh kami. Konfigurasi peranti, bukti kelayakan, rakaman, syot kilat dan pilihan kekal pada Mac anda melainkan anda memilih untuk mengeksport atau berkongsinya.</p>
+<h2>Data dikendalikan secara setempat oleh apl</h2>
+<p>Apl ini mengendalikan data berikut pada peranti anda kerana ia diperlukan untuk menyediakan cirinya:</p>
+<ul>
+<li>Alamat dan konfigurasi kamera, NVR dan DVR, termasuk alamat IP atau nama hos, RTSP atau URL strim, port, profil strim, jenama PTZ, susun atur grid, tetapan main balik dan tetapan pengesanan gerakan. Nilai ini disimpan dalam pilihan peribadi apl menggunakan <code>UserDefaults</code> dan diasingkan oleh kotak pasir aplikasi macOS.</li>
+<li>ONVIF nama pengguna dan nama pengguna peranti. Ini disimpan dengan konfigurasi peranti dalam pilihan peribadi apl.</li>
+<li>ONVIF kata laluan dan kata laluan peranti. Kata laluan disimpan dalam kawasan <code>UserDefaults</code> peribadi apl, dikodkan Base64 untuk mengelakkan isu siri senarai harta. Base64 bukan penyulitan kriptografi; ia adalah storan peribadi apl yang dilindungi oleh kotak pasir macOS. Jika anda memerlukan perlindungan terhadap seseorang yang mempunyai akses fizikal kepada cakera, dayakan FileVault pada Mac anda. Kata laluan tidak ditulis pada log dan tidak dihantar kepada pembangun atau pihak ketiga.</li>
+<li>Rakaman video, klip main balik yang dimuat turun dan syot kilat yang dibuat oleh pengguna. Ia disimpan hanya pada folder atau fail yang anda pilih melalui pemilih fail macOS, atau pada folder simpan yang anda pilih dan dibenarkan dengan penanda halaman skop keselamatan.</li>
+<li>Lakaran kenit tempatan, keadaan tetingkap, pilihan antara muka, bahasa yang dipilih, keadaan peringkat pembelian dan tetapan apl lain. Ini kekal dalam bekas apl pada Mac anda.</li>
+</ul>
+<h2>Pengesanan gerakan dan pemberitahuan</h2>
+<p>Pengesanan gerakan adalah pilihan dan berjalan secara setempat pada Mac anda. Apl ini menganalisis bingkai video pada peranti, termasuk dengan Apple Vision jika tersedia, untuk mengklasifikasikan gerakan seperti pergerakan seseorang, kenderaan, haiwan atau generik. Bingkai tidak dimuat naik ke Apple, kepada pembangun atau ke mana-mana pelayan pihak ketiga untuk ciri ini.</p>
+<p>Jika anda mendayakan makluman gerakan, apl mungkin meminta kebenaran pemberitahuan kepada macOS. Pemberitahuan dihantar oleh macOS dan boleh termasuk nama kamera dan subjek yang dikesan. Anda boleh melumpuhkan pemberitahuan dalam System Settings.</p>
+<h2>Perkara yang tidak dilakukan oleh aplikasi</h2>
+<ul>
+<li>Apl ini tidak mengumpul pengecam seperti IDFA, UDID, alamat MAC atau alamat e-mel untuk pembangun.</li>
+<li>Apl ini tidak menghantar telemetri, analitis, statistik penggunaan atau laporan ranap sistem kepada pembangun.</li>
+<li>Apl ini tidak menggunakan SDK pengiklanan, SDK analitik atau perkhidmatan pemprofilan.</li>
+<li>Apl ini tidak memuat naik strim kamera, syot kilat, rakaman, bukti kelayakan atau konfigurasi ke mana-mana pelayan yang dimiliki oleh kami.</li>
+<li>Apl itu tidak menjejaki anda merentas apl atau tapak web.</li>
+<li>Apl tidak menggunakan kamera Mac, mikrofon, lokasi, kenalan, kalendar, Bluetooth atau kebenaran pustaka Foto.</li>
+</ul>
+<h2>Komunikasi rangkaian</h2>
+<p>Apl ini hanya membuat sambungan rangkaian yang diperlukan untuk ciri yang anda gunakan:</p>
+<ol>
+<li>Ia bersambung terus ke kamera, NVRs dan DVRs yang anda konfigurasikan, sama ada pada rangkaian tempatan anda atau melalui DDNS / port-forwarding. Sambungan ini mungkin menggunakan ONVIF melalui aliran HTTP atau HTTPS dan RTSP. Trafik pergi terus antara Mac anda dan peranti yang anda konfigurasikan.</li>
+<li>Ia menggunakan teknologi penemuan rangkaian tempatan seperti Bonjour dan WS-Discovery untuk mencari peranti yang serasi pada LAN anda apabila anda meminta apl mencari.</li>
+<li>Ia menghubungi perkhidmatan StoreKit Apple untuk pembelian dalam apl dan semakan kelayakan. Pembangun tidak menerima ID Apple, nombor kad atau kaedah pembayaran anda.</li>
+<li>Jika penyegerakan masa main balik didayakan, apl mungkin menghubungi <code>pool.ntp.org</code> melalui NTP untuk mengira pengimbangan jam untuk main balik DVR yang tepat. Permintaan ini tidak digunakan untuk penjejakan dan tidak termasuk bukti kelayakan kamera atau konfigurasi apl anda.</li>
+<li>Ciri Laporkan pepijat membuka klien mel lalai anda dengan mesej pra-isi hanya selepas anda menekan Hantar. Apl itu sendiri tidak memuat naik laporan.</li>
+</ol>
+<h2>Keselamatan pengangkutan</h2>
+<p>Banyak kamera IP dan DVR hanya menyokong sijil HTTP biasa, RTSP atau HTTPS yang ditandatangani sendiri. Atas sebab itu apl membenarkan sambungan ke peranti kamera yang dikonfigurasikan pengguna yang mungkin tidak memenuhi lalai Keselamatan Pengangkutan Apl. Gunakan rangkaian yang dipercayai, kata laluan kamera yang kukuh dan HTTPS di mana peranti anda menyokongnya.</p>
+<h2>Pembelian dalam apl</h2>
+<p>Ciri Pro dan Unlimited dibuka melalui sistem pembelian dalam apl Apple menggunakan StoreKit. Pengesahan berlaku melalui API Apple, termasuk <code>Transaction.currentEntitlements</code> dan kemas kini transaksi. Apl ini hanya menyimpan keadaan kelayakan yang terhasil secara setempat supaya ia boleh mendayakan ciri yang dibeli.</p>
+<h2>Kebenaran diminta oleh apl</h2>
+<ul>
+<li>Local Network: diperlukan oleh macOS untuk menemui dan menyambung ke kamera, NVR dan DVR pada rangkaian tempatan anda. Anda boleh membatalkannya dalam System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Akses fail pilihan pengguna: digunakan apabila anda memilih tempat untuk menyimpan atau mengimport rakaman, syot kilat atau fail sandaran peranti. Jika anda memilih folder simpan yang berterusan, apl itu menyimpan penanda halaman skop keselamatan untuk folder itu. Apl tidak mendapat akses umum ke seluruh cakera anda.</li>
+<li>Desktop atau folder lain: digunakan hanya apabila anda secara eksplisit memilih folder itu sebagai destinasi. Apl ini tidak meminta akses folder Desktop, Documents atau Downloads yang luas.</li>
+<li>Pemberitahuan: pilihan, digunakan untuk makluman gerakan jika anda mendayakannya.</li>
+<li>Touch ID, Face ID atau kata laluan Mac: dikendalikan oleh macOS melalui LocalAuthentication untuk tindakan sensitif seperti mendedahkan kata laluan kamera atau mengeksport data peranti. Apl tidak menerima data biometrik.</li>
+</ul>
+<h2>Mengeksport, mengimport dan menyandarkan konfigurasi</h2>
+<p>Apl ini boleh mengeksport konfigurasi peranti ke fail<code>.ipcamvisionprobackup</code> yang anda buat dan urus. Eksport semasa meninggalkan medan kata laluan ONVIF yang berasingan. Walau bagaimanapun, jika anda memasukkan URL RTSP, DDNS atau strim secara manual yang sudah mengandungi bukti kelayakan terbenam, URL tersebut boleh disertakan dalam sandaran kerana ia merupakan sebahagian daripada konfigurasi peranti. Jika anda mengimport sandaran lama yang mengandungi kata laluan ONVIF, apl boleh membacanya sekali untuk memindahkannya ke storan apl peribadi. Anda bertanggungjawab untuk tempat anda menyimpan fail sandaran.</p>
+<h2>Laporkan ciri pepijat</h2>
+<p>Tetingkap Laporkan pepijat tidak menghantar data terus daripada apl. Apabila anda menekan Hantar, apl membuka klien mel lalai anda dengan e-mel pra-isi yang dialamatkan kepada lorys.lg@hotmail.it. Anda memutuskan sama ada untuk menghantarnya. E-mel hanya mengandungi perkara yang anda taip serta versi apl dan versi macOS untuk penyahpepijatan.</p>
+<h2>Kanak-kanak</h2>
+<p>Aplikasi ini bertujuan untuk khalayak umum. Kami tidak mengumpul data tentang kanak-kanak bawah umur secara sedar kerana apl itu tidak mengumpul data untuk pembangun.</p>
+<h2>Pengekalan dan pemadaman data</h2>
+<p>Data yang dikendalikan oleh apl kekal pada Mac anda sehingga anda memadamkannya. Anda boleh mengalih keluar data apl daripada Settings → Reset data, memadamkan rakaman dan syot kilat yang dijana daripada folder yang disimpannya atau menyahpasang apl tersebut.</p>
+<h2>Perubahan kepada dasar ini</h2>
+<p>Perubahan masa hadapan akan diterbitkan dalam apl dan, apabila berkenaan, pada halaman dasar privasi dalam talian berkanun. Tarikh kemas kini terakhir akan ditukar apabila dasar dikemas kini.</p>
+<h2>Kenalan</h2>
+<p>Untuk soalan tentang dasar ini, tulis kepada lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versi dalam talian kanonik</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ms.html">https://lorysmay.github.io/Privacy-Policy/privacy_ms.html</a></p>
+</body></html>

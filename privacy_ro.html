@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politica de confidențialitate — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Politica de confidențialitate</h1>
+<div class="meta">
+<div><strong>App</strong>: IPcamVision Pro</div>
+<div><strong>Dezvoltator</strong>: Lorenzo May</div>
+<div><strong>Contact</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Ultima actualizare</strong>: May 25, 2026</div>
+</div>
+<h2>Rezumat</h2>
+<p>IPcamVision Pro este o aplicație locală macOS pentru vizualizarea, înregistrarea și gestionarea camerelor IP configurate de utilizator, NVR și DVR. Aplicația nu colectează date personale pentru dezvoltator, nu folosește analize, instrumente de urmărire publicitare sau servicii de profilare și nu trimite datele camerei dvs. către niciun server deținut de noi. Configurația dispozitivului, acreditările, înregistrările, instantaneele și preferințele rămân pe Mac, cu excepția cazului în care alegeți să le exportați sau să le partajați.</p>
+<h2>Date gestionate local de aplicație</h2>
+<p>Aplicația gestionează următoarele date pe dispozitiv, deoarece este necesară pentru a oferi caracteristicile sale:</p>
+<ul>
+<li>Adresele și configurația camerei, NVR și DVR, inclusiv adrese IP sau nume de gazdă, RTSP sau URL-uri de flux, porturi, profiluri de flux, marca PTZ, aspect grilă, setări de redare și setări de detectare a mișcării. Aceste valori sunt stocate în preferințele private ale aplicației folosind <code>UserDefaults</code> și sunt izolate de sandbox-ul aplicației macOS.</li>
+<li>ONVIF nume de utilizator și nume de utilizator dispozitiv. Acestea sunt stocate împreună cu configurația dispozitivului în preferințele private ale aplicației.</li>
+<li>parolele ONVIF și parolele dispozitivului. Parolele sunt stocate în zona privată <code>UserDefaults</code> a aplicației, codificate în Base64 pentru a evita problemele de serializare a listei de proprietăți. Base64 nu este criptare criptografică; este stocare privată în aplicație protejată de sandbox-ul macOS. Dacă aveți nevoie de protecție împotriva unei persoane cu acces fizic la disc, activați FileVault pe Mac. Parolele nu sunt scrise în jurnale și nu sunt trimise dezvoltatorului sau terților.</li>
+<li>Înregistrări video, clipuri de redare descărcate și instantanee create de utilizator. Acestea sunt salvate numai în foldere sau fișiere pe care le alegeți prin selectorul de fișiere macOS sau într-un folder de salvare pe care l-ați selectat și autorizat cu un marcaj de securitate.</li>
+<li>Miniaturi locale, starea ferestrei, preferințele de interfață, limba selectată, starea nivelului de achiziție și alte setări ale aplicației. Acestea rămân în containerul aplicației de pe Mac.</li>
+</ul>
+<h2>Detectarea mișcării și notificări</h2>
+<p>Detectarea mișcării este opțională și rulează local pe Mac. Aplicația analizează cadrele video de pe dispozitiv, inclusiv cu Apple Vision, acolo unde este disponibil, pentru a clasifica mișcarea, cum ar fi o persoană, vehicul, animal sau mișcare generică. Cadrele nu sunt încărcate pe Apple, către dezvoltator sau pe niciun server terță parte pentru această funcție.</p>
+<p>Dacă activați alertele de mișcare, aplicația poate cere permisiunea de notificare macOS. Notificările sunt livrate de macOS și pot include numele camerei și subiectul detectat. Puteți dezactiva notificările în System Settings.</p>
+<h2>Ce nu face aplicația</h2>
+<ul>
+<li>Aplicația nu colectează identificatori precum IDFA, UDID, adresa MAC sau adresa de e-mail pentru dezvoltator.</li>
+<li>Aplicația nu trimite dezvoltatorului date de telemetrie, analize, statistici de utilizare sau rapoarte de blocare.</li>
+<li>Aplicația nu utilizează SDK-uri de publicitate, SDK-uri de analiză sau servicii de profilare.</li>
+<li>Aplicația nu încarcă fluxuri de cameră, instantanee, înregistrări, acreditări sau configurații pe niciun server deținut de noi.</li>
+<li>Aplicația nu vă urmărește prin aplicații sau site-uri web.</li>
+<li>Aplicația nu folosește camera Mac, microfonul, locația, contactele, calendarele, Bluetooth sau permisiunile bibliotecii de fotografii.</li>
+</ul>
+<h2>Comunicații în rețea</h2>
+<p>Aplicația realizează numai conexiunile de rețea necesare pentru funcțiile pe care le utilizați:</p>
+<ol>
+<li>Se conectează direct la camere, NVR și DVR pe care le configurați, fie în rețeaua locală, fie prin DDNS / port-forwarding. Aceste conexiuni pot folosi fluxurile ONVIF peste HTTP sau HTTPS și RTSP. Traficul trece direct între Mac-ul dvs. și dispozitivul pe care l-ați configurat.</li>
+<li>Utilizează tehnologii de descoperire a rețelei locale, cum ar fi Bonjour și WS-Discovery, pentru a găsi dispozitive compatibile pe LAN atunci când solicitați aplicației să caute.</li>
+<li>Acesta contactează serviciile StoreKit de la Apple pentru achiziții în aplicație și verificări ale drepturilor. Dezvoltatorul nu primește ID-ul dvs. Apple, numărul cardului sau metoda de plată.</li>
+<li>Dacă sincronizarea timpului de redare este activată, aplicația poate contacta <code>pool.ntp.org</code> prin NTP pentru a calcula o decalare a ceasului pentru o redare precisă a DVR. Această solicitare nu este utilizată pentru urmărire și nu include acreditările camerei dvs. sau configurația aplicației.</li>
+<li>Funcția Raportați o eroare deschide clientul dvs. de e-mail implicit cu un mesaj pre-completat numai după ce apăsați pe Trimitere. Aplicația în sine nu încarcă raportul.</li>
+</ol>
+<h2>Securitatea transporturilor</h2>
+<p>Multe camere IP și DVR acceptă numai certificate simple HTTP, RTSP sau HTTPS autosemnate. Din acest motiv, aplicația permite conexiuni la dispozitive de cameră configurate de utilizator care ar putea să nu îndeplinească valorile implicite de securitate pentru transportul aplicației. Utilizați rețele de încredere, parole puternice pentru camere și HTTPS acolo unde dispozitivul dvs. îl acceptă.</p>
+<h2>Achiziții în aplicație</h2>
+<p>Caracteristicile Pro și Unlimited sunt deblocate prin sistemul de achiziție în aplicație al Apple folosind StoreKit. Verificarea are loc prin API-urile Apple, inclusiv <code>Transaction.currentEntitlements</code> și actualizările tranzacțiilor. Aplicația stochează local doar starea de drept rezultată, astfel încât să poată activa funcțiile achiziționate.</p>
+<h2>Permisiuni solicitate de aplicație</h2>
+<ul>
+<li>Local Network: cerut de macOS pentru a descoperi și conecta la camere, NVR și DVR în rețeaua locală. Îl puteți revoca în System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Acces la fișiere selectat de utilizator: utilizat atunci când alegeți unde să salvați sau să importați înregistrările, instantaneele sau fișierele de rezervă ale dispozitivului. Dacă alegeți un folder de salvare persistent, aplicația stochează un marcaj de securitate pentru acel folder. Aplicația nu are acces general la restul discului.</li>
+<li>Desktop sau alte foldere: utilizate numai atunci când alegeți în mod explicit acel folder ca destinație. Aplicația nu solicită acces larg la foldere Desktop, Documents sau Downloads.</li>
+<li>Notificări: opțional, folosit pentru alerte de mișcare dacă le activați.</li>
+<li>Parola Touch ID, Face ID sau Mac: gestionată de macOS prin LocalAuthentication pentru acțiuni sensibile, cum ar fi dezvăluirea parolei unei camere sau exportul datelor dispozitivului. Aplicația nu primește date biometrice.</li>
+</ul>
+<h2>Exportarea, importul și copierea de rezervă a configurațiilor</h2>
+<p>Aplicația poate exporta configurația dispozitivului într-un fișier<code>.ipcamvisionprobackup</code> pe care îl creați și îl gestionați. Exporturile curente omit câmpul separat pentru parolă ONVIF. Cu toate acestea, dacă ați introdus manual o adresă URL RTSP, DDNS sau de flux care conține deja acreditări încorporate, acea adresă URL poate fi inclusă în backup deoarece face parte din configurația dispozitivului. Dacă importați o copie de rezervă mai veche care conține o parolă ONVIF, aplicația o poate citi o dată pentru a o migra în stocarea privată a aplicației. Sunteți responsabil pentru locul în care stocați fișierele de rezervă.</p>
+<h2>Raportați o funcție de eroare</h2>
+<p>Fereastra Raportați o eroare nu trimite date direct din aplicație. Când apăsați pe Trimitere, aplicația deschide clientul dvs. de e-mail implicit cu un e-mail pre-completat, adresat lui lorys.lg@hotmail.it. Tu decideți dacă îl trimiteți. E-mailul conține doar ceea ce ați introdus, plus versiunea aplicației și versiunea macOS pentru depanare.</p>
+<h2>Copii</h2>
+<p>Aplicația este destinată unui public larg. Nu colectăm cu bună știință date despre minori, deoarece aplicația nu colectează date pentru dezvoltator.</p>
+<h2>Păstrarea și ștergerea datelor</h2>
+<p>Datele gestionate de aplicație rămân pe Mac până când le ștergeți. Puteți elimina datele aplicației din Settings → Reset data, puteți șterge înregistrările și instantaneele generate din folderele lor salvate sau dezinstalați aplicația.</p>
+<h2>Modificări ale acestei politici</h2>
+<p>Modificările viitoare vor fi publicate în aplicație și, atunci când este cazul, pe pagina canonică a politicii de confidențialitate online. Data ultimei actualizări va fi modificată când politica este actualizată.</p>
+<h2>Contact</h2>
+<p>Pentru întrebări despre această politică, scrieți la lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versiune online canonică</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ro.html">https://lorysmay.github.io/Privacy-Policy/privacy_ro.html</a></p>
+</body></html>

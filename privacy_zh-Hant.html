@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隱私權政策 — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>隱私權政策</h1>
+<div class="meta">
+<div><strong>應用程式</strong>: IPcamVision Pro</div>
+<div><strong>開發商</strong>: Lorenzo May</div>
+<div><strong>接觸</strong>: lorys.lg@hotmail.it</div>
+<div><strong>最後更新</strong>: May 25, 2026</div>
+</div>
+<h2>概括</h2>
+<p>IPcamVision Pro 是一款本機 macOS 應用程序，用於檢視、錄製和管理使用者配置的 IP 攝影機、NVR 和 DVR。該應用程式不會為開發者收集個人數據，不會使用分析、廣告追蹤器或分析服務，也不會將您的相機數據發送到我們擁有的任何伺服器。裝置配置、憑證、錄音、快照和偏好設定都會保留在您的 Mac 上，除非您選擇匯出或共用它們。</p>
+<h2>由應用程式在本地處理的數據</h2>
+<p>該應用程式在您的設備上處理以下數據，因為需要它來提供其功能：</p>
+<ul>
+<li>攝影機、NVR 和 DVR 位址和配置，包括 IP 位址或主機名稱、RTSP 或串流 URL、連接埠、串流設定檔、PTZ 品牌、網格佈局、播放設定和動作偵測設定。這些值使用 <code>UserDefaults</code> 儲存在應用程式的私有首選項中，並由 macOS 應用程式沙箱隔離。</li>
+<li>ONVIF 使用者名稱和裝置使用者名稱。這些與設備配置一起儲存在應用程式的私人首選項中。</li>
+<li>ONVIF 密碼和設備密碼。密碼儲存在應用程式的私人 <code>UserDefaults</code> 區域中，並進行 Base64 編碼以避免屬性清單序列化問題。 Base64 不是密碼加密；它是受 macOS 沙箱保護的應用程式私有儲存。如果您需要防止有人實際存取磁碟，請在 Mac 上啟用 FileVault。密碼不會寫入日誌，也不會傳送給開發人員或第三方。</li>
+<li>用戶創建的視訊錄製、下載的播放剪輯和快照。它們僅儲存到您透過 macOS 檔案選擇器選擇的資料夾或文件，或儲存到您選擇並使用安全範圍書籤授權的儲存資料夾。</li>
+<li>本地縮圖、視窗狀態、介面首選項、所選語言、購買等級狀態和其他應用程式設定。它們保留在 Mac 上的應用程式容器中。</li>
+</ul>
+<h2>運動偵測和通知</h2>
+<p>運動偵測是可選的，並在您的 Mac 上本地運行。該應用程式分析設備上的視訊畫面（包括可用的 Apple Vision），以對人類、車輛、動物或一般運動等運動進行分類。幀不會上傳到 Apple、開發人員或任何第三方伺服器以實現此功能。</p>
+<p>如果您啟用運動警報，應用程式可能會向 macOS 要求通知權限。通知由 macOS 發送，可以包括攝影機名稱和偵測到的主體。您可以在 System Settings 中停用通知。</p>
+<h2>該應用程式不做什麼</h2>
+<ul>
+<li>該應用程式不會收集開發者的 IDFA、UDID、MAC 位址或電子郵件地址等識別碼。</li>
+<li>該應用程式不會向開發人員發送遙測、分析、使用統計或崩潰報告。</li>
+<li>該應用程式不使用廣告 SDK、分析 SDK 或分析服務。</li>
+<li>該應用程式不會將攝影機流、快照、錄音、憑證或配置上傳到我們擁有的任何伺服器。</li>
+<li>該應用程式不會跨應用程式或網站追蹤您。</li>
+<li>該應用程式不使用Mac相機、麥克風、位置、聯絡人、日曆、藍牙或照片庫權限。</li>
+</ul>
+<h2>網路通訊</h2>
+<p>該應用程式僅建立您使用的功能所需的網路連線：</p>
+<ol>
+<li>它直接連接到您在本機網路上或透過 DDNS/連接埠轉送設定的攝影機、NVR 和 DVR。這些連接可以透過 HTTP 或 HTTPS 和 RTSP 串流使用 ONVIF。流量直接在您的 Mac 和您配置的裝置之間傳輸。</li>
+<li>當您要求應用程式進行搜尋時，它會使用 Bonjour 和 WS-Discovery 等本地網路發現技術來尋找 LAN 上的相容設備。</li>
+<li>它聯繫 Apple 的 StoreKit 服務進行應用程式內購買和權利檢查。開發者不會收到您的 Apple ID、卡號或付款方式。</li>
+<li>如果啟用播放時間同步，應用程式可能會透過 NTP 聯繫 <code>pool.ntp.org</code>，以計算準確 DVR 播放的時鐘偏移。此請求不用於跟踪，也不包含您的相機憑證或應用程式配置。</li>
+<li>只有在您按下「傳送」後，「報告錯誤」功能才會開啟預設郵件用戶端並顯示預先填寫的訊息。該應用程式本身不上傳報告。</li>
+</ol>
+<h2>運輸安全</h2>
+<p>許多 IP 攝影機和 DVR 僅支援普通 HTTP、RTSP 或自簽名 HTTPS 證書。因此，該應用程式允許連接到可能不符合應用程式傳輸安全預設值的使用者配置的相機裝置。在您的裝置支援的情況下，使用受信任的網路、強相機密碼和 HTTPS。</p>
+<h2>應用程式內購買</h2>
+<p>Pro 和 Unlimited 功能透過 Apple 的應用程式內購系統使用 StoreKit 解鎖。驗證透過 Apple 的 API 進行，包括 <code>Transaction.currentEntitlements</code> 和交易更新。該應用程式僅在本地儲存產生的權利狀態，以便它可以啟用購買的功能。</p>
+<h2>應用程式請求的權限</h2>
+<ul>
+<li>Local Network：macOS 需要發現並連接到本地網路上的攝影機、NVR 和 DVR。您可以在System Settings→Privacy &amp; Security→Local Network中撤銷它。</li>
+<li>使用者選擇的檔案存取：當您選擇儲存或匯入錄音、快照或裝置備份檔案的位置時使用。如果您選擇永久儲存資料夾，應用程式會儲存該資料夾的安全範圍書籤。該應用程式無法對磁碟的其餘部分進行一般存取。</li>
+<li>Desktop 或其他資料夾：僅在您明確選擇該資料夾作為目標時使用。該應用程式不請求廣泛的 Desktop、Documents 或 Downloads 資料夾存取權限。</li>
+<li>通知：可選，如果啟用，則用於運動警報。</li>
+<li>Touch ID、Face ID 或 Mac 密碼：由 macOS 透過 LocalAuthentication 處理敏感操作，例如洩漏相機密碼或匯出裝置資料。該應用程式不接收生物識別數據。</li>
+</ul>
+<h2>匯出、匯入和備份配置</h2>
+<p>該應用程式可以將裝置配置匯出到您建立和管理的<code>.ipcamvisionprobackup</code> 檔案。目前導出省略了單獨的 ONVIF 密碼欄位。但是，如果您手動輸入已包含嵌入憑證的 RTSP、DDNS 或串流 URL，則該 URL 可以包含在備份中，因為它是裝置配置的一部分。如果您匯入包含 ONVIF 密碼的舊備份，應用程式可能會讀取一次並將其遷移到私有應用程式儲存中。您負責儲存備份檔案的位置。</p>
+<h2>報告錯誤功能</h2>
+<p>報告錯誤視窗不會直接從應用程式發送資料。當您按下「傳送」時，應用程式將開啟您的預設郵件用戶端，其中包含一封預先填寫的電子郵件，地址為 lorys.lg@hotmail.it。您決定是否發送。該電子郵件僅包含您鍵入的內容以及用於偵錯的應用程式版本和 macOS 版本。</p>
+<h2>孩子們</h2>
+<p>該應用程式面向一般受眾。我們不會故意收集有關未成年人的數據，因為該應用程式不會為開發者收集數據。</p>
+<h2>資料保留和刪除</h2>
+<p>該應用程式處理的資料將保留在您的 Mac 上，直到您將其刪除。您可以從 Settings → Reset data 中刪除應用程式數據，從其保存的資料夾中刪除生成的錄音和快照，或卸載應用程式。</p>
+<h2>本政策的變更</h2>
+<p>未來的變更將在應用程式中發布，並在適用時在規範的線上隱私權政策頁面上發布。政策更新時，最後更新日期將會變更。</p>
+<h2>接觸</h2>
+<p>如果對本政策有疑問，請寫信給 lorys.lg@hotmail.it。</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>規範線上版本</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_zh-Hant.html">https://lorysmay.github.io/Privacy-Policy/privacy_zh-Hant.html</a></p>
+</body></html>

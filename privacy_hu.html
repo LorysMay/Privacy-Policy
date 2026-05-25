@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adatvédelmi szabályzat — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Adatvédelmi szabályzat</h1>
+<div class="meta">
+<div><strong>App</strong>: IPcamVision Pro</div>
+<div><strong>Fejlesztő</strong>: Lorenzo May</div>
+<div><strong>Érintkezés</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Utoljára frissítve</strong>: May 25, 2026</div>
+</div>
+<h2>Összegzés</h2>
+<p>A IPcamVision Pro egy helyi macOS alkalmazás a felhasználó által konfigurált IP-kamerák, NVR és DVR megtekintésére, rögzítésére és kezelésére. Az alkalmazás nem gyűjt személyes adatokat a fejlesztő számára, nem használ elemzőket, hirdetéskövetőket vagy profilalkotási szolgáltatásokat, és nem küldi el a kamera adatait a tulajdonunkban lévő szerverekre. Az eszközkonfiguráció, a hitelesítési adatok, a felvételek, a pillanatképek és a beállítások a Mac-en maradnak, hacsak nem exportálja vagy megosztja őket.</p>
+<h2>Az alkalmazás által helyileg kezelt adatok</h2>
+<p>Az alkalmazás a következő adatokat kezeli az eszközén, mert ezek szükségesek a funkcióinak biztosításához:</p>
+<ul>
+<li>Kamera, NVR és DVR címek és konfigurációk, beleértve az IP-címeket vagy gazdagépneveket, RTSP vagy adatfolyam URL-eket, portokat, adatfolyam-profilokat, PTZ márkát, rácselrendezést, lejátszási beállításokat és mozgásérzékelési beállításokat. Ezeket az értékeket a rendszer az alkalmazás privát beállításaiban tárolja a <code>UserDefaults</code> használatával, és a macOS alkalmazás homokozója izolálja őket.</li>
+<li>ONVIF felhasználónevek és eszközfelhasználónevek. Ezeket az eszköz konfigurációjával együtt tárolja az alkalmazás privát beállításaiban.</li>
+<li>ONVIF jelszavak és eszközjelszavak. A jelszavak az alkalmazás privát <code>UserDefaults</code> területén vannak tárolva, Base64 kódolású, hogy elkerüljék a tulajdonlista sorozatosítási problémáit. A Base64 nem kriptográfiai titkosítás; ez egy alkalmazás-privát tárhely, amelyet a macOS homokozó véd. Ha védelemre van szüksége valaki ellen, aki fizikailag hozzáfér a lemezhez, engedélyezze a FileVault-t a Mac számítógépen. A jelszavakat nem írják a naplókba, és nem küldik el a fejlesztőnek vagy harmadik feleknek.</li>
+<li>A felhasználó által készített videofelvételek, letöltött lejátszási klipek és pillanatképek. A rendszer csak a macOS fájlválasztóval kiválasztott mappákba vagy fájlba menti őket, vagy egy olyan mentési mappába, amelyet kiválasztott és biztonsági hatókörű könyvjelzővel engedélyezett.</li>
+<li>Helyi bélyegképek, ablak állapota, interfész beállításai, kiválasztott nyelv, vásárlási szint állapota és egyéb alkalmazásbeállítások. Ezek a Mac alkalmazástárolójában maradnak.</li>
+</ul>
+<h2>Mozgásérzékelés és értesítések</h2>
+<p>A mozgásérzékelés nem kötelező, és helyileg fut a Mac számítógépen. Az alkalmazás elemzi a videokockákat az eszközön, beleértve a Apple Vision-t is, ahol elérhető, hogy osztályozza a mozgást, például személyt, járművet, állatot vagy általános mozgást. Ehhez a funkcióhoz a rendszer nem tölti fel a kereteket a Apple-re, a fejlesztőre vagy bármely harmadik fél szerverére.</p>
+<p>Ha engedélyezi a mozgási figyelmeztetéseket, az alkalmazás értesítési engedélyt kérhet a macOS-től. Az értesítéseket a macOS szállítja, és tartalmazhatja a kamera nevét és az észlelt témát. A System Settings-ben letilthatja az értesítéseket.</p>
+<h2>Mit nem csinál az alkalmazás</h2>
+<ul>
+<li>Az alkalmazás nem gyűjt azonosítókat, például IDFA-t, UDID-t, MAC-címet vagy e-mail-címet a fejlesztő számára.</li>
+<li>Az alkalmazás nem küld telemetriai adatokat, elemzéseket, használati statisztikákat vagy hibajelentéseket a fejlesztőnek.</li>
+<li>Az alkalmazás nem használ hirdetési SDK-kat, elemzési SDK-kat vagy profilalkotási szolgáltatásokat.</li>
+<li>Az alkalmazás nem tölt fel kamerafolyamokat, pillanatfelvételeket, felvételeket, hitelesítési adatokat vagy konfigurációkat a tulajdonunkban lévő szerverekre.</li>
+<li>Az alkalmazás nem követi Önt az alkalmazások vagy webhelyek között.</li>
+<li>Az alkalmazás nem használja a Mac kamera, mikrofon, hely, névjegyek, naptárak, Bluetooth vagy Photos könyvtár engedélyeit.</li>
+</ul>
+<h2>Hálózati kommunikáció</h2>
+<p>Az alkalmazás csak az Ön által használt funkciókhoz szükséges hálózati kapcsolatokat hoz létre:</p>
+<ol>
+<li>Közvetlenül csatlakozik az Ön által konfigurált kamerákhoz, NVR-ekhez és DVR-ekhez, akár a helyi hálózaton, akár a DDNS / port-továbbításon keresztül. Ezek a kapcsolatok használhatják a ONVIF HTTP vagy HTTPS és RTSP adatfolyamokat. A forgalom közvetlenül a Mac és a konfigurált eszköz között folyik.</li>
+<li>Helyi hálózatfelderítési technológiákat (például Bonjour és WS-Discovery) használ, hogy kompatibilis eszközöket találjon a LAN-on, amikor arra kéri az alkalmazást, hogy keressen.</li>
+<li>Felveszi a kapcsolatot a Apple StoreKit szolgáltatásaival az alkalmazáson belüli vásárlásokhoz és a jogosultság ellenőrzéséhez. A fejlesztő nem kapja meg az Ön Apple azonosítóját, kártyaszámát vagy fizetési módját.</li>
+<li>Ha a lejátszási idő szinkronizálása engedélyezett, az alkalmazás kapcsolatba léphet a <code>pool.ntp.org</code>-vel a NTP-n keresztül, hogy kiszámítsa az óraeltolást a DVR pontos lejátszásához. Ezt a kérést nem használják nyomon követésre, és nem tartalmazza a kamera hitelesítő adatait vagy az alkalmazás konfigurációját.</li>
+<li>A Hibajelentés funkció csak a Küldés megnyomása után nyitja meg az alapértelmezett levelezőprogramot egy előre kitöltött üzenettel. Maga az alkalmazás nem tölti fel a jelentést.</li>
+</ol>
+<h2>Szállítás biztonsága</h2>
+<p>Sok IP-kamera és DVR csak az egyszerű HTTP, RTSP vagy önaláírt HTTPS tanúsítványokat támogatja. Emiatt az alkalmazás lehetővé teszi a csatlakozást a felhasználó által konfigurált kameraeszközökhöz, amelyek esetleg nem felelnek meg az App Transport Security alapértelmezett beállításainak. Használjon megbízható hálózatokat, erős kamerajelszavakat és HTTPS-t, ahol az eszköz támogatja.</p>
+<h2>Alkalmazáson belüli vásárlások</h2>
+<p>A Pro és Unlimited funkciók a Apple alkalmazáson belüli vásárlási rendszerén keresztül érhetők el a StoreKit használatával. Az ellenőrzés a Apple API-jain keresztül történik, beleértve a <code>Transaction.currentEntitlements</code>-t és a tranzakciós frissítéseket. Az alkalmazás csak a kapott jogosultsági állapotot tárolja helyileg, így engedélyezni tudja a megvásárolt funkciókat.</p>
+<h2>Az alkalmazás által kért engedélyek</h2>
+<ul>
+<li>Local Network: a macOS számára szükséges a kamerák, NVR és DVR kamerák felfedezéséhez és csatlakoztatásához a helyi hálózaton. A System Settings → Privacy &amp; Security → Local Network menüpontban visszavonhatja.</li>
+<li>Felhasználó által kiválasztott fájlhozzáférés: akkor használható, ha kiválasztja, hogy hova mentse vagy importálja a felvételeket, pillanatképeket vagy az eszköz biztonsági másolatait. Ha állandó mentési mappát választ, az alkalmazás biztonsági hatókörű könyvjelzőt tárol az adott mappához. Az alkalmazás nem kap általános hozzáférést a lemez többi részéhez.</li>
+<li>Desktop vagy más mappák: csak akkor használatos, ha kifejezetten ezt a mappát választja célként. Az alkalmazás nem kér széles körű hozzáférést a Desktop, Documents vagy Downloads mappákhoz.</li>
+<li>Értesítések: opcionális, mozgási riasztásokhoz használatos, ha engedélyezi őket.</li>
+<li>Touch ID, Face ID vagy Mac jelszó: a macOS-től LocalAuthentication-ig kezeli az olyan érzékeny műveletekhez, mint a kamerajelszó felfedése vagy az eszközadatok exportálása. Az alkalmazás nem kap biometrikus adatokat.</li>
+</ul>
+<h2>Konfigurációk exportálása, importálása és biztonsági mentése</h2>
+<p>Az alkalmazás exportálhatja az eszközkonfigurációt egy Ön által létrehozott és kezelt<code>.ipcamvisionprobackup</code> fájlba. A jelenlegi exportálásból kimarad a különálló ONVIF jelszómező. Ha azonban manuálisan adott meg egy RTSP, DDNS vagy adatfolyam URL-címet, amely már tartalmaz beágyazott hitelesítő adatokat, akkor ez az URL szerepelhet a biztonsági másolatban, mivel az eszközkonfiguráció része. Ha egy régebbi biztonsági másolatot importál, amely ONVIF jelszót tartalmaz, az alkalmazás egyszer elolvashatja azt, hogy áttelepítse a privát alkalmazástárhelyre. Ön felelős azért, hogy hol tárolja a biztonsági mentési fájlokat.</p>
+<h2>Hibajelentés bejelentése</h2>
+<p>A Hibajelentés ablak nem küld adatokat közvetlenül az alkalmazásból. Ha megnyomja a Küldés gombot, az alkalmazás megnyitja az alapértelmezett levelezőprogramot egy előre kitöltött e-mail-címmel a lorys.lg@hotmail.it címre. Ön dönti el, hogy elküldi-e. Az e-mail csak azt tartalmazza, amit beírt, valamint az alkalmazásverziót és a macOS verziót a hibakereséshez.</p>
+<h2>Gyermekek</h2>
+<p>Az alkalmazás az általános közönség számára készült. Tudatosan nem gyűjtünk adatokat kiskorúakról, mert az alkalmazás nem gyűjt adatokat a fejlesztő számára.</p>
+<h2>Adatok megőrzése és törlése</h2>
+<p>Az alkalmazás által kezelt adatok mindaddig a Mac-en maradnak, amíg nem törli őket. Eltávolíthatja az alkalmazásadatokat a Settings → Reset data-ből, törölheti a létrehozott felvételeket és pillanatképeket a mentett mappáikból, vagy eltávolíthatja az alkalmazást.</p>
+<h2>A szabályzat változásai</h2>
+<p>A jövőbeni módosításokat az alkalmazásban és adott esetben a kanonikus online adatvédelmi irányelvek oldalán teszik közzé. Az utolsó frissítés dátuma a szabályzat frissítésekor módosul.</p>
+<h2>Érintkezés</h2>
+<p>Ha kérdése van a szabályzattal kapcsolatban, írjon a lorys.lg@hotmail.it címre.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online verzió</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hu.html">https://lorysmay.github.io/Privacy-Policy/privacy_hu.html</a></p>
+</body></html>

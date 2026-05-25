@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tietosuojakäytäntö — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Tietosuojakäytäntö</h1>
+<div class="meta">
+<div><strong>Sovellus</strong>: IPcamVision Pro</div>
+<div><strong>Kehittäjä</strong>: Lorenzo May</div>
+<div><strong>Ota yhteyttä</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Viimeksi päivitetty</strong>: May 25, 2026</div>
+</div>
+<h2>Yhteenveto</h2>
+<p>IPcamVision Pro on paikallinen macOS-sovellus käyttäjän määrittämien IP-kameroiden, NVR- ja DVR-kameroiden katseluun, tallentamiseen ja hallintaan. Sovellus ei kerää henkilötietoja kehittäjälle, ei käytä analytiikkaa, mainosseurantaa tai profilointipalveluita, eikä lähetä kameratietojasi millekään omistamamme palvelimelle. Laitteen määritykset, tunnistetiedot, tallenteet, tilannekuvat ja asetukset pysyvät Macissasi, ellet päätä viedä tai jakaa niitä.</p>
+<h2>Sovelluksen paikallisesti käsittelemät tiedot</h2>
+<p>Sovellus käsittelee seuraavia tietoja laitteessasi, koska niitä tarvitaan sen ominaisuuksien tarjoamiseen:</p>
+<ul>
+<li>Kamera-, NVR- ja DVR-osoitteet ja -asetukset, mukaan lukien IP-osoitteet tai isäntänimet, RTSP- tai stream-URL-osoitteet, portit, suoratoistoprofiilit, PTZ-brändi, ruudukon asettelu, toistoasetukset ja liikkeentunnistusasetukset. Nämä arvot tallennetaan sovelluksen yksityisiin asetuksiin <code>UserDefaults</code>:n avulla, ja ne eristetään macOS-sovelluksen hiekkalaatikolla.</li>
+<li>ONVIF-käyttäjätunnukset ja laitteen käyttäjätunnukset. Nämä tallennetaan laitteen asetusten kanssa sovelluksen yksityisiin asetuksiin.</li>
+<li>ONVIF-salasanat ja laitteiden salasanat. Salasanat tallennetaan sovelluksen yksityiselle <code>UserDefaults</code>-alueelle, joka on Base64-koodattu, jotta vältytään kiinteistöluetteloiden sarjoituksessa. Base64 ei ole kryptografinen salaus; se on sovellusyksityinen tallennustila, jota suojaa macOS-hiekkalaatikko. Jos tarvitset suojaa jotakuta vastaan, jolla on fyysinen pääsy levyyn, ota FileVault käyttöön Macissasi. Salasanoja ei kirjoiteta lokeihin, eikä niitä lähetetä kehittäjälle tai kolmansille osapuolille.</li>
+<li>Käyttäjän luomat videotallenteet, ladatut toistoleikkeet ja tilannekuvat. Ne tallennetaan vain kansioihin tai tiedostoihin, jotka valitset macOS-tiedostovalitsimella, tai tallennuskansioon, jonka valitset ja valtuutit suojaustason kirjanmerkillä.</li>
+<li>Paikalliset pikkukuvat, ikkunan tila, käyttöliittymäasetukset, valittu kieli, ostotason tila ja muut sovellusasetukset. Nämä jäävät Macin sovellussäilöön.</li>
+</ul>
+<h2>Liiketunnistus ja ilmoitukset</h2>
+<p>Liiketunnistus on valinnainen ja toimii paikallisesti Macissasi. Sovellus analysoi laitteella olevia videokehyksiä, mukaan lukien Apple Vision, jos mahdollista, luokitellakseen liikkeen, kuten henkilön, ajoneuvon, eläimen tai yleisen liikkeen. Kehyksiä ei ladata Apple:hen, kehittäjälle tai millekään kolmannen osapuolen palvelimelle tätä ominaisuutta varten.</p>
+<p>Jos otat liikehälytykset käyttöön, sovellus voi pyytää macOS:ltä ilmoituslupaa. macOS toimittaa ilmoitukset, ja ne voivat sisältää kameran nimen ja havaitun kohteen. Voit poistaa ilmoitukset käytöstä System Settings:ssä.</p>
+<h2>Mitä sovellus ei tee</h2>
+<ul>
+<li>Sovellus ei kerää kehittäjän tunnisteita, kuten IDFA, UDID, MAC-osoite tai sähköpostiosoite.</li>
+<li>Sovellus ei lähetä telemetriaa, analytiikkaa, käyttötilastoja tai virheraportteja kehittäjälle.</li>
+<li>Sovellus ei käytä mainonta-SDK:ita, analytiikan SDK:ita tai profilointipalveluita.</li>
+<li>Sovellus ei lataa kameravirtoja, tilannekuvia, tallenteita, valtuustietoja tai määrityksiä millekään omistamamme palvelimelle.</li>
+<li>Sovellus ei seuraa sinua sovellusten tai verkkosivustojen välillä.</li>
+<li>Sovellus ei käytä Mac-kameran, mikrofonin, sijainnin, yhteystietojen, kalentereiden, Bluetoothin tai valokuvakirjaston käyttöoikeuksia.</li>
+</ul>
+<h2>Verkkoviestintä</h2>
+<p>Sovellus muodostaa vain käyttämiesi ominaisuuksien edellyttämät verkkoyhteydet:</p>
+<ol>
+<li>Se yhdistetään suoraan määrittämiisi kameroihin, NVR- ja DVR-kameroihin joko paikallisessa verkossa tai DDNS:n / portin edelleenlähetyksen kautta. Nämä yhteydet voivat käyttää ONVIF:tä HTTP- tai HTTPS- ja RTSP-virtojen kautta. Liikenne kulkee suoraan Macin ja määrittämäsi laitteen välillä.</li>
+<li>Se käyttää paikallisten verkkojen etsintätekniikoita, kuten Bonjour ja WS-Discovery, löytääkseen yhteensopivia laitteita lähiverkosta, kun pyydät sovellusta hakemaan.</li>
+<li>Se ottaa yhteyttä Apple:n StoreKit-palveluihin sovelluksen sisäisten ostojen ja käyttöoikeuksien tarkistamiseksi. Kehittäjä ei saa Apple-tunnustasi, korttinumeroasi tai maksutapaasi.</li>
+<li>Jos toistoajan synkronointi on käytössä, sovellus voi ottaa yhteyttä <code>pool.ntp.org</code>:ään NTP:n kautta laskeakseen kellon siirtymän tarkan DVR-toiston varmistamiseksi. Tätä pyyntöä ei käytetä seurantaan, eikä se sisällä kamerasi kirjautumistietoja tai sovellusmäärityksiä.</li>
+<li>Ilmoita virheestä -ominaisuus avaa oletussähköpostiohjelman esitäytetyllä viestillä vasta, kun painat Lähetä. Sovellus itse ei lataa raporttia.</li>
+</ol>
+<h2>Kuljetuksen turvallisuus</h2>
+<p>Monet IP-kamerat ja DVR:t tukevat vain tavallisia HTTP-, RTSP- tai itse allekirjoitettuja HTTPS-varmenteita. Tästä syystä sovellus sallii yhteydet käyttäjän määrittämiin kameralaitteisiin, jotka eivät välttämättä täytä App Transport Securityn oletusasetuksia. Käytä luotettavia verkkoja, vahvoja kameran salasanoja ja HTTPS:tä, jos laitteesi tukee sitä.</p>
+<h2>Sovelluksen sisäiset ostot</h2>
+<p>Pro- ja Unlimited-ominaisuudet avataan Apple:n sovelluksen sisäisen ostojärjestelmän kautta StoreKit:n avulla. Vahvistus tapahtuu Apple:n sovellusliittymien kautta, mukaan lukien <code>Transaction.currentEntitlements</code> ja tapahtumapäivitykset. Sovellus tallentaa vain tuloksena olevan käyttöoikeustilan paikallisesti, jotta se voi ottaa ostetut ominaisuudet käyttöön.</p>
+<h2>Sovelluksen pyytämät luvat</h2>
+<ul>
+<li>Local Network: vaatii macOS:n paikallisverkon kameroiden, NVR- ja DVR-kameroiden löytämiseen ja niihin yhdistämiseen. Voit peruuttaa sen kohdassa System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Käyttäjän valitsemien tiedostojen käyttöoikeus: käytetään, kun valitset, minne tallennat tai tuot tallenteita, tilannekuvia tai laitteen varmuuskopiotiedostoja. Jos valitset pysyvän tallennuskansion, sovellus tallentaa kyseiselle kansioon suojatun kirjanmerkin. Sovellus ei saa yleistä pääsyä levyn muuhun osaan.</li>
+<li>Desktop tai muut kansiot: käytetään vain, kun valitset nimenomaisesti kyseisen kansion kohteeksi. Sovellus ei vaadi laajaa pääsyä kansioon Desktop, Documents tai Downloads.</li>
+<li>Ilmoitukset: valinnainen, käytetään liikehälytyksiin, jos otat ne käyttöön.</li>
+<li>Touch ID, Face ID tai Mac-salasana: käsittelee macOS - LocalAuthentication arkaluonteisia toimia, kuten kameran salasanan paljastamista tai laitetietojen vientiä varten. Sovellus ei vastaanota biometrisiä tietoja.</li>
+</ul>
+<h2>Kokoonpanojen vienti, tuonti ja varmuuskopiointi</h2>
+<p>Sovellus voi viedä laitteen määritykset<code>.ipcamvisionprobackup</code>-tiedostoon, jonka luot ja hallitset. Nykyiset viennit jättävät erillisen ONVIF-salasanakentän pois. Jos kuitenkin syötit manuaalisesti RTSP-, DDNS- tai stream-URL-osoitteen, joka sisältää jo upotetut tunnistetiedot, tämä URL-osoite voidaan sisällyttää varmuuskopioon, koska se on osa laitteen määritystä. Jos tuot vanhemman varmuuskopion, joka sisältää ONVIF-salasanan, sovellus voi lukea sen kerran siirtääkseen sen yksityiseen sovellusten tallennustilaan. Olet vastuussa varmuuskopiotiedostojen säilytyspaikasta.</p>
+<h2>Ilmoita vikaominaisuudesta</h2>
+<p>Ilmoita virheestä -ikkuna ei lähetä tietoja suoraan sovelluksesta. Kun painat Lähetä, sovellus avaa oletussähköpostiohjelmasi esitäytetyllä sähköpostilla, joka on osoitettu osoitteeseen lorys.lg@hotmail.it. Sinä päätät, lähetätkö sen. Sähköposti sisältää vain kirjoittamasi sekä sovellusversion ja macOS-version virheenkorjausta varten.</p>
+<h2>Lapset</h2>
+<p>Sovellus on tarkoitettu suurelle yleisölle. Emme tietoisesti kerää tietoja alaikäisistä, koska sovellus ei kerää tietoja kehittäjälle.</p>
+<h2>Tietojen säilyttäminen ja poistaminen</h2>
+<p>Sovelluksen käsittelemät tiedot säilyvät Macissasi, kunnes poistat ne. Voit poistaa sovellustiedot Settings → Reset data:stä, poistaa luotuja tallenteita ja tilannekuvia niiden tallennetuista kansioista tai poistaa sovelluksen.</p>
+<h2>Muutoksia tähän käytäntöön</h2>
+<p>Tulevat muutokset julkaistaan ​​sovelluksessa ja soveltuvin osin kanonisella online-tietosuojakäytäntösivulla. Viimeksi päivitetty päivämäärä muuttuu, kun käytäntö päivitetään.</p>
+<h2>Ota yhteyttä</h2>
+<p>Jos sinulla on kysyttävää tästä käytännöstä, kirjoita osoitteeseen lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online-versio</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_fi.html">https://lorysmay.github.io/Privacy-Policy/privacy_fi.html</a></p>
+</body></html>

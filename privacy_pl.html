@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Polityka prywatności</h1>
+<div class="meta">
+<div><strong>Aplikacja</strong>: IPcamVision Pro</div>
+<div><strong>Wywoływacz</strong>: Lorenzo May</div>
+<div><strong>Kontakt</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Ostatnia aktualizacja</strong>: May 25, 2026</div>
+</div>
+<h2>Streszczenie</h2>
+<p>IPcamVision Pro to lokalna aplikacja macOS do przeglądania, nagrywania i zarządzania skonfigurowanymi przez użytkownika kamerami IP, NVR i DVR. Aplikacja nie gromadzi danych osobowych dla programisty, nie korzysta z narzędzi analitycznych, trackerów reklamowych ani usług profilowania i nie wysyła danych z Twojej kamery na żaden należący do nas serwer. Konfiguracja urządzenia, dane uwierzytelniające, nagrania, migawki i preferencje pozostają na komputerze Mac, chyba że zdecydujesz się je wyeksportować lub udostępnić.</p>
+<h2>Dane obsługiwane lokalnie przez aplikację</h2>
+<p>Aplikacja obsługuje następujące dane na Twoim urządzeniu, ponieważ jest to niezbędne do zapewnienia jej funkcji:</p>
+<ul>
+<li>Adresy i konfiguracja kamery, NVR i DVR, w tym adresy IP lub nazwy hostów, RTSP lub adresy URL strumieni, porty, profile strumieni, marka PTZ, układ siatki, ustawienia odtwarzania i ustawienia wykrywania ruchu. Wartości te są przechowywane w prywatnych preferencjach aplikacji przy użyciu <code>UserDefaults</code> i są izolowane przez piaskownicę aplikacji macOS.</li>
+<li>Nazwy użytkowników ONVIF i nazwy użytkowników urządzeń. Są one przechowywane wraz z konfiguracją urządzenia w prywatnych preferencjach aplikacji.</li>
+<li>Hasła ONVIF i hasła urządzeń. Hasła są przechowywane w prywatnym obszarze <code>UserDefaults</code> aplikacji i zakodowane w formacie Base64, aby uniknąć problemów z serializacją listy właściwości. Base64 nie jest szyfrowaniem kryptograficznym; jest to prywatna pamięć aplikacji chroniona przez piaskownicę macOS. Jeśli potrzebujesz ochrony przed osobą mającą fizyczny dostęp do dysku, włącz FileVault na swoim Macu. Hasła nie są zapisywane w logach i nie są wysyłane do programisty ani osób trzecich.</li>
+<li>Nagrania wideo, pobrane klipy odtwarzające i migawki utworzone przez użytkownika. Są one zapisywane wyłącznie w folderach lub plikach wybranych za pomocą selektora plików macOS lub w folderze zapisu wybranym i autoryzowanym za pomocą zakładki o zakresie zabezpieczeń.</li>
+<li>Lokalne miniatury, stan okna, preferencje interfejsu, wybrany język, stan poziomu zakupu i inne ustawienia aplikacji. Pozostają one w kontenerze aplikacji na komputerze Mac.</li>
+</ul>
+<h2>Detekcja ruchu i powiadomienia</h2>
+<p>Wykrywanie ruchu jest opcjonalne i działa lokalnie na komputerze Mac. Aplikacja analizuje klatki wideo na urządzeniu, w tym za pomocą Apple Vision, jeśli jest dostępny, w celu klasyfikacji ruchu, np. ruchu osoby, pojazdu, zwierzęcia lub ogólnego. W przypadku tej funkcji ramki nie są przesyłane do Apple, do dewelopera ani na serwer innej firmy.</p>
+<p>Jeśli włączysz alerty o ruchu, aplikacja może zapytać macOS o pozwolenie na powiadomienie. Powiadomienia są dostarczane przez macOS i mogą zawierać nazwę kamery i wykryty obiekt. Możesz wyłączyć powiadomienia w System Settings.</p>
+<h2>Czego aplikacja nie robi</h2>
+<ul>
+<li>Aplikacja nie zbiera identyfikatorów takich jak IDFA, UDID, adres MAC czy adres e-mail programisty.</li>
+<li>Aplikacja nie wysyła do programisty danych telemetrycznych, analiz, statystyk użytkowania ani raportów o awariach.</li>
+<li>Aplikacja nie korzysta z reklamowych pakietów SDK, narzędzi analitycznych ani usług profilowania.</li>
+<li>Aplikacja nie przesyła strumieni z kamer, migawek, nagrań, danych uwierzytelniających ani konfiguracji na żaden należący do nas serwer.</li>
+<li>Aplikacja nie śledzi Cię w aplikacjach ani witrynach internetowych.</li>
+<li>Aplikacja nie korzysta z aparatu Mac, mikrofonu, lokalizacji, kontaktów, kalendarzy, Bluetooth ani uprawnień do biblioteki Zdjęć.</li>
+</ul>
+<h2>Komunikacja sieciowa</h2>
+<p>Aplikacja nawiązuje tylko połączenia sieciowe potrzebne do korzystania z funkcji, z których korzystasz:</p>
+<ol>
+<li>Łączy się bezpośrednio z kamerami NVR i DVR, które konfigurujesz, albo w sieci lokalnej, albo poprzez DDNS / przekierowanie portów. Połączenia te mogą wykorzystywać strumienie ONVIF zamiast HTTP lub HTTPS i RTSP. Ruch odbywa się bezpośrednio między komputerem Mac a skonfigurowanym urządzeniem.</li>
+<li>Wykorzystuje technologie wykrywania sieci lokalnych, takie jak Bonjour i WS-Discovery, aby znaleźć kompatybilne urządzenia w sieci LAN, gdy poprosisz aplikację o wyszukiwanie.</li>
+<li>Kontaktuje się z usługami StoreKit Apple w sprawie zakupów w aplikacji i sprawdzania uprawnień. Deweloper nie otrzyma Twojego identyfikatora Apple, numeru karty ani metody płatności.</li>
+<li>Jeśli włączona jest synchronizacja czasu odtwarzania, aplikacja może skontaktować się z <code>pool.ntp.org</code> przez NTP w celu obliczenia przesunięcia zegara w celu dokładnego odtwarzania DVR. To żądanie nie służy do śledzenia i nie obejmuje danych uwierzytelniających aparatu ani konfiguracji aplikacji.</li>
+<li>Funkcja Zgłoś błąd otwiera domyślnego klienta poczty ze wstępnie wypełnioną wiadomością dopiero po naciśnięciu przycisku Wyślij. Sama aplikacja nie przesyła raportu.</li>
+</ol>
+<h2>Bezpieczeństwo transportu</h2>
+<p>Wiele kamer IP i DVR obsługuje tylko zwykłe certyfikaty HTTP, RTSP lub HTTPS z podpisem własnym. Z tego powodu aplikacja umożliwia połączenia ze skonfigurowanymi przez użytkownika urządzeniami z kamerami, które mogą nie spełniać domyślnych ustawień App Transport Security. Korzystaj z zaufanych sieci, silnych haseł do aparatu i HTTPS tam, gdzie obsługuje je Twoje urządzenie.</p>
+<h2>Zakupy w aplikacji</h2>
+<p>Funkcje Pro i Unlimited można odblokować poprzez system zakupów w aplikacji Apple za pomocą StoreKit. Weryfikacja odbywa się za pośrednictwem interfejsów API Apple, w tym <code>Transaction.currentEntitlements</code> i aktualizacji transakcji. Aplikacja przechowuje lokalnie tylko wynikowy stan uprawnień, dzięki czemu może włączyć zakupione funkcje.</p>
+<h2>Uprawnienia wymagane przez aplikację</h2>
+<ul>
+<li>Local Network: wymagany przez macOS do wykrywania i łączenia się z kamerami, NVR i DVR w Twojej sieci lokalnej. Możesz go odwołać w System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Dostęp do plików wybranych przez użytkownika: używany, gdy wybierasz miejsce zapisywania lub importowania nagrań, migawek lub plików kopii zapasowych urządzenia. Jeśli wybierzesz folder trwałego zapisu, aplikacja zapisze dla tego folderu zakładkę o zakresie zabezpieczeń. Aplikacja nie uzyskuje ogólnego dostępu do reszty dysku.</li>
+<li>Desktop lub inne foldery: używane tylko wtedy, gdy wyraźnie wybierzesz ten folder jako miejsce docelowe. Aplikacja nie żąda szerokiego dostępu do folderów Desktop, Documents ani Downloads.</li>
+<li>Powiadomienia: opcjonalne, używane do alertów o ruchu, jeśli je włączysz.</li>
+<li>Hasło Touch ID, Face ID lub Mac: obsługiwane przez macOS do LocalAuthentication w przypadku poufnych działań, takich jak ujawnianie hasła kamery lub eksportowanie danych urządzenia. Aplikacja nie otrzymuje danych biometrycznych.</li>
+</ul>
+<h2>Eksportowanie, importowanie i tworzenie kopii zapasowych konfiguracji</h2>
+<p>Aplikacja może wyeksportować konfigurację urządzenia do pliku<code>.ipcamvisionprobackup</code>, który tworzysz i zarządzasz. Bieżące eksporty pomijają oddzielne pole hasła ONVIF. Jeśli jednak ręcznie wprowadzisz adres URL RTSP, DDNS lub strumienia, który zawiera już osadzone dane uwierzytelniające, ten adres URL może zostać uwzględniony w kopii zapasowej, ponieważ stanowi część konfiguracji urządzenia. Jeśli zaimportujesz starszą kopię zapasową zawierającą hasło ONVIF, aplikacja może je raz odczytać w celu migracji do prywatnego magazynu aplikacji. Jesteś odpowiedzialny za miejsce przechowywania plików kopii zapasowych.</p>
+<h2>Zgłoś błąd funkcji</h2>
+<p>Okno Zgłoś błąd nie wysyła danych bezpośrednio z aplikacji. Po naciśnięciu przycisku Wyślij aplikacja otworzy domyślnego klienta poczty ze wstępnie wypełnioną wiadomością e-mail zaadresowaną na adres lorys.lg@hotmail.it. Ty decydujesz, czy go wysłać. Wiadomość e-mail zawiera tylko to, co wpisałeś, a także wersję aplikacji i wersję macOS do debugowania.</p>
+<h2>Dzieci</h2>
+<p>Aplikacja przeznaczona jest dla ogółu odbiorców. Nie zbieramy świadomie danych o osobach nieletnich, ponieważ aplikacja nie zbiera danych dla programisty.</p>
+<h2>Przechowywanie i usuwanie danych</h2>
+<p>Dane obsługiwane przez aplikację pozostają na komputerze Mac, dopóki ich nie usuniesz. Możesz usunąć dane aplikacji z Settings → Reset data, usunąć wygenerowane nagrania i migawki z zapisanych folderów lub odinstalować aplikację.</p>
+<h2>Zmiany w niniejszej polityce</h2>
+<p>Przyszłe zmiany będą publikowane w aplikacji oraz, w stosownych przypadkach, na kanonicznej stronie polityki prywatności online. Data ostatniej aktualizacji zostanie zmieniona po aktualizacji polityki.</p>
+<h2>Kontakt</h2>
+<p>W przypadku pytań dotyczących tej polityki napisz do lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanoniczna wersja internetowa</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_pl.html">https://lorysmay.github.io/Privacy-Policy/privacy_pl.html</a></p>
+</body></html>

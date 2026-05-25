@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privatlivspolitik — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Privatlivspolitik</h1>
+<div class="meta">
+<div><strong>App</strong>: IPcamVision Pro</div>
+<div><strong>Udvikler</strong>: Lorenzo May</div>
+<div><strong>Kontakte</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Sidst opdateret</strong>: May 25, 2026</div>
+</div>
+<h2>Oversigt</h2>
+<p>IPcamVision Pro er en lokal macOS app til visning, optagelse og styring af brugerkonfigurerede IP-kameraer, NVRs og DVRs. Appen indsamler ikke personlige data for udvikleren, bruger ikke analyser, reklamesporing eller profileringstjenester og sender ikke dine kameradata til nogen server, der ejes af os. Enhedskonfiguration, legitimationsoplysninger, optagelser, snapshots og præferencer forbliver på din Mac, medmindre du vælger at eksportere eller dele dem.</p>
+<h2>Data håndteres lokalt af appen</h2>
+<p>Appen håndterer følgende data på din enhed, fordi den er nødvendig for at levere dens funktioner:</p>
+<ul>
+<li>Kamera-, NVR- og DVR-adresser og konfiguration, inklusive IP-adresser eller værtsnavne, RTSP- eller stream-URL&#39;er, porte, streamprofiler, PTZ-mærke, gitterlayout, afspilningsindstillinger og indstillinger for bevægelsesdetektering. Disse værdier gemmes i appens private præferencer ved hjælp af <code>UserDefaults</code> og er isoleret af macOS app-sandboxen.</li>
+<li>ONVIF brugernavne og enhedsbrugernavne. Disse gemmes med enhedskonfigurationen i appens private præferencer.</li>
+<li>ONVIF adgangskoder og enhedsadgangskoder. Adgangskoder gemmes i appens private <code>UserDefaults</code>-område, Base64-kodet for at undgå problemer med serialisering af ejendomslister. Base64 er ikke kryptografisk kryptering; det er app-privat opbevaring beskyttet af macOS sandkassen. Hvis du har brug for beskyttelse mod nogen med fysisk adgang til disken, skal du aktivere FileVault på din Mac. Adgangskoder skrives ikke til logfiler og sendes ikke til udvikleren eller tredjeparter.</li>
+<li>Videooptagelser, downloadede afspilningsklip og snapshots oprettet af brugeren. De gemmes kun i mapper eller filer, du vælger gennem macOS filvælgeren, eller i en gemt mappe, du har valgt og godkendt med et bogmærke med sikkerhed.</li>
+<li>Lokale miniaturebilleder, vinduestilstand, grænsefladepræferencer, valgt sprog, købsniveautilstand og andre appindstillinger. Disse forbliver i appbeholderen på din Mac.</li>
+</ul>
+<h2>Bevægelsesdetektering og notifikationer</h2>
+<p>Bevægelsesdetektion er valgfri og kører lokalt på din Mac. Appen analyserer videorammer på enheden, inklusive med Apple Vision, hvor det er tilgængeligt, for at klassificere bevægelse som en person, et køretøj, et dyr eller generisk bevægelse. Frames uploades ikke til Apple, til udvikleren eller til nogen tredjepartsserver for denne funktion.</p>
+<p>Hvis du aktiverer bevægelsesalarmer, kan appen bede macOS om meddelelsestilladelse. Meddelelser leveres af macOS og kan omfatte kameranavnet og det detekterede motiv. Du kan deaktivere meddelelser i System Settings.</p>
+<h2>Hvad app&#39;en ikke gør</h2>
+<ul>
+<li>Appen indsamler ikke identifikatorer såsom IDFA, UDID, MAC-adresse eller e-mailadresse for udvikleren.</li>
+<li>Appen sender ikke telemetri, analyser, brugsstatistikker eller nedbrudsrapporter til udvikleren.</li>
+<li>Appen bruger ikke reklame-SDK&#39;er, analyse-SDK&#39;er eller profileringstjenester.</li>
+<li>Appen uploader ikke kamerastreams, snapshots, optagelser, legitimationsoplysninger eller konfigurationer til nogen server, der ejes af os.</li>
+<li>Appen sporer dig ikke på tværs af apps eller websteder.</li>
+<li>Appen bruger ikke Mac-kameraet, mikrofonen, placeringen, kontakter, kalendere, Bluetooth eller Fotos-bibliotekstilladelser.</li>
+</ul>
+<h2>Netværkskommunikation</h2>
+<p>Appen laver kun netværksforbindelser, der er nødvendige for de funktioner, du bruger:</p>
+<ol>
+<li>Den forbinder direkte til kameraer, NVRs og DVRs, som du konfigurerer, enten på dit lokale netværk eller via DDNS / port-forwarding. Disse forbindelser kan bruge ONVIF over HTTP eller HTTPS og RTSP streams. Trafikken går direkte mellem din Mac og den enhed, du har konfigureret.</li>
+<li>Den bruger lokalnetværksopdagelsesteknologier såsom Bonjour og WS-Discovery til at finde kompatible enheder på dit LAN, når du beder appen om at søge.</li>
+<li>Den kontakter Apple&#39;s StoreKit-tjenester for køb i appen og kontrol af berettigelse. Udvikleren modtager ikke dit Apple ID, kortnummer eller betalingsmetode.</li>
+<li>Hvis synkronisering af afspilningstid er aktiveret, kan appen kontakte <code>pool.ntp.org</code> over NTP for at beregne en urforskydning for nøjagtig DVR-afspilning. Denne anmodning bruges ikke til sporing og inkluderer ikke dine kameraoplysninger eller appkonfiguration.</li>
+<li>Funktionen Rapporter en fejl åbner først din standardmail-klient med en forududfyldt besked, når du trykker på Send. Selve appen uploader ikke rapporten.</li>
+</ol>
+<h2>Transportsikkerhed</h2>
+<p>Mange IP-kameraer og DVR&#39;er understøtter kun almindelige HTTP, RTSP eller selvsignerede HTTPS-certifikater. Af den grund tillader appen forbindelser til brugerkonfigurerede kameraenheder, der muligvis ikke opfylder standardindstillingerne for App Transport Security. Brug betroede netværk, stærke kameraadgangskoder og HTTPS, hvor din enhed understøtter det.</p>
+<h2>Indkøb i appen</h2>
+<p>Pro- og Unlimited-funktionerne låses op gennem Apples købssystem i appen ved hjælp af StoreKit. Verifikation sker gennem Apple&#39;s API&#39;er, inklusive <code>Transaction.currentEntitlements</code> og transaktionsopdateringer. Appen gemmer kun den resulterende berettigelsestilstand lokalt, så den kan aktivere de købte funktioner.</p>
+<h2>Tilladelser anmodet af appen</h2>
+<ul>
+<li>Local Network: kræves af macOS for at opdage og oprette forbindelse til kameraer, NVRs og DVRs på dit lokale netværk. Du kan tilbagekalde den i System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Brugervalgt filadgang: bruges, når du vælger, hvor du vil gemme eller importere optagelser, snapshots eller sikkerhedskopieringsfiler på enheden. Hvis du vælger en vedvarende gem-mappe, gemmer appen et sikkerhedsbestemt bogmærke for den pågældende mappe. Appen får ikke generel adgang til resten af ​​din disk.</li>
+<li>Desktop eller andre mapper: bruges kun, når du udtrykkeligt vælger den mappe som destination. Appen anmoder ikke om bred Desktop, Documents eller Downloads mappeadgang.</li>
+<li>Meddelelser: valgfri, bruges til bevægelsesalarmer, hvis du aktiverer dem.</li>
+<li>Touch ID, Face ID eller Mac-adgangskode: håndteres af macOS til LocalAuthentication til følsomme handlinger såsom afsløring af et kameraadgangskode eller eksport af enhedsdata. Appen modtager ikke biometriske data.</li>
+</ul>
+<h2>Eksport, import og sikkerhedskopiering af konfigurationer</h2>
+<p>Appen kan eksportere enhedskonfiguration til en<code>.ipcamvisionprobackup</code>-fil, som du opretter og administrerer. Aktuelle eksporter udelader det separate ONVIF-adgangskodefelt. Men hvis du manuelt indtastede en RTSP, DDNS eller stream-URL, der allerede indeholder indlejrede legitimationsoplysninger, kan den URL inkluderes i sikkerhedskopien, fordi den er en del af enhedskonfigurationen. Hvis du importerer en ældre sikkerhedskopi, der indeholder en ONVIF-adgangskode, kan appen læse den én gang for at migrere den til privat applager. Du er ansvarlig for, hvor du gemmer backup-filer.</p>
+<h2>Rapporter en fejlfunktion</h2>
+<p>Vinduet Rapporter en fejl sender ikke data direkte fra appen. Når du trykker på Send, åbner appen din standardmailklient med en forududfyldt e-mail adresseret til lorys.lg@hotmail.it. Du bestemmer selv om du vil sende den. E-mailen indeholder kun det du har indtastet plus appversion og macOS version til fejlretning.</p>
+<h2>Børn</h2>
+<p>Appen er beregnet til et generelt publikum. Vi indsamler ikke bevidst data om mindreårige, fordi appen ikke indsamler data for udvikleren.</p>
+<h2>Opbevaring og sletning af data</h2>
+<p>Data, der håndteres af appen, forbliver på din Mac, indtil du sletter dem. Du kan fjerne appdata fra Settings → Reset data, slette genererede optagelser og snapshots fra deres gemte mapper eller afinstallere appen.</p>
+<h2>Ændringer i denne politik</h2>
+<p>Fremtidige ændringer vil blive offentliggjort i appen og, når det er relevant, på den kanoniske online privatlivspolitikside. Senest opdateret dato vil blive ændret, når politikken opdateres.</p>
+<h2>Kontakte</h2>
+<p>For spørgsmål om denne politik, skriv til lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonisk online version</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_da.html">https://lorysmay.github.io/Privacy-Policy/privacy_da.html</a></p>
+</body></html>

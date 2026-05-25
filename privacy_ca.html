@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ca" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privadesa — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Política de privadesa</h1>
+<div class="meta">
+<div><strong>App</strong>: IPcamVision Pro</div>
+<div><strong>Desenvolupador</strong>: Lorenzo May</div>
+<div><strong>Contacte</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Última actualització</strong>: May 25, 2026</div>
+</div>
+<h2>Resum</h2>
+<p>IPcamVision Pro és una aplicació local macOS per visualitzar, gravar i gestionar càmeres IP configurades per l&#39;usuari, NVR i DVR. L&#39;aplicació no recull dades personals per al desenvolupador, no utilitza analítiques, rastrejadors de publicitat ni serveis de creació de perfils, i no envia les dades de la càmera a cap servidor de la nostra propietat. La configuració del dispositiu, les credencials, les gravacions, les instantànies i les preferències romanen al vostre Mac tret que trieu exportar-los o compartir-los.</p>
+<h2>Dades gestionades localment per l&#39;aplicació</h2>
+<p>L&#39;aplicació gestiona les dades següents al vostre dispositiu perquè és necessària per oferir les seves funcions:</p>
+<ul>
+<li>Càmera, adreces i configuració NVR i DVR, incloses adreces IP o noms d&#39;amfitrió, RTSP o URL de flux, ports, perfils de flux, marca PTZ, disseny de quadrícula, paràmetres de reproducció i paràmetres de detecció de moviment. Aquests valors s&#39;emmagatzemen a les preferències privades de l&#39;aplicació mitjançant <code>UserDefaults</code> i estan aïllats pel sandbox de l&#39;aplicació macOS.</li>
+<li>ONVIF noms d&#39;usuari i noms d&#39;usuari del dispositiu. S&#39;emmagatzemen amb la configuració del dispositiu a les preferències privades de l&#39;aplicació.</li>
+<li>ONVIF contrasenyes i contrasenyes del dispositiu. Les contrasenyes s&#39;emmagatzemen a l&#39;àrea privada <code>UserDefaults</code> de l&#39;aplicació, codificada en Base64 per evitar problemes de serialització de la llista de propietats. Base64 no és xifratge criptogràfic; és un emmagatzematge privat d&#39;aplicacions protegit pel sandbox macOS. Si necessiteu protecció contra algú amb accés físic al disc, activeu FileVault al vostre Mac. Les contrasenyes no s&#39;escriuen als registres i no s&#39;envien al desenvolupador ni a tercers.</li>
+<li>Enregistraments de vídeo, clips de reproducció descarregats i instantànies creades per l&#39;usuari. Només es guarden a les carpetes o fitxers que trieu mitjançant el selector de fitxers macOS, o a una carpeta de desar que heu seleccionat i autoritzat amb un marcador de seguretat.</li>
+<li>Miniatures locals, estat de la finestra, preferències de la interfície, idioma seleccionat, estat del nivell de compra i altres paràmetres de l&#39;aplicació. Aquests romanen al contenidor de l&#39;aplicació del vostre Mac.</li>
+</ul>
+<h2>Detecció de moviment i notificacions</h2>
+<p>La detecció de moviment és opcional i s&#39;executa localment al vostre Mac. L&#39;aplicació analitza els fotogrames de vídeo al dispositiu, inclòs amb Apple Vision quan estigui disponible, per classificar el moviment com ara una persona, vehicle, animal o moviment genèric. Els marcs no es pengen a Apple, al desenvolupador o a cap servidor de tercers per a aquesta funció.</p>
+<p>Si activeu les alertes de moviment, l&#39;aplicació pot demanar permís de notificació a macOS. macOS envia les notificacions i poden incloure el nom de la càmera i el subjecte detectat. Podeu desactivar les notificacions a System Settings.</p>
+<h2>El que l&#39;aplicació no fa</h2>
+<ul>
+<li>L&#39;aplicació no recull identificadors com IDFA, UDID, adreça MAC o adreça de correu electrònic per al desenvolupador.</li>
+<li>L&#39;aplicació no envia telemetria, anàlisis, estadístiques d&#39;ús ni informes d&#39;error al desenvolupador.</li>
+<li>L&#39;aplicació no utilitza SDK de publicitat, SDK d&#39;anàlisi ni serveis de creació de perfils.</li>
+<li>L&#39;aplicació no carrega fluxos de càmeres, instantànies, enregistraments, credencials o configuració a cap servidor de la nostra propietat.</li>
+<li>L&#39;aplicació no et fa un seguiment a través d&#39;aplicacions o llocs web.</li>
+<li>L&#39;aplicació no utilitza la càmera del Mac, el micròfon, la ubicació, els contactes, els calendaris, el Bluetooth o els permisos de la biblioteca de fotos.</li>
+</ul>
+<h2>Comunicacions en xarxa</h2>
+<p>L&#39;aplicació només fa les connexions de xarxa necessàries per a les funcions que utilitzeu:</p>
+<ol>
+<li>Es connecta directament a càmeres, NVR i DVR que configureu, ja sigui a la vostra xarxa local o mitjançant DDNS / port-forwarding. Aquestes connexions poden utilitzar ONVIF sobre HTTP o HTTPS i RTSP fluxos. El trànsit passa directament entre el vostre Mac i el dispositiu que heu configurat.</li>
+<li>Utilitza tecnologies de descobriment de xarxes locals com Bonjour i WS-Discovery per trobar dispositius compatibles a la vostra LAN quan demaneu a l&#39;aplicació que cerqui.</li>
+<li>Es posa en contacte amb els serveis StoreKit de Apple per a compres integrades a l&#39;aplicació i comprovacions de drets. El desenvolupador no rep el vostre identificador Apple, número de targeta ni forma de pagament.</li>
+<li>Si la sincronització del temps de reproducció està habilitada, l&#39;aplicació pot contactar amb <code>pool.ntp.org</code> a través de NTP per calcular un desplaçament del rellotge per a una reproducció precisa de DVR. Aquesta sol·licitud no s&#39;utilitza per al seguiment i no inclou les credencials de la càmera ni la configuració de l&#39;aplicació.</li>
+<li>La funció Informar d&#39;un error obre el vostre client de correu predeterminat amb un missatge emplenat prèviament només després de prémer Envia. L&#39;aplicació en si no carrega l&#39;informe.</li>
+</ol>
+<h2>Seguretat del transport</h2>
+<p>Moltes càmeres IP i DVR només admeten certificats normals HTTP, RTSP o HTTPS autofirmats. Per aquest motiu, l&#39;aplicació permet connexions a dispositius de càmera configurats per l&#39;usuari que potser no compleixen els valors predeterminats de seguretat d&#39;App Transport. Utilitzeu xarxes de confiança, contrasenyes de càmera segures i HTTPS on el vostre dispositiu ho admeti.</p>
+<h2>Compres des de l&#39;aplicació</h2>
+<p>Les funcions Pro i Unlimited es desbloquegen mitjançant el sistema de compra integrada de Apple mitjançant StoreKit. La verificació es fa mitjançant les API de Apple, incloses <code>Transaction.currentEntitlements</code> i les actualitzacions de transaccions. L&#39;aplicació només emmagatzema localment l&#39;estat del dret resultant perquè pugui habilitar les funcions adquirides.</p>
+<h2>Permisos sol·licitats per l&#39;aplicació</h2>
+<ul>
+<li>Local Network: requerit per macOS per descobrir i connectar-se a càmeres, NVR i DVR a la vostra xarxa local. Podeu revocar-lo a System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Accés a fitxers seleccionat per l&#39;usuari: s&#39;utilitza quan trieu on desar o importar enregistraments, instantànies o fitxers de còpia de seguretat del dispositiu. Si trieu una carpeta de desat persistent, l&#39;aplicació emmagatzema una adreça d&#39;interès amb àmbit de seguretat per a aquesta carpeta. L&#39;aplicació no té accés general a la resta del vostre disc.</li>
+<li>Desktop o altres carpetes: només s&#39;utilitza quan trieu explícitament aquesta carpeta com a destinació. L&#39;aplicació no sol·licita un accés ampli a les carpetes Desktop, Documents o Downloads.</li>
+<li>Notificacions: opcional, s&#39;utilitza per a alertes de moviment si les activeu.</li>
+<li>Contrasenya Touch ID, Face ID o Mac: gestionada per macOS a través de LocalAuthentication per a accions sensibles, com ara revelar la contrasenya d&#39;una càmera o exportar dades del dispositiu. L&#39;aplicació no rep dades biomètriques.</li>
+</ul>
+<h2>Exportació, importació i còpia de seguretat de configuracions</h2>
+<p>L&#39;aplicació pot exportar la configuració del dispositiu a un fitxer<code>.ipcamvisionprobackup</code> que creeu i gestioneu. Les exportacions actuals ometen el camp de contrasenya ONVIF independent. Tanmateix, si heu introduït manualment un URL RTSP, DDNS o de flux que ja conté credencials incrustades, aquest URL es pot incloure a la còpia de seguretat perquè forma part de la configuració del dispositiu. Si importeu una còpia de seguretat antiga que conté una contrasenya ONVIF, l&#39;aplicació pot llegir-la una vegada per migrar-la a l&#39;emmagatzematge privat d&#39;aplicacions. Sou responsable d&#39;on deseu els fitxers de còpia de seguretat.</p>
+<h2>Informa d&#39;una funció d&#39;error</h2>
+<p>La finestra Informa d&#39;un error no envia dades directament des de l&#39;aplicació. Quan premeu Envia, l&#39;aplicació obre el vostre client de correu predeterminat amb un correu electrònic preemplenat adreçat a lorys.lg@hotmail.it. Tu decideixes si l&#39;envies. El correu electrònic només conté el que heu escrit més la versió de l&#39;aplicació i la versió macOS per a la depuració.</p>
+<h2>Nens</h2>
+<p>L&#39;aplicació està pensada per a un públic general. No recollim dades sobre menors amb coneixement de causa perquè l&#39;aplicació no recull dades per al desenvolupador.</p>
+<h2>Retenció i supressió de dades</h2>
+<p>Les dades gestionades per l&#39;aplicació romanen al vostre Mac fins que les suprimiu. Podeu eliminar les dades de l&#39;aplicació de Settings → Reset data, suprimir les gravacions i les instantànies generades de les carpetes desades o desinstal·lar l&#39;aplicació.</p>
+<h2>Canvis a aquesta política</h2>
+<p>Els canvis futurs es publicaran a l&#39;aplicació i, si escau, a la pàgina de política de privadesa en línia canònica. La data de l&#39;última actualització es canviarà quan s&#39;actualitzi la política.</p>
+<h2>Contacte</h2>
+<p>Per a preguntes sobre aquesta política, escriviu a lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versió en línia canònica</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ca.html">https://lorysmay.github.io/Privacy-Policy/privacy_ca.html</a></p>
+</body></html>

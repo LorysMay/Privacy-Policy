@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Política de Privacidade — IPcamVision Pro</title>
+<title>política de Privacidade — IPcamVision Pro</title>
 <style>
-
       :root { color-scheme: light dark; }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -16,7 +15,6 @@
         padding: 0 1.4em 4em;
         color: #111;
         background: #fff;
-        text-align: left;
       }
       @media (prefers-color-scheme: dark) {
         body { background: #1a1a1a; color: #ececec; }
@@ -29,68 +27,75 @@
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1; padding: 1px 5px; border-radius: 3px;
-        font-size: .9em;
-      }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
       @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
-    
 </style>
 </head>
 <body>
-<h1>Política de Privacidade</h1>
+<h1>política de Privacidade</h1>
 <div class="meta">
-<div><strong>Aplicação</strong>: IPcamVision Pro</div>
+<div><strong>Aplicativo</strong>: IPcamVision Pro</div>
 <div><strong>Desenvolvedor</strong>: Lorenzo May</div>
-<div><strong>Contacto</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Última atualização</strong>: 23 de maio de 2026</div>
+<div><strong>Contato</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Última atualização</strong>: May 25, 2026</div>
 </div>
 <h2>Resumo</h2>
-<p>IPcamVision Pro é uma aplicação <strong>local</strong>. Não recolhemos quaisquer dados pessoais, não enviamos os seus dados para nenhum servidor e não utilizamos análises, rastreadores publicitários ou serviços de criação de perfis. Tudo o que configurar (câmeras, credenciais, gravações, capturas) fica exclusivamente no seu Mac.</p>
-<h2>Dados geridos pela aplicação</h2>
-<p>A aplicação gere os seguintes dados no seu dispositivo, todos <strong>necessários para o seu funcionamento</strong>:</p>
+<p>IPcamVision Pro é um aplicativo macOS local para visualizar, gravar e gerenciar câmeras IP configuradas pelo usuário, NVRs e DVRs. O aplicativo não coleta dados pessoais do desenvolvedor, não usa análises, rastreadores de publicidade ou serviços de criação de perfil e não envia os dados da sua câmera para nenhum servidor de nossa propriedade. A configuração do dispositivo, as credenciais, as gravações, os instantâneos e as preferências permanecem no seu Mac, a menos que você opte por exportá-los ou compartilhá-los.</p>
+<h2>Dados tratados localmente pelo aplicativo</h2>
+<p>O aplicativo lida com os seguintes dados no seu dispositivo porque são necessários para fornecer seus recursos:</p>
 <ul>
-<li><strong>Endereços e configuração das suas câmeras/NVR/DVR</strong> (IP ou nome do host, portas, perfis de transmissão, marca PTZ, opções). Armazenados nas preferências privadas da aplicação (UserDefaults), isoladas pela sandbox do macOS.</li>
-<li><strong>Nomes de utilizador ONVIF</strong>. Armazenados da mesma forma.</li>
-<li><strong>Palavras-passe ONVIF</strong>. Armazenadas nas <strong>preferências privadas da aplicação (UserDefaults)</strong>, codificadas e acessíveis apenas por esta aplicação graças à sandbox do macOS. As palavras-passe nunca são escritas em texto simples no disco ou nos registos, e nunca são partilhadas connosco ou com terceiros. Nenhum pedido de acesso do sistema é apresentado.</li>
-<li><strong>Gravações de vídeo e capturas</strong> geradas pelo utilizador. Guardadas na pasta que escolher. Não são carregadas para nenhum lado.</li>
-<li><strong>Preferências de interface</strong> (layout da grelha, tamanho da janela, atalhos). Armazenadas nas preferências da aplicação.</li>
+<li>Câmera, endereços e configuração de NVR e DVR, incluindo endereços IP ou nomes de host, RTSP ou URLs de fluxo, portas, perfis de fluxo, marca PTZ, layout de grade, configurações de reprodução e configurações de detecção de movimento. Esses valores são armazenados nas preferências privadas do aplicativo usando <code>UserDefaults</code> e são isolados pela sandbox do aplicativo macOS.</li>
+<li>Nomes de usuário ONVIF e nomes de usuário de dispositivos. Eles são armazenados com a configuração do dispositivo nas preferências privadas do aplicativo.</li>
+<li>Senhas ONVIF e senhas de dispositivos. As senhas são armazenadas na área <code>UserDefaults</code> privada do aplicativo, codificada em Base64 para evitar problemas de serialização da lista de propriedades. Base64 não é criptografia criptográfica; é um armazenamento privado de aplicativo protegido pela sandbox macOS. Se precisar de proteção contra alguém com acesso físico ao disco, habilite FileVault em seu Mac. As senhas não são gravadas nos logs e não são enviadas ao desenvolvedor ou a terceiros.</li>
+<li>Gravações de vídeo, clipes de reprodução baixados e instantâneos criados pelo usuário. Eles são salvos apenas em pastas ou arquivos escolhidos por meio do seletor de arquivos macOS ou em uma pasta salva que você selecionou e autorizou com um marcador com escopo de segurança.</li>
+<li>Miniaturas locais, estado da janela, preferências de interface, idioma selecionado, estado do nível de compra e outras configurações do aplicativo. Eles permanecem no contêiner do aplicativo no seu Mac.</li>
 </ul>
-<h2>O que a aplicação NÃO faz</h2>
+<h2>Detecção de movimento e notificações</h2>
+<p>A detecção de movimento é opcional e é executada localmente no seu Mac. O aplicativo analisa quadros de vídeo no dispositivo, inclusive com Apple Vision quando disponível, para classificar movimentos como pessoas, veículos, animais ou movimentos genéricos. Os frames não são carregados no Apple, no desenvolvedor ou em qualquer servidor de terceiros para este recurso.</p>
+<p>Se você ativar alertas de movimento, o aplicativo poderá solicitar permissão de notificação ao macOS. As notificações são entregues pelo macOS e podem incluir o nome da câmera e o assunto detectado. Você pode desativar notificações em System Settings.</p>
+<h2>O que o aplicativo não faz</h2>
 <ul>
-<li><strong>Não</strong> recolhe identificadores (UDID, IDFA, endereço MAC, e-mail).</li>
-<li><strong>Não</strong> envia telemetria, estatísticas de utilização ou relatórios de falhas.</li>
-<li><strong>Não</strong> utiliza SDKs de análise (ex. Google Analytics, Firebase, Mixpanel).</li>
-<li><strong>Não</strong> utiliza SDKs publicitários.</li>
-<li><strong>Não</strong> cria perfis do utilizador.</li>
-<li><strong>Não</strong> comunica com nenhum servidor nosso: não temos nenhum.</li>
+<li>O aplicativo não coleta identificadores como IDFA, UDID, endereço MAC ou endereço de e-mail do desenvolvedor.</li>
+<li>O aplicativo não envia telemetria, análises, estatísticas de uso ou relatórios de falhas ao desenvolvedor.</li>
+<li>O aplicativo não usa SDKs de publicidade, SDKs analíticos ou serviços de criação de perfil.</li>
+<li>O aplicativo não carrega streams de câmeras, instantâneos, gravações, credenciais ou configurações para qualquer servidor de nossa propriedade.</li>
+<li>O aplicativo não rastreia você em aplicativos ou sites.</li>
+<li>O aplicativo não usa as permissões de câmera, microfone, localização, contatos, calendários, Bluetooth ou biblioteca de fotos do Mac.</li>
 </ul>
 <h2>Comunicações de rede</h2>
-<p>A aplicação liga-se apenas a:</p>
+<p>O aplicativo só faz conexões de rede necessárias para os recursos que você usa:</p>
 <ol>
-<li><strong>As câmeras, NVR e DVR que configurar</strong>, na sua rede local ou através de DDNS/reencaminhamento de portas. Estas ligações utilizam ONVIF (HTTP/HTTPS) e RTSP com as suas credenciais. O tráfego vai diretamente da sua aplicação para a câmera, sem passar pelos nossos servidores.</li>
-<li><strong>O serviço de compras integradas da Apple</strong>, totalmente gerido pelo sistema operativo. Não recebemos nenhuma informação pessoal sua.</li>
+<li>Ele se conecta diretamente às câmeras, NVRs e DVRs que você configura, seja em sua rede local ou por meio de DDNS/encaminhamento de porta. Essas conexões podem usar ONVIF em fluxos HTTP ou HTTPS e RTSP. O tráfego vai diretamente entre o seu Mac e o dispositivo que você configurou.</li>
+<li>Ele usa tecnologias de descoberta de rede local, como Bonjour e WS-Discovery, para encontrar dispositivos compatíveis em sua LAN quando você solicita a pesquisa do aplicativo.</li>
+<li>Ele entra em contato com os serviços StoreKit da Apple para compras no aplicativo e verificações de direitos. O desenvolvedor não recebe seu ID Apple, número de cartão ou forma de pagamento.</li>
+<li>Se a sincronização do tempo de reprodução estiver habilitada, o aplicativo poderá entrar em contato com <code>pool.ntp.org</code> por meio de NTP para calcular um deslocamento do relógio para uma reprodução DVR precisa. Esta solicitação não é usada para rastreamento e não inclui as credenciais da sua câmera ou configuração do aplicativo.</li>
+<li>O recurso Reportar um bug abre seu cliente de e-mail padrão com uma mensagem pré-preenchida somente depois que você pressiona Enviar. O próprio aplicativo não carrega o relatório.</li>
 </ol>
-<h2>Compras integradas</h2>
-<p>As funcionalidades Pro são desbloqueadas através do sistema de compras integradas da Apple (StoreKit). A verificação é feita localmente através das APIs da Apple (<code>Transaction.currentEntitlements</code>). Não mantemos nem recebemos informações sobre o seu Apple ID, cartão ou método de pagamento.</p>
-<h2>Permissões solicitadas</h2>
+<h2>Segurança de transporte</h2>
+<p>Muitas câmeras IP e DVRs suportam apenas certificados simples HTTP, RTSP ou HTTPS autoassinados. Por esse motivo, o aplicativo permite conexões com dispositivos de câmera configurados pelo usuário que podem não atender aos padrões do App Transport Security. Use redes confiáveis, senhas de câmera fortes e HTTPS onde seu dispositivo suportar.</p>
+<h2>Compras no aplicativo</h2>
+<p>Os recursos Pro e Unlimited são desbloqueados por meio do sistema de compra no aplicativo do Apple usando StoreKit. A verificação acontece por meio das APIs do Apple, incluindo <code>Transaction.currentEntitlements</code> e atualizações de transações. O aplicativo armazena localmente apenas o estado de direito resultante para que possa ativar os recursos adquiridos.</p>
+<h2>Permissões solicitadas pelo aplicativo</h2>
 <ul>
-<li><strong>Rede local</strong>: exigida pelo macOS para a descoberta de câmeras via ONVIF/WS-Discovery e Bonjour. Concede na primeira utilização e pode revogar em <em>Definições do Sistema → Privacidade e Segurança → Rede Local</em>.</li>
-<li><strong>Acesso a ficheiros selecionados</strong>: a aplicação só pode guardar na pasta que selecionar explicitamente. Não tem acesso ao resto do disco.</li>
+<li>Local Network: exigido pelo macOS para descobrir e conectar-se a câmeras, NVRs e DVRs em sua rede local. Você pode revogá-lo em System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Acesso a arquivos selecionados pelo usuário: usado quando você escolhe onde salvar ou importar gravações, instantâneos ou arquivos de backup do dispositivo. Se você escolher uma pasta de salvamento persistente, o aplicativo armazenará um marcador com escopo de segurança para essa pasta. O aplicativo não obtém acesso geral ao restante do disco.</li>
+<li>Desktop ou outras pastas: usado somente quando você escolhe explicitamente essa pasta como destino. O aplicativo não solicita acesso amplo às pastas Desktop, Documents ou Downloads.</li>
+<li>Notificações: opcionais, usadas para alertas de movimento se você ativá-los.</li>
+<li>Senha Touch ID, Face ID ou Mac: gerenciada por macOS por meio de LocalAuthentication para ações confidenciais, como revelar a senha de uma câmera ou exportar dados do dispositivo. O aplicativo não recebe dados biométricos.</li>
 </ul>
-<h2>Exportação e cópia de segurança de configurações</h2>
-<p>A aplicação permite exportar configurações para um ficheiro <code>.ipcamvisionprobackup</code>. Este ficheiro <strong>não</strong> contém palavras-passe ONVIF. É responsável pelo local onde o guarda.</p>
-<h2>Função «Reportar um erro»</h2>
-<p>A partir da aplicação pode abrir uma janela de reporte de erros. Ao clicar em «Enviar», a aplicação <strong>não envia nada pela rede</strong>: abre o seu cliente de e-mail predefinido com um e-mail pré-preenchido endereçado a <code>lorys.lg@hotmail.it</code>. Decide se o envia ou não.</p>
+<h2>Exportar, importar e fazer backup de configurações</h2>
+<p>O aplicativo pode exportar a configuração do dispositivo para um arquivo<code>.ipcamvisionprobackup</code> que você cria e gerencia. As exportações atuais omitem o campo de senha ONVIF separado. No entanto, se você inseriu manualmente um URL RTSP, DDNS ou de fluxo que já contém credenciais incorporadas, esse URL poderá ser incluído no backup porque faz parte da configuração do dispositivo. Se você importar um backup mais antigo que contém uma senha ONVIF, o aplicativo poderá lê-lo uma vez para migrá-lo para o armazenamento privado do aplicativo. Você é responsável por onde armazena os arquivos de backup.</p>
+<h2>Relatar um recurso de bug</h2>
+<p>A janela Reportar um bug não envia dados diretamente do aplicativo. Quando você pressiona Enviar, o aplicativo abre seu cliente de e-mail padrão com um e-mail pré-preenchido endereçado a lorys.lg@hotmail.it. Você decide se deseja enviá-lo. O e-mail contém apenas o que você digitou, além da versão do aplicativo e da versão macOS para depuração.</p>
 <h2>Crianças</h2>
-<p>A aplicação destina-se a um público adulto em geral. Não recolhemos dados de menores porque não recolhemos dados de ninguém.</p>
-<h2>Retenção de dados</h2>
-<p>Todos os dados geridos ficam exclusivamente no seu Mac. Pode eliminá-los em qualquer momento em «Definições → Repor dados» ou desinstalando a aplicação.</p>
-<h2>Alterações a esta política</h2>
-<p>Quaisquer alterações futuras serão publicadas nesta página e dentro da aplicação, com a data de atualização no início do documento.</p>
-<h2>Contacto</h2>
-<p>Para questões sobre esta política escreva para <strong>lorys.lg@hotmail.it</strong>.</p>
+<p>O aplicativo é destinado ao público em geral. Não coletamos intencionalmente dados sobre menores porque o aplicativo não coleta dados para o desenvolvedor.</p>
+<h2>Retenção e exclusão de dados</h2>
+<p>Os dados gerenciados pelo aplicativo permanecem no seu Mac até que você os exclua. Você pode remover dados do aplicativo Settings → Reset data, excluir gravações e instantâneos gerados de suas pastas salvas ou desinstalar o aplicativo.</p>
+<h2>Alterações nesta política</h2>
+<p>As alterações futuras serão publicadas no aplicativo e, quando aplicável, na página canônica da política de privacidade online. A data da última atualização será alterada quando a política for atualizada.</p>
+<h2>Contato</h2>
+<p>Para dúvidas sobre esta política, escreva para lorys.lg@hotmail.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versão canónica online</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versão canônica online</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_pt.html">https://lorysmay.github.io/Privacy-Policy/privacy_pt.html</a></p>
 </body></html>

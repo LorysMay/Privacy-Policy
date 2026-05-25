@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — IPcamVision Pro</title>
+<style>
+      :root { color-scheme: light dark; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                     "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.55;
+        max-width: 760px;
+        margin: 2.4em auto;
+        padding: 0 1.4em 4em;
+        color: #111;
+        background: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; }
+        a { color: #4ea1ff; }
+      }
+      h1 { font-size: 1.9em; margin-top: 0; }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
+      p, li { font-size: 0.97em; }
+      ul, ol { padding-left: 1.3em; }
+      li { margin-bottom: .35em; }
+      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
+      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+</style>
+</head>
+<body>
+<h1>Kebijakan Privasi</h1>
+<div class="meta">
+<div><strong>Aplikasi</strong>: IPcamVision Pro</div>
+<div><strong>Pengembang</strong>: Lorenzo May</div>
+<div><strong>Kontak</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Terakhir diperbarui</strong>: May 25, 2026</div>
+</div>
+<h2>Ringkasan</h2>
+<p>IPcamVision Pro adalah aplikasi macOS lokal untuk melihat, merekam, dan mengelola kamera IP yang dikonfigurasi pengguna, NVR, dan DVR. Aplikasi ini tidak mengumpulkan data pribadi untuk pengembang, tidak menggunakan analitik, pelacak iklan, atau layanan pembuatan profil, dan tidak mengirimkan data kamera Anda ke server mana pun milik kami. Konfigurasi perangkat, kredensial, rekaman, snapshot, dan preferensi tetap ada di Mac Anda kecuali Anda memilih untuk mengekspor atau membagikannya.</p>
+<h2>Data ditangani secara lokal oleh aplikasi</h2>
+<p>Aplikasi ini menangani data berikut di perangkat Anda karena diperlukan untuk menyediakan fitur-fiturnya:</p>
+<ul>
+<li>Kamera, alamat dan konfigurasi NVR dan DVR, termasuk alamat IP atau nama host, RTSP atau URL streaming, port, profil streaming, merek PTZ, tata letak grid, pengaturan pemutaran, dan pengaturan deteksi gerakan. Nilai-nilai ini disimpan dalam preferensi pribadi aplikasi menggunakan <code>UserDefaults</code> dan diisolasi oleh sandbox aplikasi macOS.</li>
+<li>Nama pengguna ONVIF dan nama pengguna perangkat. Ini disimpan dengan konfigurasi perangkat di preferensi pribadi aplikasi.</li>
+<li>Kata sandi ONVIF dan kata sandi perangkat. Kata sandi disimpan di area <code>UserDefaults</code> pribadi aplikasi, dikodekan Base64 untuk menghindari masalah serialisasi daftar properti. Base64 bukan enkripsi kriptografi; ini adalah penyimpanan pribadi aplikasi yang dilindungi oleh kotak pasir macOS. Jika Anda memerlukan perlindungan terhadap seseorang dengan akses fisik ke disk, aktifkan FileVault di Mac Anda. Kata sandi tidak ditulis ke log dan tidak dikirim ke pengembang atau pihak ketiga.</li>
+<li>Rekaman video, klip pemutaran yang diunduh, dan foto yang dibuat oleh pengguna. Mereka disimpan hanya ke folder atau file yang Anda pilih melalui pemilih file macOS, atau ke folder penyimpanan yang Anda pilih dan otorisasi dengan penanda cakupan keamanan.</li>
+<li>Thumbnail lokal, status jendela, preferensi antarmuka, bahasa yang dipilih, status tingkat pembelian, dan pengaturan aplikasi lainnya. Ini tetap berada di wadah aplikasi di Mac Anda.</li>
+</ul>
+<h2>Deteksi gerakan dan pemberitahuan</h2>
+<p>Deteksi gerakan bersifat opsional dan berjalan secara lokal di Mac Anda. Aplikasi ini menganalisis bingkai video pada perangkat, termasuk dengan Apple Vision jika tersedia, untuk mengklasifikasikan gerakan seperti orang, kendaraan, hewan, atau gerakan umum. Bingkai tidak diunggah ke Apple, ke pengembang, atau ke server pihak ketiga mana pun untuk fitur ini.</p>
+<p>Jika Anda mengaktifkan peringatan gerakan, aplikasi mungkin meminta izin notifikasi kepada macOS. Notifikasi dikirimkan oleh macOS dan dapat menyertakan nama kamera dan subjek yang terdeteksi. Anda dapat menonaktifkan notifikasi di System Settings.</p>
+<h2>Apa yang tidak dilakukan aplikasi ini</h2>
+<ul>
+<li>Aplikasi tidak mengumpulkan pengidentifikasi seperti IDFA, UDID, alamat MAC atau alamat email untuk pengembang.</li>
+<li>Aplikasi tidak mengirimkan telemetri, analitik, statistik penggunaan, atau laporan kerusakan kepada pengembang.</li>
+<li>Aplikasi ini tidak menggunakan SDK periklanan, SDK analitik, atau layanan pembuatan profil.</li>
+<li>Aplikasi tidak mengunggah aliran kamera, snapshot, rekaman, kredensial, atau konfigurasi ke server mana pun milik kami.</li>
+<li>Aplikasi ini tidak melacak Anda di seluruh aplikasi atau situs web.</li>
+<li>Aplikasi ini tidak menggunakan izin kamera Mac, mikrofon, lokasi, kontak, kalender, Bluetooth, atau perpustakaan Foto.</li>
+</ul>
+<h2>Komunikasi jaringan</h2>
+<p>Aplikasi ini hanya membuat koneksi jaringan yang diperlukan untuk fitur yang Anda gunakan:</p>
+<ol>
+<li>Ini terhubung langsung ke kamera, NVR dan DVR yang Anda konfigurasikan, baik di jaringan lokal Anda atau melalui DDNS / penerusan port. Koneksi ini dapat menggunakan ONVIF melalui aliran HTTP atau HTTPS dan RTSP. Lalu lintas langsung mengalir antara Mac Anda dan perangkat yang Anda konfigurasikan.</li>
+<li>Ia menggunakan teknologi penemuan jaringan lokal seperti Bonjour dan WS-Discovery untuk menemukan perangkat yang kompatibel di LAN Anda saat Anda meminta aplikasi untuk mencari.</li>
+<li>Ini menghubungi layanan StoreKit Apple untuk pembelian dalam aplikasi dan pemeriksaan hak. Pengembang tidak menerima ID Apple, nomor kartu, atau metode pembayaran Anda.</li>
+<li>Jika sinkronisasi waktu pemutaran diaktifkan, aplikasi dapat menghubungi <code>pool.ntp.org</code> melalui NTP untuk menghitung offset jam untuk pemutaran DVR yang akurat. Permintaan ini tidak digunakan untuk pelacakan dan tidak menyertakan kredensial kamera atau konfigurasi aplikasi Anda.</li>
+<li>Fitur Laporkan bug membuka klien email default Anda dengan pesan yang sudah diisi sebelumnya hanya setelah Anda menekan Kirim. Aplikasi itu sendiri tidak mengunggah laporan.</li>
+</ol>
+<h2>Keamanan transportasi</h2>
+<p>Banyak kamera IP dan DVR hanya mendukung sertifikat HTTP, RTSP, atau HTTPS yang ditandatangani sendiri. Oleh karena itu, aplikasi mengizinkan koneksi ke perangkat kamera yang dikonfigurasi pengguna yang mungkin tidak memenuhi default Keamanan Transportasi Aplikasi. Gunakan jaringan tepercaya, kata sandi kamera yang kuat, dan HTTPS jika perangkat Anda mendukungnya.</p>
+<h2>Pembelian dalam aplikasi</h2>
+<p>Fitur Pro dan Unlimited dibuka melalui sistem pembelian dalam aplikasi Apple menggunakan StoreKit. Verifikasi terjadi melalui API Apple, termasuk <code>Transaction.currentEntitlements</code> dan pembaruan transaksi. Aplikasi hanya menyimpan status kepemilikan yang dihasilkan secara lokal sehingga dapat mengaktifkan fitur yang dibeli.</p>
+<h2>Izin diminta oleh aplikasi</h2>
+<ul>
+<li>Local Network: diperlukan oleh macOS untuk menemukan dan terhubung ke kamera, NVR, dan DVR di jaringan lokal Anda. Anda dapat mencabutnya di System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Akses file yang dipilih pengguna: digunakan saat Anda memilih tempat untuk menyimpan atau mengimpor rekaman, snapshot, atau file cadangan perangkat. Jika Anda memilih folder penyimpanan persisten, aplikasi akan menyimpan bookmark dengan cakupan keamanan untuk folder tersebut. Aplikasi ini tidak mendapatkan akses umum ke seluruh disk Anda.</li>
+<li>Desktop atau folder lain: hanya digunakan ketika Anda secara eksplisit memilih folder tersebut sebagai tujuan. Aplikasi tidak meminta akses folder Desktop, Documents, atau Downloads yang luas.</li>
+<li>Notifikasi: opsional, digunakan untuk peringatan gerakan jika Anda mengaktifkannya.</li>
+<li>Kata sandi Touch ID, Face ID atau Mac: ditangani oleh macOS melalui LocalAuthentication untuk tindakan sensitif seperti mengungkapkan kata sandi kamera atau mengekspor data perangkat. Aplikasi tidak menerima data biometrik.</li>
+</ul>
+<h2>Mengekspor, mengimpor, dan mencadangkan konfigurasi</h2>
+<p>Aplikasi ini dapat mengekspor konfigurasi perangkat ke file<code>.ipcamvisionprobackup</code> yang Anda buat dan kelola. Ekspor saat ini menghilangkan bidang kata sandi ONVIF yang terpisah. Namun, jika Anda memasukkan RTSP, DDNS, atau URL streaming secara manual yang sudah berisi kredensial tertanam, URL tersebut dapat disertakan dalam cadangan karena merupakan bagian dari konfigurasi perangkat. Jika Anda mengimpor cadangan lama yang berisi kata sandi ONVIF, aplikasi mungkin membacanya satu kali untuk memigrasikannya ke penyimpanan aplikasi pribadi. Anda bertanggung jawab atas tempat Anda menyimpan file cadangan.</p>
+<h2>Laporkan fitur bug</h2>
+<p>Jendela Laporkan bug tidak mengirim data langsung dari aplikasi. Saat Anda menekan Kirim, aplikasi akan membuka klien email default Anda dengan email yang telah diisi sebelumnya yang dialamatkan ke lorys.lg@hotmail.it. Anda memutuskan apakah akan mengirimkannya. Email hanya berisi apa yang Anda ketik ditambah versi aplikasi dan versi macOS untuk debugging.</p>
+<h2>Anak-anak</h2>
+<p>Aplikasi ini ditujukan untuk khalayak umum. Kami tidak dengan sengaja mengumpulkan data tentang anak di bawah umur karena aplikasi tidak mengumpulkan data untuk pengembang.</p>
+<h2>Retensi dan penghapusan data</h2>
+<p>Data yang ditangani oleh app tetap ada di Mac Anda hingga Anda menghapusnya. Anda dapat menghapus data aplikasi dari Settings → Reset data, menghapus rekaman dan snapshot yang dihasilkan dari folder tersimpannya, atau menghapus instalan aplikasi.</p>
+<h2>Perubahan pada kebijakan ini</h2>
+<p>Perubahan di masa depan akan dipublikasikan di aplikasi dan, bila berlaku, di halaman kebijakan privasi online kanonik. Tanggal Terakhir diperbarui akan berubah ketika kebijakan diperbarui.</p>
+<h2>Kontak</h2>
+<p>Untuk pertanyaan tentang kebijakan ini, tulislah ke lorys.lg@hotmail.it.</p>
+<hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
+<p style="font-size:.82em;color:#888;margin-top:1em"><em>Versi online kanonik</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_id.html">https://lorysmay.github.io/Privacy-Policy/privacy_id.html</a></p>
+</body></html>
