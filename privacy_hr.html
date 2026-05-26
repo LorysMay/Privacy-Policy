@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Politika privatnosti</h1>
 <div class="meta">
 <div><strong>aplikacija</strong>: IPcamVision Pro</div>
-<div><strong>Developer</strong>: Lorenzo May</div>
-<div><strong>Kontakt</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Zadnje ažuriranje</strong>: May 25, 2026</div>
+<div><strong>Developer</strong>: LorysMay</div>
+<div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
+<div><strong>Zadnje ažuriranje</strong>: 25. svibnja 2026.</div>
 </div>
 <h2>Sažetak</h2>
 <p>IPcamVision Pro je lokalna macOS aplikacija za pregled, snimanje i upravljanje korisnički konfiguriranim IP kamerama, NVRs i DVRs. Aplikacija ne prikuplja osobne podatke za razvojnog programera, ne koristi analitiku, alate za praćenje oglašavanja ili usluge profiliranja i ne šalje podatke o vašoj kameri bilo kojem poslužitelju u našem vlasništvu. Konfiguracija uređaja, vjerodajnice, snimke, snimke i postavke ostaju na vašem Macu osim ako ih ne odlučite izvesti ili podijeliti.</p>
@@ -87,7 +96,7 @@
 <h2>Izvoz, uvoz i sigurnosno kopiranje konfiguracija</h2>
 <p>Aplikacija može izvesti konfiguraciju uređaja u datoteku<code>.ipcamvisionprobackup</code> koju vi izradite i kojom upravljate. Trenutačni izvozi izostavljaju zasebno polje lozinke ONVIF. Međutim, ako ste ručno unijeli RTSP, DDNS ili URL streama koji već sadrži ugrađene vjerodajnice, taj URL može biti uključen u sigurnosnu kopiju jer je dio konfiguracije uređaja. Ako uvezete stariju sigurnosnu kopiju koja sadrži ONVIF lozinku, aplikacija ju može jednom pročitati kako bi je migrirala u privatnu pohranu aplikacije. Vi ste odgovorni za to gdje pohranjujete sigurnosne kopije datoteka.</p>
 <h2>Prijavite značajku pogreške</h2>
-<p>Prozor Prijavi bug ne šalje podatke izravno iz aplikacije. Kada pritisnete Pošalji, aplikacija otvara vaš zadani klijent e-pošte s unaprijed ispunjenom e-poštom adresiranom na lorys.lg@hotmail.it. Vi odlučujete hoćete li ga poslati. E-pošta sadrži samo ono što ste upisali plus verziju aplikacije i macOS verziju za otklanjanje pogrešaka.</p>
+<p>Prozor Prijavi bug ne šalje podatke izravno iz aplikacije. Kada pritisnete Pošalji, aplikacija otvara vaš zadani klijent e-pošte s unaprijed ispunjenom e-poštom adresiranom na LorysMay@outlook.it. Vi odlučujete hoćete li ga poslati. E-pošta sadrži samo ono što ste upisali plus verziju aplikacije i macOS verziju za otklanjanje pogrešaka.</p>
 <h2>djeca</h2>
 <p>Aplikacija je namijenjena općoj publici. Ne prikupljamo svjesno podatke o maloljetnicima jer aplikacija ne prikuplja podatke za razvojnog programera.</p>
 <h2>Zadržavanje i brisanje podataka</h2>
@@ -95,7 +104,7 @@
 <h2>Promjene ove politike</h2>
 <p>Buduće promjene bit će objavljene u aplikaciji i, kada je primjenjivo, na kanonskoj stranici pravila o privatnosti na internetu. Datum zadnjeg ažuriranja promijenit će se kada se politika ažurira.</p>
 <h2>Kontakt</h2>
-<p>Za pitanja o ovoj politici pišite na lorys.lg@hotmail.it.</p>
+<p>Za pitanja o ovoj politici pišite na LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonska online verzija</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hr.html">https://lorysmay.github.io/Privacy-Policy/privacy_hr.html</a></p>
 </body></html>

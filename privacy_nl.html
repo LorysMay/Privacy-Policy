@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Privacybeleid</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Ontwikkelaar</strong>: Lorenzo May</div>
-<div><strong>Contact</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Laatst bijgewerkt</strong>: May 25, 2026</div>
+<div><strong>Ontwikkelaar</strong>: LorysMay</div>
+<div><strong>Contact</strong>: LorysMay@outlook.it</div>
+<div><strong>Laatst bijgewerkt</strong>: 25 mei 2026</div>
 </div>
 <h2>Samenvatting</h2>
 <p>IPcamVision Pro is een lokale macOS-app voor het bekijken, opnemen en beheren van door de gebruiker geconfigureerde IP-camera&#39;s, NVR&#39;s en DVR&#39;s. De app verzamelt geen persoonlijke gegevens voor de ontwikkelaar, maakt geen gebruik van analyses, advertentietrackers of profileringsdiensten en verzendt uw cameragegevens niet naar een server die eigendom is van ons. Apparaatconfiguratie, inloggegevens, opnamen, momentopnamen en voorkeuren blijven op uw Mac staan, tenzij u ervoor kiest ze te exporteren of te delen.</p>
@@ -87,7 +96,7 @@
 <h2>Configuraties exporteren, importeren en back-uppen</h2>
 <p>De app kan de apparaatconfiguratie exporteren naar een<code>.ipcamvisionprobackup</code>-bestand dat u maakt en beheert. Bij huidige exporten wordt het afzonderlijke ONVIF-wachtwoordveld weggelaten. Als u echter handmatig een RTSP-, DDNS- of stream-URL hebt ingevoerd die al ingebedde inloggegevens bevat, kan die URL worden opgenomen in de back-up omdat deze deel uitmaakt van de apparaatconfiguratie. Als u een oudere back-up importeert die een ONVIF-wachtwoord bevat, kan de app deze één keer lezen om deze naar de privé-app-opslag te migreren. U bent verantwoordelijk voor waar u back-upbestanden opslaat.</p>
 <h2>Rapporteer een bugfunctie</h2>
-<p>Het venster Een bug rapporteren verzendt geen gegevens rechtstreeks vanuit de app. Wanneer u op Verzenden drukt, opent de app uw standaard e-mailclient met een vooraf ingevulde e-mail geadresseerd aan lorys.lg@hotmail.it. Jij beslist of je het verzendt. De e-mail bevat alleen wat u hebt getypt, plus de app-versie en de macOS-versie voor foutopsporing.</p>
+<p>Het venster Een bug rapporteren verzendt geen gegevens rechtstreeks vanuit de app. Wanneer u op Verzenden drukt, opent de app uw standaard e-mailclient met een vooraf ingevulde e-mail geadresseerd aan LorysMay@outlook.it. Jij beslist of je het verzendt. De e-mail bevat alleen wat u hebt getypt, plus de app-versie en de macOS-versie voor foutopsporing.</p>
 <h2>Kinderen</h2>
 <p>De app is bedoeld voor een algemeen publiek. Wij verzamelen niet bewust gegevens over minderjarigen, omdat de app geen gegevens verzamelt voor de ontwikkelaar.</p>
 <h2>Bewaren en verwijderen van gegevens</h2>
@@ -95,7 +104,7 @@
 <h2>Wijzigingen in dit beleid</h2>
 <p>Toekomstige wijzigingen zullen worden gepubliceerd in de app en, indien van toepassing, op de canonieke online privacybeleidspagina. De datum voor het laatst bijgewerkt wordt gewijzigd wanneer het beleid wordt bijgewerkt.</p>
 <h2>Contact</h2>
-<p>Voor vragen over dit beleid kunt u schrijven naar lorys.lg@hotmail.it.</p>
+<p>Voor vragen over dit beleid kunt u schrijven naar LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonieke online versie</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_nl.html">https://lorysmay.github.io/Privacy-Policy/privacy_nl.html</a></p>
 </body></html>

@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Kebijakan Privasi</h1>
 <div class="meta">
 <div><strong>Aplikasi</strong>: IPcamVision Pro</div>
-<div><strong>Pengembang</strong>: Lorenzo May</div>
-<div><strong>Kontak</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Terakhir diperbarui</strong>: May 25, 2026</div>
+<div><strong>Pengembang</strong>: LorysMay</div>
+<div><strong>Kontak</strong>: LorysMay@outlook.it</div>
+<div><strong>Terakhir diperbarui</strong>: 25 Mei 2026</div>
 </div>
 <h2>Ringkasan</h2>
 <p>IPcamVision Pro adalah aplikasi macOS lokal untuk melihat, merekam, dan mengelola kamera IP yang dikonfigurasi pengguna, NVR, dan DVR. Aplikasi ini tidak mengumpulkan data pribadi untuk pengembang, tidak menggunakan analitik, pelacak iklan, atau layanan pembuatan profil, dan tidak mengirimkan data kamera Anda ke server mana pun milik kami. Konfigurasi perangkat, kredensial, rekaman, snapshot, dan preferensi tetap ada di Mac Anda kecuali Anda memilih untuk mengekspor atau membagikannya.</p>
@@ -87,7 +96,7 @@
 <h2>Mengekspor, mengimpor, dan mencadangkan konfigurasi</h2>
 <p>Aplikasi ini dapat mengekspor konfigurasi perangkat ke file<code>.ipcamvisionprobackup</code> yang Anda buat dan kelola. Ekspor saat ini menghilangkan bidang kata sandi ONVIF yang terpisah. Namun, jika Anda memasukkan RTSP, DDNS, atau URL streaming secara manual yang sudah berisi kredensial tertanam, URL tersebut dapat disertakan dalam cadangan karena merupakan bagian dari konfigurasi perangkat. Jika Anda mengimpor cadangan lama yang berisi kata sandi ONVIF, aplikasi mungkin membacanya satu kali untuk memigrasikannya ke penyimpanan aplikasi pribadi. Anda bertanggung jawab atas tempat Anda menyimpan file cadangan.</p>
 <h2>Laporkan fitur bug</h2>
-<p>Jendela Laporkan bug tidak mengirim data langsung dari aplikasi. Saat Anda menekan Kirim, aplikasi akan membuka klien email default Anda dengan email yang telah diisi sebelumnya yang dialamatkan ke lorys.lg@hotmail.it. Anda memutuskan apakah akan mengirimkannya. Email hanya berisi apa yang Anda ketik ditambah versi aplikasi dan versi macOS untuk debugging.</p>
+<p>Jendela Laporkan bug tidak mengirim data langsung dari aplikasi. Saat Anda menekan Kirim, aplikasi akan membuka klien email default Anda dengan email yang telah diisi sebelumnya yang dialamatkan ke LorysMay@outlook.it. Anda memutuskan apakah akan mengirimkannya. Email hanya berisi apa yang Anda ketik ditambah versi aplikasi dan versi macOS untuk debugging.</p>
 <h2>Anak-anak</h2>
 <p>Aplikasi ini ditujukan untuk khalayak umum. Kami tidak dengan sengaja mengumpulkan data tentang anak di bawah umur karena aplikasi tidak mengumpulkan data untuk pengembang.</p>
 <h2>Retensi dan penghapusan data</h2>
@@ -95,7 +104,7 @@
 <h2>Perubahan pada kebijakan ini</h2>
 <p>Perubahan di masa depan akan dipublikasikan di aplikasi dan, bila berlaku, di halaman kebijakan privasi online kanonik. Tanggal Terakhir diperbarui akan berubah ketika kebijakan diperbarui.</p>
 <h2>Kontak</h2>
-<p>Untuk pertanyaan tentang kebijakan ini, tulislah ke lorys.lg@hotmail.it.</p>
+<p>Untuk pertanyaan tentang kebijakan ini, tulislah ke LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Versi online kanonik</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_id.html">https://lorysmay.github.io/Privacy-Policy/privacy_id.html</a></p>
 </body></html>

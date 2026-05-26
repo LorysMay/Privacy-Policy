@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Dasar Privasi</h1>
 <div class="meta">
 <div><strong>Apl</strong>: IPcamVision Pro</div>
-<div><strong>pemaju</strong>: Lorenzo May</div>
-<div><strong>Kenalan</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Kemas kini terakhir</strong>: May 25, 2026</div>
+<div><strong>pemaju</strong>: LorysMay</div>
+<div><strong>Kenalan</strong>: LorysMay@outlook.it</div>
+<div><strong>Kemas kini terakhir</strong>: 25 Mei 2026</div>
 </div>
 <h2>Ringkasan</h2>
 <p>IPcamVision Pro ialah aplikasi macOS tempatan untuk melihat, merakam dan mengurus kamera IP yang dikonfigurasikan pengguna, NVRs dan DVRs. Apl ini tidak mengumpul data peribadi untuk pembangun, tidak menggunakan analitik, penjejak pengiklanan atau perkhidmatan pemprofilan dan tidak menghantar data kamera anda ke mana-mana pelayan yang dimiliki oleh kami. Konfigurasi peranti, bukti kelayakan, rakaman, syot kilat dan pilihan kekal pada Mac anda melainkan anda memilih untuk mengeksport atau berkongsinya.</p>
@@ -87,7 +96,7 @@
 <h2>Mengeksport, mengimport dan menyandarkan konfigurasi</h2>
 <p>Apl ini boleh mengeksport konfigurasi peranti ke fail<code>.ipcamvisionprobackup</code> yang anda buat dan urus. Eksport semasa meninggalkan medan kata laluan ONVIF yang berasingan. Walau bagaimanapun, jika anda memasukkan URL RTSP, DDNS atau strim secara manual yang sudah mengandungi bukti kelayakan terbenam, URL tersebut boleh disertakan dalam sandaran kerana ia merupakan sebahagian daripada konfigurasi peranti. Jika anda mengimport sandaran lama yang mengandungi kata laluan ONVIF, apl boleh membacanya sekali untuk memindahkannya ke storan apl peribadi. Anda bertanggungjawab untuk tempat anda menyimpan fail sandaran.</p>
 <h2>Laporkan ciri pepijat</h2>
-<p>Tetingkap Laporkan pepijat tidak menghantar data terus daripada apl. Apabila anda menekan Hantar, apl membuka klien mel lalai anda dengan e-mel pra-isi yang dialamatkan kepada lorys.lg@hotmail.it. Anda memutuskan sama ada untuk menghantarnya. E-mel hanya mengandungi perkara yang anda taip serta versi apl dan versi macOS untuk penyahpepijatan.</p>
+<p>Tetingkap Laporkan pepijat tidak menghantar data terus daripada apl. Apabila anda menekan Hantar, apl membuka klien mel lalai anda dengan e-mel pra-isi yang dialamatkan kepada LorysMay@outlook.it. Anda memutuskan sama ada untuk menghantarnya. E-mel hanya mengandungi perkara yang anda taip serta versi apl dan versi macOS untuk penyahpepijatan.</p>
 <h2>Kanak-kanak</h2>
 <p>Aplikasi ini bertujuan untuk khalayak umum. Kami tidak mengumpul data tentang kanak-kanak bawah umur secara sedar kerana apl itu tidak mengumpul data untuk pembangun.</p>
 <h2>Pengekalan dan pemadaman data</h2>
@@ -95,7 +104,7 @@
 <h2>Perubahan kepada dasar ini</h2>
 <p>Perubahan masa hadapan akan diterbitkan dalam apl dan, apabila berkenaan, pada halaman dasar privasi dalam talian berkanun. Tarikh kemas kini terakhir akan ditukar apabila dasar dikemas kini.</p>
 <h2>Kenalan</h2>
-<p>Untuk soalan tentang dasar ini, tulis kepada lorys.lg@hotmail.it.</p>
+<p>Untuk soalan tentang dasar ini, tulis kepada LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Versi dalam talian kanonik</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ms.html">https://lorysmay.github.io/Privacy-Policy/privacy_ms.html</a></p>
 </body></html>

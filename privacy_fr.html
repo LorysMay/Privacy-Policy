@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>politique de confidentialité</h1>
 <div class="meta">
 <div><strong>Application</strong>: IPcamVision Pro</div>
-<div><strong>Promoteur</strong>: Lorenzo May</div>
-<div><strong>Contact</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Dernière mise à jour</strong>: May 25, 2026</div>
+<div><strong>Promoteur</strong>: LorysMay</div>
+<div><strong>Contact</strong>: LorysMay@outlook.it</div>
+<div><strong>Dernière mise à jour</strong>: 25 mai 2026</div>
 </div>
 <h2>Résumé</h2>
 <p>IPcamVision Pro est une application locale macOS permettant de visualiser, d&#39;enregistrer et de gérer les caméras IP configurées par l&#39;utilisateur, les NVR et les DVR. L&#39;application ne collecte pas de données personnelles pour le développeur, n&#39;utilise pas de services d&#39;analyse, de suivi publicitaire ou de profilage, et n&#39;envoie les données de votre caméra à aucun serveur nous appartenant. La configuration de l&#39;appareil, les informations d&#39;identification, les enregistrements, les instantanés et les préférences restent sur votre Mac, sauf si vous choisissez de les exporter ou de les partager.</p>
@@ -87,7 +96,7 @@
 <h2>Exportation, importation et sauvegarde des configurations</h2>
 <p>L&#39;application peut exporter la configuration de l&#39;appareil vers un fichier<code>.ipcamvisionprobackup</code> que vous créez et gérez. Les exportations actuelles omettent le champ de mot de passe ONVIF distinct. Toutefois, si vous avez saisi manuellement une URL RTSP, DDNS ou une URL de flux contenant déjà des informations d&#39;identification intégrées, cette URL peut être incluse dans la sauvegarde car elle fait partie de la configuration du périphérique. Si vous importez une ancienne sauvegarde contenant un mot de passe ONVIF, l&#39;application peut la lire une fois pour la migrer vers le stockage d&#39;application privé. Vous êtes responsable de l&#39;endroit où vous stockez les fichiers de sauvegarde.</p>
 <h2>Signaler une fonctionnalité de bug</h2>
-<p>La fenêtre Signaler un bug n’envoie pas de données directement depuis l’application. Lorsque vous appuyez sur Envoyer, l&#39;application ouvre votre client de messagerie par défaut avec un e-mail pré-rempli adressé à lorys.lg@hotmail.it. Vous décidez si vous souhaitez l&#39;envoyer. L&#39;e-mail contient uniquement ce que vous avez tapé, ainsi que la version de l&#39;application et la version macOS pour le débogage.</p>
+<p>La fenêtre Signaler un bug n’envoie pas de données directement depuis l’application. Lorsque vous appuyez sur Envoyer, l&#39;application ouvre votre client de messagerie par défaut avec un e-mail pré-rempli adressé à LorysMay@outlook.it. Vous décidez si vous souhaitez l&#39;envoyer. L&#39;e-mail contient uniquement ce que vous avez tapé, ainsi que la version de l&#39;application et la version macOS pour le débogage.</p>
 <h2>Enfants</h2>
 <p>L&#39;application est destinée à un public général. Nous ne collectons pas sciemment de données sur les mineurs car l&#39;application ne collecte pas de données pour le développeur.</p>
 <h2>Conservation et suppression des données</h2>
@@ -95,7 +104,7 @@
 <h2>Modifications de cette politique</h2>
 <p>Les modifications futures seront publiées dans l&#39;application et, le cas échéant, sur la page canonique de politique de confidentialité en ligne. La date de la dernière mise à jour sera modifiée lorsque la politique sera mise à jour.</p>
 <h2>Contact</h2>
-<p>Pour toute question concernant cette politique, écrivez à lorys.lg@hotmail.it.</p>
+<p>Pour toute question concernant cette politique, écrivez à LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Version canonique en ligne</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_fr.html">https://lorysmay.github.io/Privacy-Policy/privacy_fr.html</a></p>
 </body></html>

@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Zásady ochrany osobních údajů</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Vývojář</strong>: Lorenzo May</div>
-<div><strong>Kontakt</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Naposledy aktualizováno</strong>: May 25, 2026</div>
+<div><strong>Vývojář</strong>: LorysMay</div>
+<div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
+<div><strong>Naposledy aktualizováno</strong>: 25. května 2026</div>
 </div>
 <h2>Shrnutí</h2>
 <p>IPcamVision Pro je místní aplikace macOS pro prohlížení, záznam a správu uživatelsky konfigurovaných IP kamer NVR a DVR. Aplikace neshromažďuje osobní údaje pro vývojáře, nepoužívá analytické, reklamní sledovače ani profilovací služby a neposílá data z vašich kamer na žádný server, který vlastníme. Konfigurace zařízení, přihlašovací údaje, nahrávky, snímky a předvolby zůstanou na vašem Macu, pokud se nerozhodnete je exportovat nebo sdílet.</p>
@@ -87,7 +96,7 @@
 <h2>Export, import a zálohování konfigurací</h2>
 <p>Aplikace může exportovat konfiguraci zařízení do souboru<code>.ipcamvisionprobackup</code>, který vytvoříte a spravujete. Aktuální exporty vynechávají samostatné pole hesla ONVIF. Pokud jste však ručně zadali adresu URL RTSP, DDNS nebo stream, která již obsahuje vložená pověření, může být tato adresa URL zahrnuta do zálohy, protože je součástí konfigurace zařízení. Pokud importujete starší zálohu, která obsahuje heslo ONVIF, aplikace si ji může jednou přečíst, aby ji migrovala do soukromého úložiště aplikace. Jste odpovědní za to, kam ukládáte záložní soubory.</p>
 <h2>Nahlásit chybu funkce</h2>
-<p>Okno Nahlásit chybu neodesílá data přímo z aplikace. Když stisknete Odeslat, aplikace otevře vašeho výchozího poštovního klienta s předvyplněným e-mailem adresovaným na lorys.lg@hotmail.it. Vy se rozhodnete, zda jej pošlete. E-mail obsahuje pouze to, co jste zadali, plus verzi aplikace a verzi macOS pro ladění.</p>
+<p>Okno Nahlásit chybu neodesílá data přímo z aplikace. Když stisknete Odeslat, aplikace otevře vašeho výchozího poštovního klienta s předvyplněným e-mailem adresovaným na LorysMay@outlook.it. Vy se rozhodnete, zda jej pošlete. E-mail obsahuje pouze to, co jste zadali, plus verzi aplikace a verzi macOS pro ladění.</p>
 <h2>Děti</h2>
 <p>Aplikace je určena pro širokou veřejnost. Vědomě neshromažďujeme údaje o nezletilých, protože aplikace neshromažďuje údaje pro vývojáře.</p>
 <h2>Uchovávání a mazání dat</h2>
@@ -95,7 +104,7 @@
 <h2>Změny těchto zásad</h2>
 <p>Budoucí změny budou zveřejněny v aplikaci a případně na kanonické stránce zásad ochrany soukromí online. Datum poslední aktualizace se změní při aktualizaci zásad.</p>
 <h2>Kontakt</h2>
-<p>Máte-li dotazy týkající se těchto zásad, pište na adresu lorys.lg@hotmail.it.</p>
+<p>Máte-li dotazy týkající se těchto zásad, pište na adresu LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonická online verze</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_cs.html">https://lorysmay.github.io/Privacy-Policy/privacy_cs.html</a></p>
 </body></html>

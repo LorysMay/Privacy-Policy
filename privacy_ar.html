@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>سياسة الخصوصية</h1>
 <div class="meta">
 <div><strong>برنامج</strong>: IPcamVision Pro</div>
-<div><strong>المطور</strong>: Lorenzo May</div>
-<div><strong>اتصال</strong>: lorys.lg@hotmail.it</div>
-<div><strong>آخر تحديث</strong>: May 25, 2026</div>
+<div><strong>المطور</strong>: LorysMay</div>
+<div><strong>اتصال</strong>: LorysMay@outlook.it</div>
+<div><strong>آخر تحديث</strong>: 25 مايو 2026</div>
 </div>
 <h2>ملخص</h2>
 <p>IPcamVision Pro هو تطبيق macOS محلي لعرض وتسجيل وإدارة كاميرات IP التي قام المستخدم بتكوينها، NVRs وDVRs. لا يجمع التطبيق بيانات شخصية للمطور، ولا يستخدم التحليلات أو أدوات تتبع الإعلانات أو خدمات ملفات التعريف، ولا يرسل بيانات الكاميرا الخاصة بك إلى أي خادم مملوك لنا. تظل تكوينات الجهاز وبيانات الاعتماد والتسجيلات واللقطات والتفضيلات موجودة على جهاز Mac الخاص بك ما لم تختر تصديرها أو مشاركتها.</p>
@@ -87,7 +96,7 @@
 <h2>تصدير واستيراد ونسخ التكوينات احتياطيًا</h2>
 <p>يمكن للتطبيق تصدير تكوين الجهاز إلى ملف<code>.ipcamvisionprobackup</code> الذي تقوم بإنشائه وإدارته. تحذف الصادرات الحالية حقل كلمة المرور المنفصل ONVIF. ومع ذلك، إذا قمت بإدخال RTSP أو DDNS أو عنوان URL للبث يدويًا والذي يحتوي بالفعل على بيانات اعتماد مضمنة، فيمكن تضمين عنوان URL هذا في النسخة الاحتياطية لأنه جزء من تكوين الجهاز. إذا قمت باستيراد نسخة احتياطية قديمة تحتوي على كلمة مرور ONVIF، فقد يقرأها التطبيق مرة واحدة لترحيلها إلى مساحة تخزين التطبيق الخاصة. أنت مسؤول عن مكان تخزين ملفات النسخ الاحتياطي.</p>
 <h2>الإبلاغ عن ميزة الخلل</h2>
-<p>لا تقوم نافذة الإبلاغ عن خطأ بإرسال البيانات مباشرة من التطبيق. عندما تضغط على إرسال، يفتح التطبيق عميل البريد الافتراضي الخاص بك برسالة بريد إلكتروني مملوءة مسبقًا موجهة إلى lorys.lg@hotmail.it. عليك أن تقرر ما إذا كنت تريد إرسالها. يحتوي البريد الإلكتروني فقط على ما كتبته بالإضافة إلى إصدار التطبيق وإصدار macOS لتصحيح الأخطاء.</p>
+<p>لا تقوم نافذة الإبلاغ عن خطأ بإرسال البيانات مباشرة من التطبيق. عندما تضغط على إرسال، يفتح التطبيق عميل البريد الافتراضي الخاص بك برسالة بريد إلكتروني مملوءة مسبقًا موجهة إلى LorysMay@outlook.it. عليك أن تقرر ما إذا كنت تريد إرسالها. يحتوي البريد الإلكتروني فقط على ما كتبته بالإضافة إلى إصدار التطبيق وإصدار macOS لتصحيح الأخطاء.</p>
 <h2>أطفال</h2>
 <p>التطبيق مخصص للجمهور العام. نحن لا نجمع بيانات عن القاصرين عن عمد لأن التطبيق لا يجمع بيانات للمطور.</p>
 <h2>الاحتفاظ بالبيانات وحذفها</h2>
@@ -95,7 +104,7 @@
 <h2>التغييرات في هذه السياسة</h2>
 <p>سيتم نشر التغييرات المستقبلية في التطبيق، وعند الاقتضاء، على صفحة سياسة الخصوصية الأساسية عبر الإنترنت. سيتم تغيير تاريخ آخر تحديث عندما يتم تحديث السياسة.</p>
 <h2>اتصال</h2>
-<p>إذا كانت لديك أسئلة حول هذه السياسة، فاكتب إلى lorys.lg@hotmail.it.</p>
+<p>إذا كانت لديك أسئلة حول هذه السياسة، فاكتب إلى LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>النسخة الإلكترونية الكنسي</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ar.html">https://lorysmay.github.io/Privacy-Policy/privacy_ar.html</a></p>
 </body></html>

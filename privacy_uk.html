@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Політика конфіденційності</h1>
 <div class="meta">
 <div><strong>додаток</strong>: IPcamVision Pro</div>
-<div><strong>Розробник</strong>: Lorenzo May</div>
-<div><strong>контакт</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Останнє оновлення</strong>: May 25, 2026</div>
+<div><strong>Розробник</strong>: LorysMay</div>
+<div><strong>контакт</strong>: LorysMay@outlook.it</div>
+<div><strong>Останнє оновлення</strong>: 25 травня 2026</div>
 </div>
 <h2>Резюме</h2>
 <p>IPcamVision Pro — це локальна програма macOS для перегляду, запису та керування IP-камерами, налаштованими користувачем, NVR та DVR. Додаток не збирає особисті дані для розробника, не використовує аналітику, засоби відстеження реклами чи служби профілювання та не надсилає дані вашої камери на будь-який сервер, який належить нам. Конфігурація пристрою, облікові дані, записи, знімки та параметри залишаються на вашому Mac, доки ви не вирішите їх експортувати або поділитися ними.</p>
@@ -87,7 +96,7 @@
 <h2>Експорт, імпорт і резервне копіювання конфігурацій</h2>
 <p>Програма може експортувати конфігурацію пристрою у файл<code>.ipcamvisionprobackup</code>, який ви створюєте та керуєте ним. Поточні експорти пропускають окреме поле пароля ONVIF. Однак якщо ви вручну ввели RTSP, DDNS або URL-адресу потоку, яка вже містить вбудовані облікові дані, цю URL-адресу можна включити в резервну копію, оскільки вона є частиною конфігурації пристрою. Якщо ви імпортуєте старішу резервну копію, яка містить пароль ONVIF, програма може прочитати її один раз, щоб перенести в приватне сховище програми. Ви несете відповідальність за місце зберігання резервних копій файлів.</p>
 <h2>Повідомити про помилку</h2>
-<p>Вікно звіту про помилку не надсилає дані безпосередньо з програми. Коли ви натискаєте «Надіслати», програма відкриває ваш поштовий клієнт за умовчанням із попередньо заповненою електронною адресою на lorys.lg@hotmail.it. Вам вирішувати, чи надсилати його. Електронний лист містить лише те, що ви ввели, а також версію програми та версію macOS для налагодження.</p>
+<p>Вікно звіту про помилку не надсилає дані безпосередньо з програми. Коли ви натискаєте «Надіслати», програма відкриває ваш поштовий клієнт за умовчанням із попередньо заповненою електронною адресою на LorysMay@outlook.it. Вам вирішувати, чи надсилати його. Електронний лист містить лише те, що ви ввели, а також версію програми та версію macOS для налагодження.</p>
 <h2>діти</h2>
 <p>Додаток призначений для широкої аудиторії. Ми свідомо не збираємо дані про неповнолітніх, оскільки програма не збирає дані для розробника.</p>
 <h2>Зберігання та видалення даних</h2>
@@ -95,7 +104,7 @@
 <h2>Зміни до цієї політики</h2>
 <p>Майбутні зміни буде опубліковано в програмі та, якщо це можливо, на канонічній сторінці політики конфіденційності в Інтернеті. Дата останнього оновлення буде змінена під час оновлення політики.</p>
 <h2>контакт</h2>
-<p>Із запитаннями щодо цієї політики пишіть на lorys.lg@hotmail.it.</p>
+<p>Із запитаннями щодо цієї політики пишіть на LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Канонічна онлайн версія</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_uk.html">https://lorysmay.github.io/Privacy-Policy/privacy_uk.html</a></p>
 </body></html>

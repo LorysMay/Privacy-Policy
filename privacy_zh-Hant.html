@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>隱私權政策</h1>
 <div class="meta">
 <div><strong>應用程式</strong>: IPcamVision Pro</div>
-<div><strong>開發商</strong>: Lorenzo May</div>
-<div><strong>接觸</strong>: lorys.lg@hotmail.it</div>
-<div><strong>最後更新</strong>: May 25, 2026</div>
+<div><strong>開發商</strong>: LorysMay</div>
+<div><strong>接觸</strong>: LorysMay@outlook.it</div>
+<div><strong>最後更新</strong>: 2026年5月25日</div>
 </div>
 <h2>概括</h2>
 <p>IPcamVision Pro 是一款本機 macOS 應用程序，用於檢視、錄製和管理使用者配置的 IP 攝影機、NVR 和 DVR。該應用程式不會為開發者收集個人數據，不會使用分析、廣告追蹤器或分析服務，也不會將您的相機數據發送到我們擁有的任何伺服器。裝置配置、憑證、錄音、快照和偏好設定都會保留在您的 Mac 上，除非您選擇匯出或共用它們。</p>
@@ -87,7 +96,7 @@
 <h2>匯出、匯入和備份配置</h2>
 <p>該應用程式可以將裝置配置匯出到您建立和管理的<code>.ipcamvisionprobackup</code> 檔案。目前導出省略了單獨的 ONVIF 密碼欄位。但是，如果您手動輸入已包含嵌入憑證的 RTSP、DDNS 或串流 URL，則該 URL 可以包含在備份中，因為它是裝置配置的一部分。如果您匯入包含 ONVIF 密碼的舊備份，應用程式可能會讀取一次並將其遷移到私有應用程式儲存中。您負責儲存備份檔案的位置。</p>
 <h2>報告錯誤功能</h2>
-<p>報告錯誤視窗不會直接從應用程式發送資料。當您按下「傳送」時，應用程式將開啟您的預設郵件用戶端，其中包含一封預先填寫的電子郵件，地址為 lorys.lg@hotmail.it。您決定是否發送。該電子郵件僅包含您鍵入的內容以及用於偵錯的應用程式版本和 macOS 版本。</p>
+<p>報告錯誤視窗不會直接從應用程式發送資料。當您按下「傳送」時，應用程式將開啟您的預設郵件用戶端，其中包含一封預先填寫的電子郵件，地址為 LorysMay@outlook.it。您決定是否發送。該電子郵件僅包含您鍵入的內容以及用於偵錯的應用程式版本和 macOS 版本。</p>
 <h2>孩子們</h2>
 <p>該應用程式面向一般受眾。我們不會故意收集有關未成年人的數據，因為該應用程式不會為開發者收集數據。</p>
 <h2>資料保留和刪除</h2>
@@ -95,7 +104,7 @@
 <h2>本政策的變更</h2>
 <p>未來的變更將在應用程式中發布，並在適用時在規範的線上隱私權政策頁面上發布。政策更新時，最後更新日期將會變更。</p>
 <h2>接觸</h2>
-<p>如果對本政策有疑問，請寫信給 lorys.lg@hotmail.it。</p>
+<p>如果對本政策有疑問，請寫信給 LorysMay@outlook.it。</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>規範線上版本</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_zh-Hant.html">https://lorysmay.github.io/Privacy-Policy/privacy_zh-Hant.html</a></p>
 </body></html>

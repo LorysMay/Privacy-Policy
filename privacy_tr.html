@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Gizlilik Politikası</h1>
 <div class="meta">
 <div><strong>Uygulama</strong>: IPcamVision Pro</div>
-<div><strong>Geliştirici</strong>: Lorenzo May</div>
-<div><strong>Temas etmek</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Son güncelleme</strong>: May 25, 2026</div>
+<div><strong>Geliştirici</strong>: LorysMay</div>
+<div><strong>Temas etmek</strong>: LorysMay@outlook.it</div>
+<div><strong>Son güncelleme</strong>: 25 Mayıs 2026</div>
 </div>
 <h2>Özet</h2>
 <p>IPcamVision Pro, kullanıcı tarafından yapılandırılan IP kameraları, NVR&#39;leri ve DVR&#39;leri görüntülemek, kaydetmek ve yönetmek için kullanılan yerel bir macOS uygulamasıdır. Uygulama, geliştiricinin kişisel verilerini toplamaz, analizleri, reklam izleyicileri veya profil oluşturma hizmetlerini kullanmaz ve kamera verilerinizi tarafımıza ait herhangi bir sunucuya göndermez. Cihaz yapılandırması, kimlik bilgileri, kayıtlar, anlık görüntüler ve tercihler, siz bunları dışa aktarmayı veya paylaşmayı seçmediğiniz sürece Mac&#39;inizde kalır.</p>
@@ -87,7 +96,7 @@
 <h2>Yapılandırmaları dışa aktarma, içe aktarma ve yedekleme</h2>
 <p>Uygulama, cihaz yapılandırmasını oluşturduğunuz ve yönettiğiniz bir<code>.ipcamvisionprobackup</code> dosyasına aktarabilir. Mevcut dışa aktarımlarda ayrı ONVIF şifre alanı atlanır. Ancak, zaten katıştırılmış kimlik bilgileri içeren bir RTSP, DDNS veya akış URL&#39;sini manuel olarak girdiyseniz bu URL, cihaz yapılandırmasının bir parçası olduğundan yedeklemeye dahil edilebilir. ONVIF parolası içeren eski bir yedeği içe aktarırsanız uygulama, onu özel uygulama depolama alanına taşımak için onu bir kez okuyabilir. Yedekleme dosyalarını nerede saklayacağınızdan siz sorumlusunuz.</p>
 <h2>Hata bildirme özelliği</h2>
-<p>Hata bildir penceresi doğrudan uygulamadan veri göndermez. Gönder&#39;e bastığınızda uygulama, lorys.lg@hotmail.it adresine önceden doldurulmuş bir e-postayla varsayılan posta istemcinizi açar. Gönderip göndermeyeceğinize siz karar verin. E-posta yalnızca yazdıklarınızı ve hata ayıklama için uygulama sürümünü ve macOS sürümünü içerir.</p>
+<p>Hata bildir penceresi doğrudan uygulamadan veri göndermez. Gönder&#39;e bastığınızda uygulama, LorysMay@outlook.it adresine önceden doldurulmuş bir e-postayla varsayılan posta istemcinizi açar. Gönderip göndermeyeceğinize siz karar verin. E-posta yalnızca yazdıklarınızı ve hata ayıklama için uygulama sürümünü ve macOS sürümünü içerir.</p>
 <h2>Çocuklar</h2>
 <p>Uygulama genel bir kitleye yöneliktir. Uygulama, geliştirici için veri toplamadığı için reşit olmayan kişiler hakkında bilerek veri toplamıyoruz.</p>
 <h2>Veri saklama ve silme</h2>
@@ -95,7 +104,7 @@
 <h2>Bu politikadaki değişiklikler</h2>
 <p>Gelecekteki değişiklikler uygulamada ve uygun olduğunda standart çevrimiçi gizlilik politikası sayfasında yayınlanacaktır. Politika güncellendiğinde Son güncelleme tarihi değişecektir.</p>
 <h2>Temas etmek</h2>
-<p>Bu politikayla ilgili sorularınız için lorys.lg@hotmail.it adresine yazın.</p>
+<p>Bu politikayla ilgili sorularınız için LorysMay@outlook.it adresine yazın.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonik çevrimiçi sürüm</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_tr.html">https://lorysmay.github.io/Privacy-Policy/privacy_tr.html</a></p>
 </body></html>

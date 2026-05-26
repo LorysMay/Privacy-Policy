@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Adatvédelmi szabályzat</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Fejlesztő</strong>: Lorenzo May</div>
-<div><strong>Érintkezés</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Utoljára frissítve</strong>: May 25, 2026</div>
+<div><strong>Fejlesztő</strong>: LorysMay</div>
+<div><strong>Érintkezés</strong>: LorysMay@outlook.it</div>
+<div><strong>Utoljára frissítve</strong>: 2026. május 25.</div>
 </div>
 <h2>Összegzés</h2>
 <p>A IPcamVision Pro egy helyi macOS alkalmazás a felhasználó által konfigurált IP-kamerák, NVR és DVR megtekintésére, rögzítésére és kezelésére. Az alkalmazás nem gyűjt személyes adatokat a fejlesztő számára, nem használ elemzőket, hirdetéskövetőket vagy profilalkotási szolgáltatásokat, és nem küldi el a kamera adatait a tulajdonunkban lévő szerverekre. Az eszközkonfiguráció, a hitelesítési adatok, a felvételek, a pillanatképek és a beállítások a Mac-en maradnak, hacsak nem exportálja vagy megosztja őket.</p>
@@ -87,7 +96,7 @@
 <h2>Konfigurációk exportálása, importálása és biztonsági mentése</h2>
 <p>Az alkalmazás exportálhatja az eszközkonfigurációt egy Ön által létrehozott és kezelt<code>.ipcamvisionprobackup</code> fájlba. A jelenlegi exportálásból kimarad a különálló ONVIF jelszómező. Ha azonban manuálisan adott meg egy RTSP, DDNS vagy adatfolyam URL-címet, amely már tartalmaz beágyazott hitelesítő adatokat, akkor ez az URL szerepelhet a biztonsági másolatban, mivel az eszközkonfiguráció része. Ha egy régebbi biztonsági másolatot importál, amely ONVIF jelszót tartalmaz, az alkalmazás egyszer elolvashatja azt, hogy áttelepítse a privát alkalmazástárhelyre. Ön felelős azért, hogy hol tárolja a biztonsági mentési fájlokat.</p>
 <h2>Hibajelentés bejelentése</h2>
-<p>A Hibajelentés ablak nem küld adatokat közvetlenül az alkalmazásból. Ha megnyomja a Küldés gombot, az alkalmazás megnyitja az alapértelmezett levelezőprogramot egy előre kitöltött e-mail-címmel a lorys.lg@hotmail.it címre. Ön dönti el, hogy elküldi-e. Az e-mail csak azt tartalmazza, amit beírt, valamint az alkalmazásverziót és a macOS verziót a hibakereséshez.</p>
+<p>A Hibajelentés ablak nem küld adatokat közvetlenül az alkalmazásból. Ha megnyomja a Küldés gombot, az alkalmazás megnyitja az alapértelmezett levelezőprogramot egy előre kitöltött e-mail-címmel a LorysMay@outlook.it címre. Ön dönti el, hogy elküldi-e. Az e-mail csak azt tartalmazza, amit beírt, valamint az alkalmazásverziót és a macOS verziót a hibakereséshez.</p>
 <h2>Gyermekek</h2>
 <p>Az alkalmazás az általános közönség számára készült. Tudatosan nem gyűjtünk adatokat kiskorúakról, mert az alkalmazás nem gyűjt adatokat a fejlesztő számára.</p>
 <h2>Adatok megőrzése és törlése</h2>
@@ -95,7 +104,7 @@
 <h2>A szabályzat változásai</h2>
 <p>A jövőbeni módosításokat az alkalmazásban és adott esetben a kanonikus online adatvédelmi irányelvek oldalán teszik közzé. Az utolsó frissítés dátuma a szabályzat frissítésekor módosul.</p>
 <h2>Érintkezés</h2>
-<p>Ha kérdése van a szabályzattal kapcsolatban, írjon a lorys.lg@hotmail.it címre.</p>
+<p>Ha kérdése van a szabályzattal kapcsolatban, írjon a LorysMay@outlook.it címre.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online verzió</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hu.html">https://lorysmay.github.io/Privacy-Policy/privacy_hu.html</a></p>
 </body></html>

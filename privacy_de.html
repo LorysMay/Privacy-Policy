@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Datenschutzrichtlinie</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Entwickler</strong>: Lorenzo May</div>
-<div><strong>Kontakt</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Zuletzt aktualisiert</strong>: May 25, 2026</div>
+<div><strong>Entwickler</strong>: LorysMay</div>
+<div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
+<div><strong>Zuletzt aktualisiert</strong>: 25. Mai 2026</div>
 </div>
 <h2>Zusammenfassung</h2>
 <p>IPcamVision Pro ist eine lokale macOS-App zum Anzeigen, Aufzeichnen und Verwalten benutzerkonfigurierter IP-Kameras, NVRs und DVRs. Die App sammelt keine personenbezogenen Daten für den Entwickler, verwendet keine Analyse-, Werbe-Tracker- oder Profilierungsdienste und sendet Ihre Kameradaten nicht an einen Server, der uns gehört. Gerätekonfiguration, Anmeldeinformationen, Aufzeichnungen, Schnappschüsse und Einstellungen bleiben auf Ihrem Mac, es sei denn, Sie entscheiden sich für den Export oder die Freigabe.</p>
@@ -87,7 +96,7 @@
 <h2>Konfigurationen exportieren, importieren und sichern</h2>
 <p>Die App kann die Gerätekonfiguration in eine<code>.ipcamvisionprobackup</code>-Datei exportieren, die Sie erstellen und verwalten. Bei aktuellen Exporten fehlt das separate ONVIF-Passwortfeld. Wenn Sie jedoch manuell eine RTSP-, DDNS- oder Stream-URL eingegeben haben, die bereits eingebettete Anmeldeinformationen enthält, kann diese URL in die Sicherung einbezogen werden, da sie Teil der Gerätekonfiguration ist. Wenn Sie ein älteres Backup importieren, das ein ONVIF-Passwort enthält, liest die App es möglicherweise einmal, um es in den privaten App-Speicher zu migrieren. Sie sind dafür verantwortlich, wo Sie Sicherungsdateien speichern.</p>
 <h2>Melden Sie eine Fehlerfunktion</h2>
-<p>Das Fenster „Fehler melden“ sendet keine Daten direkt von der App. Wenn Sie auf „Senden“ klicken, öffnet die App Ihren Standard-Mail-Client mit einer vorab ausgefüllten E-Mail an lorys.lg@hotmail.it. Sie entscheiden, ob Sie es versenden möchten. Die E-Mail enthält nur das, was Sie eingegeben haben, sowie die App-Version und die macOS-Version zum Debuggen.</p>
+<p>Das Fenster „Fehler melden“ sendet keine Daten direkt von der App. Wenn Sie auf „Senden“ klicken, öffnet die App Ihren Standard-Mail-Client mit einer vorab ausgefüllten E-Mail an LorysMay@outlook.it. Sie entscheiden, ob Sie es versenden möchten. Die E-Mail enthält nur das, was Sie eingegeben haben, sowie die App-Version und die macOS-Version zum Debuggen.</p>
 <h2>Kinder</h2>
 <p>Die App ist für ein allgemeines Publikum gedacht. Wir sammeln wissentlich keine Daten über Minderjährige, da die App keine Daten für den Entwickler sammelt.</p>
 <h2>Datenaufbewahrung und -löschung</h2>
@@ -95,7 +104,7 @@
 <h2>Änderungen an dieser Richtlinie</h2>
 <p>Zukünftige Änderungen werden in der App und gegebenenfalls auf der Seite mit den Online-Datenschutzrichtlinien von Canonical veröffentlicht. Das Datum der letzten Aktualisierung wird geändert, wenn die Richtlinie aktualisiert wird.</p>
 <h2>Kontakt</h2>
-<p>Bei Fragen zu dieser Richtlinie schreiben Sie an lorys.lg@hotmail.it.</p>
+<p>Bei Fragen zu dieser Richtlinie schreiben Sie an LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonische Online-Version</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_de.html">https://lorysmay.github.io/Privacy-Policy/privacy_de.html</a></p>
 </body></html>

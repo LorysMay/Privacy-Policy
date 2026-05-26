@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Sekretesspolicy</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Framkallare</strong>: Lorenzo May</div>
-<div><strong>Kontakta</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Senast uppdaterad</strong>: May 25, 2026</div>
+<div><strong>Framkallare</strong>: LorysMay</div>
+<div><strong>Kontakta</strong>: LorysMay@outlook.it</div>
+<div><strong>Senast uppdaterad</strong>: 25 maj 2026</div>
 </div>
 <h2>Sammanfattning</h2>
 <p>IPcamVision Pro är en lokal macOS-app för visning, inspelning och hantering av användarkonfigurerade IP-kameror, NVR och DVR. Appen samlar inte in personuppgifter för utvecklaren, använder inte analyser, reklamspårare eller profileringstjänster och skickar inte din kameradata till någon server som ägs av oss. Enhetskonfiguration, autentiseringsuppgifter, inspelningar, ögonblicksbilder och inställningar stannar på din Mac om du inte väljer att exportera eller dela dem.</p>
@@ -87,7 +96,7 @@
 <h2>Exportera, importera och säkerhetskopiera konfigurationer</h2>
 <p>Appen kan exportera enhetskonfiguration till en<code>.ipcamvisionprobackup</code>-fil som du skapar och hanterar. Aktuell export utelämnar det separata lösenordsfältet ONVIF. Men om du manuellt angav en RTSP, DDNS eller stream-URL som redan innehåller inbäddade autentiseringsuppgifter, kan den URL:en inkluderas i säkerhetskopian eftersom den är en del av enhetskonfigurationen. Om du importerar en äldre säkerhetskopia som innehåller ett ONVIF-lösenord kan appen läsa den en gång för att migrera den till privat applagring. Du ansvarar för var du lagrar säkerhetskopior.</p>
 <h2>Rapportera en buggfunktion</h2>
-<p>Fönstret Rapportera ett fel skickar inte data direkt från appen. När du trycker på Skicka öppnar appen din standardpostklient med en förifylld e-post adresserad till lorys.lg@hotmail.it. Du bestämmer om du vill skicka den. E-postmeddelandet innehåller bara det du skrivit plus appversion och macOS-version för felsökning.</p>
+<p>Fönstret Rapportera ett fel skickar inte data direkt från appen. När du trycker på Skicka öppnar appen din standardpostklient med en förifylld e-post adresserad till LorysMay@outlook.it. Du bestämmer om du vill skicka den. E-postmeddelandet innehåller bara det du skrivit plus appversion och macOS-version för felsökning.</p>
 <h2>Barn</h2>
 <p>Appen är avsedd för en allmän publik. Vi samlar inte medvetet in data om minderåriga eftersom appen inte samlar in data för utvecklaren.</p>
 <h2>Datalagring och radering</h2>
@@ -95,7 +104,7 @@
 <h2>Ändringar av denna policy</h2>
 <p>Framtida ändringar kommer att publiceras i appen och, i förekommande fall, på den kanoniska webbsidan för sekretesspolicy. Datumet för senaste uppdatering kommer att ändras när policyn uppdateras.</p>
 <h2>Kontakta</h2>
-<p>För frågor om denna policy, skriv till lorys.lg@hotmail.it.</p>
+<p>För frågor om denna policy, skriv till LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonisk onlineversion</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_sv.html">https://lorysmay.github.io/Privacy-Policy/privacy_sv.html</a></p>
 </body></html>

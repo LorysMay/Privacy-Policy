@@ -16,28 +16,37 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Privacy Policy</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Developer</strong>: Lorenzo May</div>
-<div><strong>Contact</strong>: lorys.lg@hotmail.it</div>
+<div><strong>Developer</strong>: LorysMay</div>
+<div><strong>Contact</strong>: LorysMay@outlook.it</div>
 <div><strong>Last updated</strong>: May 25, 2026</div>
 </div>
 <h2>Summary</h2>
@@ -87,7 +96,7 @@
 <h2>Exporting, importing and backing up configurations</h2>
 <p>The app can export device configuration to a <code>.ipcamvisionprobackup</code> file that you create and manage. Current exports omit the separate ONVIF password field. However, if you manually entered an RTSP, DDNS or stream URL that already contains embedded credentials, that URL can be included in the backup because it is part of the device configuration. If you import an older backup that contains an ONVIF password, the app may read it once to migrate it into private app storage. You are responsible for where you store backup files.</p>
 <h2>Report a bug feature</h2>
-<p>The Report a bug window does not send data directly from the app. When you press Send, the app opens your default mail client with a pre-filled email addressed to lorys.lg@hotmail.it. You decide whether to send it. The email contains only what you typed plus app version and macOS version for debugging.</p>
+<p>The Report a bug window does not send data directly from the app. When you press Send, the app opens your default mail client with a pre-filled email addressed to LorysMay@outlook.it. You decide whether to send it. The email contains only what you typed plus app version and macOS version for debugging.</p>
 <h2>Children</h2>
 <p>The app is intended for a general audience. We do not knowingly collect data about minors because the app does not collect data for the developer.</p>
 <h2>Data retention and deletion</h2>
@@ -95,7 +104,7 @@
 <h2>Changes to this policy</h2>
 <p>Future changes will be published in the app and, when applicable, on the canonical online privacy policy page. The Last updated date will be changed when the policy is updated.</p>
 <h2>Contact</h2>
-<p>For questions about this policy, write to lorys.lg@hotmail.it.</p>
+<p>For questions about this policy, write to LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online version</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
 </body></html>

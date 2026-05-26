@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Tietosuojakäytäntö</h1>
 <div class="meta">
 <div><strong>Sovellus</strong>: IPcamVision Pro</div>
-<div><strong>Kehittäjä</strong>: Lorenzo May</div>
-<div><strong>Ota yhteyttä</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Viimeksi päivitetty</strong>: May 25, 2026</div>
+<div><strong>Kehittäjä</strong>: LorysMay</div>
+<div><strong>Ota yhteyttä</strong>: LorysMay@outlook.it</div>
+<div><strong>Viimeksi päivitetty</strong>: 25. toukokuuta 2026</div>
 </div>
 <h2>Yhteenveto</h2>
 <p>IPcamVision Pro on paikallinen macOS-sovellus käyttäjän määrittämien IP-kameroiden, NVR- ja DVR-kameroiden katseluun, tallentamiseen ja hallintaan. Sovellus ei kerää henkilötietoja kehittäjälle, ei käytä analytiikkaa, mainosseurantaa tai profilointipalveluita, eikä lähetä kameratietojasi millekään omistamamme palvelimelle. Laitteen määritykset, tunnistetiedot, tallenteet, tilannekuvat ja asetukset pysyvät Macissasi, ellet päätä viedä tai jakaa niitä.</p>
@@ -87,7 +96,7 @@
 <h2>Kokoonpanojen vienti, tuonti ja varmuuskopiointi</h2>
 <p>Sovellus voi viedä laitteen määritykset<code>.ipcamvisionprobackup</code>-tiedostoon, jonka luot ja hallitset. Nykyiset viennit jättävät erillisen ONVIF-salasanakentän pois. Jos kuitenkin syötit manuaalisesti RTSP-, DDNS- tai stream-URL-osoitteen, joka sisältää jo upotetut tunnistetiedot, tämä URL-osoite voidaan sisällyttää varmuuskopioon, koska se on osa laitteen määritystä. Jos tuot vanhemman varmuuskopion, joka sisältää ONVIF-salasanan, sovellus voi lukea sen kerran siirtääkseen sen yksityiseen sovellusten tallennustilaan. Olet vastuussa varmuuskopiotiedostojen säilytyspaikasta.</p>
 <h2>Ilmoita vikaominaisuudesta</h2>
-<p>Ilmoita virheestä -ikkuna ei lähetä tietoja suoraan sovelluksesta. Kun painat Lähetä, sovellus avaa oletussähköpostiohjelmasi esitäytetyllä sähköpostilla, joka on osoitettu osoitteeseen lorys.lg@hotmail.it. Sinä päätät, lähetätkö sen. Sähköposti sisältää vain kirjoittamasi sekä sovellusversion ja macOS-version virheenkorjausta varten.</p>
+<p>Ilmoita virheestä -ikkuna ei lähetä tietoja suoraan sovelluksesta. Kun painat Lähetä, sovellus avaa oletussähköpostiohjelmasi esitäytetyllä sähköpostilla, joka on osoitettu osoitteeseen LorysMay@outlook.it. Sinä päätät, lähetätkö sen. Sähköposti sisältää vain kirjoittamasi sekä sovellusversion ja macOS-version virheenkorjausta varten.</p>
 <h2>Lapset</h2>
 <p>Sovellus on tarkoitettu suurelle yleisölle. Emme tietoisesti kerää tietoja alaikäisistä, koska sovellus ei kerää tietoja kehittäjälle.</p>
 <h2>Tietojen säilyttäminen ja poistaminen</h2>
@@ -95,7 +104,7 @@
 <h2>Muutoksia tähän käytäntöön</h2>
 <p>Tulevat muutokset julkaistaan ​​sovelluksessa ja soveltuvin osin kanonisella online-tietosuojakäytäntösivulla. Viimeksi päivitetty päivämäärä muuttuu, kun käytäntö päivitetään.</p>
 <h2>Ota yhteyttä</h2>
-<p>Jos sinulla on kysyttävää tästä käytännöstä, kirjoita osoitteeseen lorys.lg@hotmail.it.</p>
+<p>Jos sinulla on kysyttävää tästä käytännöstä, kirjoita osoitteeseen LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online-versio</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_fi.html">https://lorysmay.github.io/Privacy-Policy/privacy_fi.html</a></p>
 </body></html>

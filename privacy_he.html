@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>מדיניות פרטיות</h1>
 <div class="meta">
 <div><strong>אפליקציה</strong>: IPcamVision Pro</div>
-<div><strong>מפתח</strong>: Lorenzo May</div>
-<div><strong>מַגָע</strong>: lorys.lg@hotmail.it</div>
-<div><strong>עודכן לאחרונה</strong>: May 25, 2026</div>
+<div><strong>מפתח</strong>: LorysMay</div>
+<div><strong>מַגָע</strong>: LorysMay@outlook.it</div>
+<div><strong>עודכן לאחרונה</strong>: 25 במאי 2026</div>
 </div>
 <h2>תַקצִיר</h2>
 <p>IPcamVision Pro היא אפליקציית macOS מקומית לצפייה, הקלטה וניהול מצלמות IP בהגדרת משתמש, NVR ו-DVRs. האפליקציה אינה אוספת נתונים אישיים עבור המפתח, אינה משתמשת בניתוחים, מעקבי פרסום או שירותי פרופילים, ואינה שולחת את נתוני המצלמה שלך לשום שרת בבעלותנו. תצורת המכשיר, אישורים, הקלטות, תמונות והעדפות נשארות ב-Mac שלך אלא אם כן תבחר לייצא או לשתף אותם.</p>
@@ -87,7 +96,7 @@
 <h2>ייצוא, ייבוא ​​וגיבוי תצורות</h2>
 <p>האפליקציה יכולה לייצא את תצורת המכשיר לקובץ<code>.ipcamvisionprobackup</code> שאתה יוצר ומנהל. יצוא נוכחי משמיט את שדה הסיסמה הנפרד ONVIF. עם זאת, אם הזנת באופן ידני כתובת URL של RTSP, DDNS או זרם שכבר מכיל אישורים משובצים, ניתן לכלול כתובת URL זו בגיבוי מכיוון שהיא חלק מתצורת המכשיר. אם אתה מייבא גיבוי ישן יותר שמכיל סיסמת ONVIF, ייתכן שהאפליקציה תקרא אותה פעם אחת כדי להעביר אותה לאחסון אפליקציות פרטי. אתה אחראי למקום שבו אתה מאחסן קבצי גיבוי.</p>
 <h2>דווח על תכונת באג</h2>
-<p>החלון &#39;דווח על באג&#39; אינו שולח נתונים ישירות מהאפליקציה. כאשר אתה לוחץ על שלח, האפליקציה פותחת את לקוח הדואר המוגדר כברירת מחדל עם דוא&quot;ל מלא מראש הממוען אל lorys.lg@hotmail.it. אתה מחליט אם לשלוח אותו. האימייל מכיל רק את מה שהקלדת בתוספת גרסת האפליקציה וגרסת macOS עבור ניפוי באגים.</p>
+<p>החלון &#39;דווח על באג&#39; אינו שולח נתונים ישירות מהאפליקציה. כאשר אתה לוחץ על שלח, האפליקציה פותחת את לקוח הדואר המוגדר כברירת מחדל עם דוא&quot;ל מלא מראש הממוען אל LorysMay@outlook.it. אתה מחליט אם לשלוח אותו. האימייל מכיל רק את מה שהקלדת בתוספת גרסת האפליקציה וגרסת macOS עבור ניפוי באגים.</p>
 <h2>יְלָדִים</h2>
 <p>האפליקציה מיועדת לקהל הרחב. אנחנו לא אוספים ביודעין נתונים על קטינים מכיוון שהאפליקציה לא אוספת נתונים עבור המפתח.</p>
 <h2>שמירה ומחיקה של נתונים</h2>
@@ -95,7 +104,7 @@
 <h2>שינויים במדיניות זו</h2>
 <p>שינויים עתידיים יפורסמו באפליקציה, ובמידת הצורך, בעמוד מדיניות הפרטיות הקנוני המקוון. תאריך העדכון האחרון ישתנה עם עדכון המדיניות.</p>
 <h2>מַגָע</h2>
-<p>לשאלות על מדיניות זו, כתוב ל-lorys.lg@hotmail.it.</p>
+<p>לשאלות על מדיניות זו, כתוב ל-LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>גרסה קנונית מקוונת</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_he.html">https://lorysmay.github.io/Privacy-Policy/privacy_he.html</a></p>
 </body></html>

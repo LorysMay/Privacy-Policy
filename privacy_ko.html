@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>개인 정보 보호 정책</h1>
 <div class="meta">
 <div><strong>앱</strong>: IPcamVision Pro</div>
-<div><strong>개발자</strong>: Lorenzo May</div>
-<div><strong>연락하다</strong>: lorys.lg@hotmail.it</div>
-<div><strong>마지막 업데이트</strong>: May 25, 2026</div>
+<div><strong>개발자</strong>: LorysMay</div>
+<div><strong>연락하다</strong>: LorysMay@outlook.it</div>
+<div><strong>마지막 업데이트</strong>: 2026년 5월 25일</div>
 </div>
 <h2>요약</h2>
 <p>IPcamVision Pro는 사용자 구성 IP 카메라, NVR 및 DVR를 보고, 기록하고, 관리하기 위한 로컬 macOS 앱입니다. 이 앱은 개발자를 위해 개인 데이터를 수집하지 않으며 분석, 광고 추적기 또는 프로파일링 서비스를 사용하지 않으며 카메라 데이터를 당사가 소유한 서버로 보내지 않습니다. 장치 구성, 자격 증명, 녹음, 스냅샷 및 환경 설정은 내보내거나 공유하도록 선택하지 않는 한 Mac에 그대로 유지됩니다.</p>
@@ -87,7 +96,7 @@
 <h2>구성 내보내기, 가져오기 및 백업</h2>
 <p>앱은 장치 구성을 사용자가 만들고 관리하는<code>.ipcamvisionprobackup</code> 파일로 내보낼 수 있습니다. 현재 내보내기에서는 별도의 ONVIF 비밀번호 필드가 생략됩니다. 그러나 이미 내장된 자격 증명이 포함된 RTSP, DDNS 또는 스트림 URL을 수동으로 입력한 경우 해당 URL은 장치 구성의 일부이므로 백업에 포함될 수 있습니다. ONVIF 비밀번호가 포함된 이전 백업을 가져오는 경우 앱은 이를 한 번 읽고 개인 앱 저장소로 마이그레이션할 수 있습니다. 백업 파일을 저장하는 위치에 대한 책임은 귀하에게 있습니다.</p>
 <h2>버그 신고 기능</h2>
-<p>버그 신고 창은 앱에서 직접 데이터를 전송하지 않습니다. 보내기를 누르면 앱에서 lorys.lg@hotmail.it라는 주소가 미리 입력된 이메일이 포함된 기본 메일 클라이언트를 엽니다. 보낼지 여부를 결정합니다. 이메일에는 입력한 내용과 디버깅을 위한 앱 버전 및 macOS 버전만 포함됩니다.</p>
+<p>버그 신고 창은 앱에서 직접 데이터를 전송하지 않습니다. 보내기를 누르면 앱에서 LorysMay@outlook.it라는 주소가 미리 입력된 이메일이 포함된 기본 메일 클라이언트를 엽니다. 보낼지 여부를 결정합니다. 이메일에는 입력한 내용과 디버깅을 위한 앱 버전 및 macOS 버전만 포함됩니다.</p>
 <h2>어린이들</h2>
 <p>이 앱은 일반 사용자를 대상으로 합니다. 앱은 개발자를 위해 데이터를 수집하지 않기 때문에 미성년자에 대한 데이터를 고의로 수집하지 않습니다.</p>
 <h2>데이터 보관 및 삭제</h2>
@@ -95,7 +104,7 @@
 <h2>이 정책의 변경 사항</h2>
 <p>향후 변경 사항은 앱과 해당하는 경우 정식 온라인 개인정보 보호정책 페이지에 게시됩니다. 정책이 업데이트되면 최종 업데이트 날짜가 변경됩니다.</p>
 <h2>연락하다</h2>
-<p>이 정책에 대한 질문이 있는 경우 lorys.lg@hotmail.it로 문의하세요.</p>
+<p>이 정책에 대한 질문이 있는 경우 LorysMay@outlook.it로 문의하세요.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>정식 온라인 버전</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ko.html">https://lorysmay.github.io/Privacy-Policy/privacy_ko.html</a></p>
 </body></html>

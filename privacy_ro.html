@@ -16,29 +16,38 @@
         color: #111;
         background: #fff;
       }
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; }
-        a { color: #4ea1ff; }
-      }
       h1 { font-size: 1.9em; margin-top: 0; }
       h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
       p, li { font-size: 0.97em; }
       ul, ol { padding-left: 1.3em; }
       li { margin-bottom: .35em; }
-      code { background: #f1f1f1; padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      code {
+        background: #f1f1f1;
+        color: #111;
+        padding: 1px 5px;
+        border-radius: 3px;
+        font-size: .9em;
+      }
       .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+      a { color: #0066cc; }
+
+      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
+      @media (prefers-color-scheme: dark) {
+        body { background: #1a1a1a; color: #ececec; }
+        h1, h2 { color: #fff; }
+        code { background: #2c2c2c; color: #ececec; }
+        .meta { color: #aaa; }
+        a { color: #4ea1ff; }
+      }
 </style>
 </head>
 <body>
 <h1>Politica de confidențialitate</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
-<div><strong>Dezvoltator</strong>: Lorenzo May</div>
-<div><strong>Contact</strong>: lorys.lg@hotmail.it</div>
-<div><strong>Ultima actualizare</strong>: May 25, 2026</div>
+<div><strong>Dezvoltator</strong>: LorysMay</div>
+<div><strong>Contact</strong>: LorysMay@outlook.it</div>
+<div><strong>Ultima actualizare</strong>: 25 mai 2026</div>
 </div>
 <h2>Rezumat</h2>
 <p>IPcamVision Pro este o aplicație locală macOS pentru vizualizarea, înregistrarea și gestionarea camerelor IP configurate de utilizator, NVR și DVR. Aplicația nu colectează date personale pentru dezvoltator, nu folosește analize, instrumente de urmărire publicitare sau servicii de profilare și nu trimite datele camerei dvs. către niciun server deținut de noi. Configurația dispozitivului, acreditările, înregistrările, instantaneele și preferințele rămân pe Mac, cu excepția cazului în care alegeți să le exportați sau să le partajați.</p>
@@ -87,7 +96,7 @@
 <h2>Exportarea, importul și copierea de rezervă a configurațiilor</h2>
 <p>Aplicația poate exporta configurația dispozitivului într-un fișier<code>.ipcamvisionprobackup</code> pe care îl creați și îl gestionați. Exporturile curente omit câmpul separat pentru parolă ONVIF. Cu toate acestea, dacă ați introdus manual o adresă URL RTSP, DDNS sau de flux care conține deja acreditări încorporate, acea adresă URL poate fi inclusă în backup deoarece face parte din configurația dispozitivului. Dacă importați o copie de rezervă mai veche care conține o parolă ONVIF, aplicația o poate citi o dată pentru a o migra în stocarea privată a aplicației. Sunteți responsabil pentru locul în care stocați fișierele de rezervă.</p>
 <h2>Raportați o funcție de eroare</h2>
-<p>Fereastra Raportați o eroare nu trimite date direct din aplicație. Când apăsați pe Trimitere, aplicația deschide clientul dvs. de e-mail implicit cu un e-mail pre-completat, adresat lui lorys.lg@hotmail.it. Tu decideți dacă îl trimiteți. E-mailul conține doar ceea ce ați introdus, plus versiunea aplicației și versiunea macOS pentru depanare.</p>
+<p>Fereastra Raportați o eroare nu trimite date direct din aplicație. Când apăsați pe Trimitere, aplicația deschide clientul dvs. de e-mail implicit cu un e-mail pre-completat, adresat lui LorysMay@outlook.it. Tu decideți dacă îl trimiteți. E-mailul conține doar ceea ce ați introdus, plus versiunea aplicației și versiunea macOS pentru depanare.</p>
 <h2>Copii</h2>
 <p>Aplicația este destinată unui public larg. Nu colectăm cu bună știință date despre minori, deoarece aplicația nu colectează date pentru dezvoltator.</p>
 <h2>Păstrarea și ștergerea datelor</h2>
@@ -95,7 +104,7 @@
 <h2>Modificări ale acestei politici</h2>
 <p>Modificările viitoare vor fi publicate în aplicație și, atunci când este cazul, pe pagina canonică a politicii de confidențialitate online. Data ultimei actualizări va fi modificată când politica este actualizată.</p>
 <h2>Contact</h2>
-<p>Pentru întrebări despre această politică, scrieți la lorys.lg@hotmail.it.</p>
+<p>Pentru întrebări despre această politică, scrieți la LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
 <p style="font-size:.82em;color:#888;margin-top:1em"><em>Versiune online canonică</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ro.html">https://lorysmay.github.io/Privacy-Policy/privacy_ro.html</a></p>
 </body></html>
