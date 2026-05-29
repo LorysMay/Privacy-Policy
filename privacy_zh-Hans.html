@@ -47,7 +47,7 @@
 <div><strong>应用程序</strong>: IPcamVision Pro</div>
 <div><strong>开发商</strong>: LorysMay</div>
 <div><strong>接触</strong>: LorysMay@outlook.it</div>
-<div><strong>最后更新</strong>: 2026年5月25日</div>
+<div><strong>最后更新</strong>: 2026年5月29日</div>
 </div>
 <h2>概括</h2>
 <p>IPcamVision Pro 是一款本地 macOS 应用程序，用于查看、录制和管理用户配置的 IP 摄像机、NVR 和 DVR。该应用程序不会为开发者收集个人数据，不会使用分析、广告跟踪器或分析服务，也不会将您的相机数据发送到我们拥有的任何服务器。设备配置、凭据、录音、快照和偏好设置都会保留在您的 Mac 上，除非您选择导出或共享它们。</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>摄像机、NVR 和 DVR 地址和配置，包括 IP 地址或主机名、RTSP 或流 URL、端口、流配置文件、PTZ 品牌、网格布局、播放设置和运动检测设置。这些值使用 <code>UserDefaults</code> 存储在应用程序的私有首选项中，并由 macOS 应用程序沙箱隔离。</li>
 <li>ONVIF 用户名和设备用户名。这些与设备配置一起存储在应用程序的私人首选项中。</li>
-<li>ONVIF 密码和设备密码。密码存储在应用程序的私有 <code>UserDefaults</code> 区域中，并进行 Base64 编码以避免属性列表序列化问题。 Base64 不是密码加密；它是受 macOS 沙箱保护的应用程序私有存储。如果您需要防止有人物理访问磁盘，请在 Mac 上启用 FileVault。密码不会写入日志，也不会发送给开发人员或第三方。</li>
+<li>ONVIF 密码和设备密码。密码使用存储在 macOS 钥匙串中的主密钥通过 AES-256-GCM 加密，然后保存到应用程序的私有 <code>UserDefaults</code> 区域。主密钥仅生成一次，永不离开钥匙串。密码绝不会以明文或 Base64 格式存储在磁盘上。密码不会写入日志，也不会发送给开发人员或第三方。</li>
 <li>用户创建的视频录制、下载的播放剪辑和快照。它们仅保存到您通过 macOS 文件选择器选择的文件夹或文件，或者保存到您选择并使用安全范围书签授权的保存文件夹。</li>
 <li>本地缩略图、窗口状态、界面首选项、所选语言、购买等级状态和其他应用程序设置。它们保留在 Mac 上的应用程序容器中。</li>
 </ul>

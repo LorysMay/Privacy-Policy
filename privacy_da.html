@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Udvikler</strong>: LorysMay</div>
 <div><strong>Kontakte</strong>: LorysMay@outlook.it</div>
-<div><strong>Sidst opdateret</strong>: 25. maj 2026</div>
+<div><strong>Sidst opdateret</strong>: 29. maj 2026</div>
 </div>
 <h2>Oversigt</h2>
 <p>IPcamVision Pro er en lokal macOS app til visning, optagelse og styring af brugerkonfigurerede IP-kameraer, NVRs og DVRs. Appen indsamler ikke personlige data for udvikleren, bruger ikke analyser, reklamesporing eller profileringstjenester og sender ikke dine kameradata til nogen server, der ejes af os. Enhedskonfiguration, legitimationsoplysninger, optagelser, snapshots og præferencer forbliver på din Mac, medmindre du vælger at eksportere eller dele dem.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera-, NVR- og DVR-adresser og konfiguration, inklusive IP-adresser eller værtsnavne, RTSP- eller stream-URL&#39;er, porte, streamprofiler, PTZ-mærke, gitterlayout, afspilningsindstillinger og indstillinger for bevægelsesdetektering. Disse værdier gemmes i appens private præferencer ved hjælp af <code>UserDefaults</code> og er isoleret af macOS app-sandboxen.</li>
 <li>ONVIF brugernavne og enhedsbrugernavne. Disse gemmes med enhedskonfigurationen i appens private præferencer.</li>
-<li>ONVIF adgangskoder og enhedsadgangskoder. Adgangskoder gemmes i appens private <code>UserDefaults</code>-område, Base64-kodet for at undgå problemer med serialisering af ejendomslister. Base64 er ikke kryptografisk kryptering; det er app-privat opbevaring beskyttet af macOS sandkassen. Hvis du har brug for beskyttelse mod nogen med fysisk adgang til disken, skal du aktivere FileVault på din Mac. Adgangskoder skrives ikke til logfiler og sendes ikke til udvikleren eller tredjeparter.</li>
+<li>ONVIF adgangskoder og enhedsadgangskoder. Adgangskoder krypteres med AES-256-GCM ved hjælp af en hovednøgle gemt i macOS Keychain og gemmes derefter i appens private <code>UserDefaults</code>-område. Hovednøglen genereres én gang og forlader aldrig Keychain. Adgangskoder gemmes aldrig som klartekst eller Base64 på disken. Adgangskoder skrives ikke til logfiler og sendes ikke til udvikleren eller tredjeparter.</li>
 <li>Videooptagelser, downloadede afspilningsklip og snapshots oprettet af brugeren. De gemmes kun i mapper eller filer, du vælger gennem macOS filvælgeren, eller i en gemt mappe, du har valgt og godkendt med et bogmærke med sikkerhed.</li>
 <li>Lokale miniaturebilleder, vinduestilstand, grænsefladepræferencer, valgt sprog, købsniveautilstand og andre appindstillinger. Disse forbliver i appbeholderen på din Mac.</li>
 </ul>

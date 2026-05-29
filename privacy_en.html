@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Developer</strong>: LorysMay</div>
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Last updated</strong>: May 25, 2026</div>
+<div><strong>Last updated</strong>: May 29, 2026</div>
 </div>
 <h2>Summary</h2>
 <p>IPcamVision Pro is a local macOS app for viewing, recording and managing user-configured IP cameras, NVRs and DVRs. The app does not collect personal data for the developer, does not use analytics, advertising trackers or profiling services, and does not send your camera data to any server owned by us. Device configuration, credentials, recordings, snapshots and preferences stay on your Mac unless you choose to export or share them.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Camera, NVR and DVR addresses and configuration, including IP addresses or host names, RTSP or stream URLs, ports, stream profiles, PTZ brand, grid layout, playback settings and motion-detection settings. These values are stored in the app&#39;s private preferences using <code>UserDefaults</code> and are isolated by the macOS app sandbox.</li>
 <li>ONVIF usernames and device usernames. These are stored with the device configuration in the app&#39;s private preferences.</li>
-<li>ONVIF passwords and device passwords. Passwords are stored in the app&#39;s private <code>UserDefaults</code> area, Base64-encoded to avoid property-list serialization issues. Base64 is not cryptographic encryption; it is app-private storage protected by the macOS sandbox. If you need protection against someone with physical access to the disk, enable FileVault on your Mac. Passwords are not written to logs and are not sent to the developer or third parties.</li>
+<li>ONVIF passwords and device passwords. Passwords are encrypted with AES-256-GCM using a master key stored in the macOS Keychain, then saved to the app&#39;s private <code>UserDefaults</code> area. The master key is generated once and never leaves the Keychain. Passwords are never stored in plain text or as Base64 on disk. Passwords are not written to logs and are not sent to the developer or third parties.</li>
 <li>Video recordings, downloaded playback clips and snapshots created by the user. They are saved only to folders or files you choose through the macOS file picker, or to a save folder you selected and authorized with a security-scoped bookmark.</li>
 <li>Local thumbnails, window state, interface preferences, selected language, purchase tier state and other app settings. These remain in the app container on your Mac.</li>
 </ul>

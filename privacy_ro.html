@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Dezvoltator</strong>: LorysMay</div>
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Ultima actualizare</strong>: 25 mai 2026</div>
+<div><strong>Ultima actualizare</strong>: 29 mai 2026</div>
 </div>
 <h2>Rezumat</h2>
 <p>IPcamVision Pro este o aplicație locală macOS pentru vizualizarea, înregistrarea și gestionarea camerelor IP configurate de utilizator, NVR și DVR. Aplicația nu colectează date personale pentru dezvoltator, nu folosește analize, instrumente de urmărire publicitare sau servicii de profilare și nu trimite datele camerei dvs. către niciun server deținut de noi. Configurația dispozitivului, acreditările, înregistrările, instantaneele și preferințele rămân pe Mac, cu excepția cazului în care alegeți să le exportați sau să le partajați.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Adresele și configurația camerei, NVR și DVR, inclusiv adrese IP sau nume de gazdă, RTSP sau URL-uri de flux, porturi, profiluri de flux, marca PTZ, aspect grilă, setări de redare și setări de detectare a mișcării. Aceste valori sunt stocate în preferințele private ale aplicației folosind <code>UserDefaults</code> și sunt izolate de sandbox-ul aplicației macOS.</li>
 <li>ONVIF nume de utilizator și nume de utilizator dispozitiv. Acestea sunt stocate împreună cu configurația dispozitivului în preferințele private ale aplicației.</li>
-<li>parolele ONVIF și parolele dispozitivului. Parolele sunt stocate în zona privată <code>UserDefaults</code> a aplicației, codificate în Base64 pentru a evita problemele de serializare a listei de proprietăți. Base64 nu este criptare criptografică; este stocare privată în aplicație protejată de sandbox-ul macOS. Dacă aveți nevoie de protecție împotriva unei persoane cu acces fizic la disc, activați FileVault pe Mac. Parolele nu sunt scrise în jurnale și nu sunt trimise dezvoltatorului sau terților.</li>
+<li>Parole ONVIF și parolele dispozitivului. Parolele sunt criptate cu AES-256-GCM folosind o cheie principală stocată în lanțul de chei macOS, apoi salvate în zona privată <code>UserDefaults</code> a aplicației. Cheia principală este generată o singură dată și nu părăsește niciodată lanțul de chei. Parolele nu sunt niciodată stocate ca text clar sau Base64 pe disc. Parolele nu sunt scrise în jurnale și nu sunt trimise dezvoltatorului sau terților.</li>
 <li>Înregistrări video, clipuri de redare descărcate și instantanee create de utilizator. Acestea sunt salvate numai în foldere sau fișiere pe care le alegeți prin selectorul de fișiere macOS sau într-un folder de salvare pe care l-ați selectat și autorizat cu un marcaj de securitate.</li>
 <li>Miniaturi locale, starea ferestrei, preferințele de interfață, limba selectată, starea nivelului de achiziție și alte setări ale aplicației. Acestea rămân în containerul aplicației de pe Mac.</li>
 </ul>

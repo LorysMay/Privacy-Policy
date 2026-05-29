@@ -47,7 +47,7 @@
 <div><strong>Aplikasi</strong>: IPcamVision Pro</div>
 <div><strong>Pengembang</strong>: LorysMay</div>
 <div><strong>Kontak</strong>: LorysMay@outlook.it</div>
-<div><strong>Terakhir diperbarui</strong>: 25 Mei 2026</div>
+<div><strong>Terakhir diperbarui</strong>: 29 Mei 2026</div>
 </div>
 <h2>Ringkasan</h2>
 <p>IPcamVision Pro adalah aplikasi macOS lokal untuk melihat, merekam, dan mengelola kamera IP yang dikonfigurasi pengguna, NVR, dan DVR. Aplikasi ini tidak mengumpulkan data pribadi untuk pengembang, tidak menggunakan analitik, pelacak iklan, atau layanan pembuatan profil, dan tidak mengirimkan data kamera Anda ke server mana pun milik kami. Konfigurasi perangkat, kredensial, rekaman, snapshot, dan preferensi tetap ada di Mac Anda kecuali Anda memilih untuk mengekspor atau membagikannya.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera, alamat dan konfigurasi NVR dan DVR, termasuk alamat IP atau nama host, RTSP atau URL streaming, port, profil streaming, merek PTZ, tata letak grid, pengaturan pemutaran, dan pengaturan deteksi gerakan. Nilai-nilai ini disimpan dalam preferensi pribadi aplikasi menggunakan <code>UserDefaults</code> dan diisolasi oleh sandbox aplikasi macOS.</li>
 <li>Nama pengguna ONVIF dan nama pengguna perangkat. Ini disimpan dengan konfigurasi perangkat di preferensi pribadi aplikasi.</li>
-<li>Kata sandi ONVIF dan kata sandi perangkat. Kata sandi disimpan di area <code>UserDefaults</code> pribadi aplikasi, dikodekan Base64 untuk menghindari masalah serialisasi daftar properti. Base64 bukan enkripsi kriptografi; ini adalah penyimpanan pribadi aplikasi yang dilindungi oleh kotak pasir macOS. Jika Anda memerlukan perlindungan terhadap seseorang dengan akses fisik ke disk, aktifkan FileVault di Mac Anda. Kata sandi tidak ditulis ke log dan tidak dikirim ke pengembang atau pihak ketiga.</li>
+<li>Kata sandi ONVIF dan kata sandi perangkat. Kata sandi dienkripsi dengan AES-256-GCM menggunakan kunci utama yang tersimpan di macOS Keychain, lalu disimpan di area <code>UserDefaults</code> pribadi aplikasi. Kunci utama dibuat satu kali dan tidak pernah meninggalkan Keychain. Kata sandi tidak pernah disimpan sebagai teks biasa atau Base64 di disk. Kata sandi tidak ditulis ke log dan tidak dikirim ke pengembang atau pihak ketiga.</li>
 <li>Rekaman video, klip pemutaran yang diunduh, dan foto yang dibuat oleh pengguna. Mereka disimpan hanya ke folder atau file yang Anda pilih melalui pemilih file macOS, atau ke folder penyimpanan yang Anda pilih dan otorisasi dengan penanda cakupan keamanan.</li>
 <li>Thumbnail lokal, status jendela, preferensi antarmuka, bahasa yang dipilih, status tingkat pembelian, dan pengaturan aplikasi lainnya. Ini tetap berada di wadah aplikasi di Mac Anda.</li>
 </ul>

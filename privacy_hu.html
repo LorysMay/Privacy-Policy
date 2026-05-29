@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Fejlesztő</strong>: LorysMay</div>
 <div><strong>Érintkezés</strong>: LorysMay@outlook.it</div>
-<div><strong>Utoljára frissítve</strong>: 2026. május 25.</div>
+<div><strong>Utoljára frissítve</strong>: 2026. május 29.</div>
 </div>
 <h2>Összegzés</h2>
 <p>A IPcamVision Pro egy helyi macOS alkalmazás a felhasználó által konfigurált IP-kamerák, NVR és DVR megtekintésére, rögzítésére és kezelésére. Az alkalmazás nem gyűjt személyes adatokat a fejlesztő számára, nem használ elemzőket, hirdetéskövetőket vagy profilalkotási szolgáltatásokat, és nem küldi el a kamera adatait a tulajdonunkban lévő szerverekre. Az eszközkonfiguráció, a hitelesítési adatok, a felvételek, a pillanatképek és a beállítások a Mac-en maradnak, hacsak nem exportálja vagy megosztja őket.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera, NVR és DVR címek és konfigurációk, beleértve az IP-címeket vagy gazdagépneveket, RTSP vagy adatfolyam URL-eket, portokat, adatfolyam-profilokat, PTZ márkát, rácselrendezést, lejátszási beállításokat és mozgásérzékelési beállításokat. Ezeket az értékeket a rendszer az alkalmazás privát beállításaiban tárolja a <code>UserDefaults</code> használatával, és a macOS alkalmazás homokozója izolálja őket.</li>
 <li>ONVIF felhasználónevek és eszközfelhasználónevek. Ezeket az eszköz konfigurációjával együtt tárolja az alkalmazás privát beállításaiban.</li>
-<li>ONVIF jelszavak és eszközjelszavak. A jelszavak az alkalmazás privát <code>UserDefaults</code> területén vannak tárolva, Base64 kódolású, hogy elkerüljék a tulajdonlista sorozatosítási problémáit. A Base64 nem kriptográfiai titkosítás; ez egy alkalmazás-privát tárhely, amelyet a macOS homokozó véd. Ha védelemre van szüksége valaki ellen, aki fizikailag hozzáfér a lemezhez, engedélyezze a FileVault-t a Mac számítógépen. A jelszavakat nem írják a naplókba, és nem küldik el a fejlesztőnek vagy harmadik feleknek.</li>
+<li>ONVIF jelszavak és eszközjelszavak. A jelszavak AES-256-GCM titkosítással vannak védve, a macOS Kulcstartóban tárolt főkulcs segítségével, majd az alkalmazás privát <code>UserDefaults</code> területén vannak mentve. A főkulcs egyszer jön létre, és soha nem hagyja el a Kulcstartót. A jelszavak soha nem tárolódnak egyszerű szövegként vagy Base64 formátumban a lemezen. A jelszavakat nem írják a naplókba, és nem küldik el a fejlesztőnek vagy harmadik feleknek.</li>
 <li>A felhasználó által készített videofelvételek, letöltött lejátszási klipek és pillanatképek. A rendszer csak a macOS fájlválasztóval kiválasztott mappákba vagy fájlba menti őket, vagy egy olyan mentési mappába, amelyet kiválasztott és biztonsági hatókörű könyvjelzővel engedélyezett.</li>
 <li>Helyi bélyegképek, ablak állapota, interfész beállításai, kiválasztott nyelv, vásárlási szint állapota és egyéb alkalmazásbeállítások. Ezek a Mac alkalmazástárolójában maradnak.</li>
 </ul>

@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Utvikler</strong>: LorysMay</div>
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Sist oppdatert</strong>: 25. mai 2026</div>
+<div><strong>Sist oppdatert</strong>: 29. mai 2026</div>
 </div>
 <h2>Sammendrag</h2>
 <p>IPcamVision Pro er en lokal macOS-app for visning, opptak og administrasjon av brukerkonfigurerte IP-kameraer, NVRs og DVRs. Appen samler ikke inn personlige data for utvikleren, bruker ikke analyser, reklamesporere eller profileringstjenester, og sender ikke kameradataene dine til noen server som eies av oss. Enhetskonfigurasjon, legitimasjon, opptak, øyeblikksbilder og preferanser forblir på Mac-en med mindre du velger å eksportere eller dele dem.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera-, NVR- og DVR-adresser og konfigurasjon, inkludert IP-adresser eller vertsnavn, RTSP- eller strømnettadresser, porter, strømprofiler, PTZ-merke, rutenettoppsett, avspillingsinnstillinger og innstillinger for bevegelsesdeteksjon. Disse verdiene lagres i appens private preferanser ved å bruke <code>UserDefaults</code> og er isolert av macOS app-sandbox.</li>
 <li>ONVIF brukernavn og enhetsbrukernavn. Disse lagres med enhetskonfigurasjonen i appens private preferanser.</li>
-<li>ONVIF passord og enhetspassord. Passord lagres i appens private <code>UserDefaults</code>-område, Base64-kodet for å unngå problemer med serialisering av eiendomslister. Base64 er ikke kryptografisk kryptering; det er app-privat lagring beskyttet av macOS sandkassen. Hvis du trenger beskyttelse mot noen med fysisk tilgang til disken, aktiver FileVault på Mac-en. Passord skrives ikke til logger og sendes ikke til utvikleren eller tredjeparter.</li>
+<li>ONVIF passord og enhetspassord. Passord krypteres med AES-256-GCM ved hjelp av en hovednøkkel lagret i macOS Keychain, og lagres deretter i appens private <code>UserDefaults</code>-område. Hovednøkkelen genereres én gang og forlater aldri Keychain. Passord lagres aldri som klartekst eller Base64 på disken. Passord skrives ikke til logger og sendes ikke til utvikleren eller tredjeparter.</li>
 <li>Videoopptak, nedlastede avspillingsklipp og øyeblikksbilder laget av brukeren. De lagres kun i mapper eller filer du velger gjennom macOS-filvelgeren, eller i en lagringsmappe du har valgt og autorisert med et bokmerke med sikkerhetsomfang.</li>
 <li>Lokale miniatyrbilder, vindustatus, grensesnittpreferanser, valgt språk, kjøpsnivåstatus og andre appinnstillinger. Disse forblir i appbeholderen på din Mac.</li>
 </ul>

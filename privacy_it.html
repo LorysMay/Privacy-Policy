@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Sviluppatore</strong>: LorysMay</div>
 <div><strong>Contatto</strong>: LorysMay@outlook.it</div>
-<div><strong>Ultimo aggiornamento</strong>: 25 maggio 2026</div>
+<div><strong>Ultimo aggiornamento</strong>: 29 maggio 2026</div>
 </div>
 <h2>Riepilogo</h2>
 <p>IPcamVision Pro è un&#39;app macOS locale per visualizzare, registrare e gestire telecamere IP, NVR e DVR configurate dall&#39;utente. L&#39;app non raccoglie dati personali per lo sviluppatore, non utilizza analytics, tracker pubblicitari o servizi di profilazione e non invia i dati delle telecamere ad alcun nostro server. La configurazione dei dispositivi, le credenziali, le registrazioni, gli snapshot e le preferenze restano sul tuo Mac a meno che tu non scelga di esportarli o condividerli.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Indirizzi e configurazione di telecamere, NVR e DVR, inclusi indirizzi IP o hostname, URL RTSP o di streaming, porte, profili di stream, marca PTZ, layout della griglia, impostazioni di playback e impostazioni di rilevamento movimento. Questi valori vengono salvati nelle preferenze private dell&#39;app tramite <code>UserDefaults</code> e sono isolati dalla sandbox dell&#39;app macOS.</li>
 <li>Nomi utente ONVIF e nomi utente del dispositivo. Vengono memorizzati insieme alla configurazione del dispositivo nelle preferenze private dell&#39;app.</li>
-<li>Password ONVIF e password del dispositivo. Le password vengono salvate nell&#39;area <code>UserDefaults</code> privata dell&#39;app, codificate in Base64 per evitare problemi di serializzazione nel property list. Base64 non è una cifratura crittografica: è uno storage privato dell&#39;app protetto dalla sandbox di macOS. Se hai bisogno di protezione contro chi ha accesso fisico al disco, abilita FileVault sul tuo Mac. Le password non vengono scritte nei log e non vengono inviate allo sviluppatore o a terze parti.</li>
+<li>Password ONVIF e password del dispositivo. Le password vengono cifrate con AES-256-GCM usando una master key conservata nel Keychain di macOS, poi salvate nell&#39;area <code>UserDefaults</code> privata dell&#39;app. La master key viene generata una sola volta e non lascia mai il Keychain. Le password non vengono mai salvate in chiaro né come Base64 su disco. Le password non vengono scritte nei log e non vengono inviate allo sviluppatore o a terze parti.</li>
 <li>Registrazioni video, clip di playback scaricate e snapshot creati dall&#39;utente. Vengono salvati solo nelle cartelle o nei file che scegli tramite il selettore file di macOS, oppure in una cartella di salvataggio che hai selezionato e autorizzato con un security-scoped bookmark.</li>
 <li>Miniature locali, stato della finestra, preferenze dell&#39;interfaccia, lingua selezionata, stato del livello di acquisto e altre impostazioni dell&#39;app. Restano nel container dell&#39;app sul tuo Mac.</li>
 </ul>

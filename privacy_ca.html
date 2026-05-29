@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Desenvolupador</strong>: LorysMay</div>
 <div><strong>Contacte</strong>: LorysMay@outlook.it</div>
-<div><strong>Última actualització</strong>: 25 de maig de 2026</div>
+<div><strong>Última actualització</strong>: 29 de maig de 2026</div>
 </div>
 <h2>Resum</h2>
 <p>IPcamVision Pro és una aplicació local macOS per visualitzar, gravar i gestionar càmeres IP configurades per l&#39;usuari, NVR i DVR. L&#39;aplicació no recull dades personals per al desenvolupador, no utilitza analítiques, rastrejadors de publicitat ni serveis de creació de perfils, i no envia les dades de la càmera a cap servidor de la nostra propietat. La configuració del dispositiu, les credencials, les gravacions, les instantànies i les preferències romanen al vostre Mac tret que trieu exportar-los o compartir-los.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Càmera, adreces i configuració NVR i DVR, incloses adreces IP o noms d&#39;amfitrió, RTSP o URL de flux, ports, perfils de flux, marca PTZ, disseny de quadrícula, paràmetres de reproducció i paràmetres de detecció de moviment. Aquests valors s&#39;emmagatzemen a les preferències privades de l&#39;aplicació mitjançant <code>UserDefaults</code> i estan aïllats pel sandbox de l&#39;aplicació macOS.</li>
 <li>ONVIF noms d&#39;usuari i noms d&#39;usuari del dispositiu. S&#39;emmagatzemen amb la configuració del dispositiu a les preferències privades de l&#39;aplicació.</li>
-<li>ONVIF contrasenyes i contrasenyes del dispositiu. Les contrasenyes s&#39;emmagatzemen a l&#39;àrea privada <code>UserDefaults</code> de l&#39;aplicació, codificada en Base64 per evitar problemes de serialització de la llista de propietats. Base64 no és xifratge criptogràfic; és un emmagatzematge privat d&#39;aplicacions protegit pel sandbox macOS. Si necessiteu protecció contra algú amb accés físic al disc, activeu FileVault al vostre Mac. Les contrasenyes no s&#39;escriuen als registres i no s&#39;envien al desenvolupador ni a tercers.</li>
+<li>ONVIF contrasenyes i contrasenyes del dispositiu. Les contrasenyes es xifren amb AES-256-GCM usant una clau mestra emmagatzemada al clauer de macOS, i després es desen a l&#39;àrea privada <code>UserDefaults</code> de l&#39;aplicació. La clau mestra es genera una sola vegada i mai no surt del clauer. Les contrasenyes mai no s&#39;emmagatzemen en text pla ni en Base64 al disc. Les contrasenyes no s&#39;escriuen als registres i no s&#39;envien al desenvolupador ni a tercers.</li>
 <li>Enregistraments de vídeo, clips de reproducció descarregats i instantànies creades per l&#39;usuari. Només es guarden a les carpetes o fitxers que trieu mitjançant el selector de fitxers macOS, o a una carpeta de desar que heu seleccionat i autoritzat amb un marcador de seguretat.</li>
 <li>Miniatures locals, estat de la finestra, preferències de la interfície, idioma seleccionat, estat del nivell de compra i altres paràmetres de l&#39;aplicació. Aquests romanen al contenidor de l&#39;aplicació del vostre Mac.</li>
 </ul>

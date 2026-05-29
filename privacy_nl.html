@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Ontwikkelaar</strong>: LorysMay</div>
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Laatst bijgewerkt</strong>: 25 mei 2026</div>
+<div><strong>Laatst bijgewerkt</strong>: 29 mei 2026</div>
 </div>
 <h2>Samenvatting</h2>
 <p>IPcamVision Pro is een lokale macOS-app voor het bekijken, opnemen en beheren van door de gebruiker geconfigureerde IP-camera&#39;s, NVR&#39;s en DVR&#39;s. De app verzamelt geen persoonlijke gegevens voor de ontwikkelaar, maakt geen gebruik van analyses, advertentietrackers of profileringsdiensten en verzendt uw cameragegevens niet naar een server die eigendom is van ons. Apparaatconfiguratie, inloggegevens, opnamen, momentopnamen en voorkeuren blijven op uw Mac staan, tenzij u ervoor kiest ze te exporteren of te delen.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Camera-, NVR- en DVR-adressen en configuratie, inclusief IP-adressen of hostnamen, RTSP- of stream-URL&#39;s, poorten, streamprofielen, PTZ-merk, rasterindeling, afspeelinstellingen en instellingen voor bewegingsdetectie. Deze waarden worden opgeslagen in de privévoorkeuren van de app met behulp van <code>UserDefaults</code> en worden geïsoleerd door de macOS app-sandbox.</li>
 <li>ONVIF-gebruikersnamen en apparaatgebruikersnamen. Deze worden opgeslagen bij de apparaatconfiguratie in de privévoorkeuren van de app.</li>
-<li>ONVIF-wachtwoorden en apparaatwachtwoorden. Wachtwoorden worden opgeslagen in het privé <code>UserDefaults</code>-gebied van de app, Base64-gecodeerd om serialisatieproblemen met eigendommenlijsten te voorkomen. Base64 is geen cryptografische versleuteling; het is app-privéopslag die wordt beschermd door de macOS-sandbox. Als je bescherming nodig hebt tegen iemand met fysieke toegang tot de schijf, schakel dan FileVault in op je Mac. Wachtwoorden worden niet in logs geschreven en niet naar de ontwikkelaar of derden verzonden.</li>
+<li>ONVIF-wachtwoorden en apparaatwachtwoorden. Wachtwoorden worden versleuteld met AES-256-GCM met een hoofdsleutel die is opgeslagen in de macOS Sleutelhanger, en vervolgens opgeslagen in het privé <code>UserDefaults</code>-gebied van de app. De hoofdsleutel wordt eenmalig gegenereerd en verlaat nooit de Sleutelhanger. Wachtwoorden worden nooit opgeslagen als platte tekst of Base64 op schijf. Wachtwoorden worden niet in logs geschreven en niet naar de ontwikkelaar of derden verzonden.</li>
 <li>Video-opnamen, gedownloade afspeelclips en snapshots gemaakt door de gebruiker. Ze worden alleen opgeslagen in mappen of bestanden die u kiest via de macOS-bestandskiezer, of in een opslagmap die u hebt geselecteerd en geautoriseerd met een op beveiliging gerichte bladwijzer.</li>
 <li>Lokale miniaturen, vensterstatus, interfacevoorkeuren, geselecteerde taal, aankoopniveaustatus en andere app-instellingen. Deze blijven in de app-container op uw Mac.</li>
 </ul>

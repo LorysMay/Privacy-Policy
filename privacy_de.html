@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Entwickler</strong>: LorysMay</div>
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Zuletzt aktualisiert</strong>: 25. Mai 2026</div>
+<div><strong>Zuletzt aktualisiert</strong>: 29. Mai 2026</div>
 </div>
 <h2>Zusammenfassung</h2>
 <p>IPcamVision Pro ist eine lokale macOS-App zum Anzeigen, Aufzeichnen und Verwalten benutzerkonfigurierter IP-Kameras, NVRs und DVRs. Die App sammelt keine personenbezogenen Daten für den Entwickler, verwendet keine Analyse-, Werbe-Tracker- oder Profilierungsdienste und sendet Ihre Kameradaten nicht an einen Server, der uns gehört. Gerätekonfiguration, Anmeldeinformationen, Aufzeichnungen, Schnappschüsse und Einstellungen bleiben auf Ihrem Mac, es sei denn, Sie entscheiden sich für den Export oder die Freigabe.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera-, NVR- und DVR-Adressen und -Konfiguration, einschließlich IP-Adressen oder Hostnamen, RTSP- oder Stream-URLs, Ports, Stream-Profile, PTZ-Marke, Rasterlayout, Wiedergabeeinstellungen und Bewegungserkennungseinstellungen. Diese Werte werden mithilfe von <code>UserDefaults</code> in den privaten Einstellungen der App gespeichert und von der macOS-App-Sandbox isoliert.</li>
 <li>ONVIF Benutzernamen und Gerätebenutzernamen. Diese werden mit der Gerätekonfiguration in den privaten Einstellungen der App gespeichert.</li>
-<li>ONVIF Passwörter und Gerätepasswörter. Passwörter werden im privaten <code>UserDefaults</code>-Bereich der App gespeichert und Base64-codiert, um Probleme bei der Serialisierung von Eigenschaftenlisten zu vermeiden. Base64 ist keine kryptografische Verschlüsselung; Es handelt sich um einen privaten App-Speicher, der durch die macOS-Sandbox geschützt ist. Wenn Sie Schutz vor jemandem mit physischem Zugriff auf die Festplatte benötigen, aktivieren Sie FileVault auf Ihrem Mac. Passwörter werden nicht in Protokolle geschrieben und nicht an den Entwickler oder Dritte gesendet.</li>
+<li>ONVIF-Passwörter und Gerätepasswörter. Passwörter werden mit AES-256-GCM verschlüsselt, wobei ein im macOS-Keychain gespeicherter Master-Schlüssel verwendet wird, und dann im privaten <code>UserDefaults</code>-Bereich der App gespeichert. Der Master-Schlüssel wird einmalig generiert und verlässt den Keychain nie. Passwörter werden niemals im Klartext oder als Base64 auf dem Datenträger gespeichert. Passwörter werden nicht in Protokolle geschrieben und nicht an den Entwickler oder Dritte gesendet.</li>
 <li>Videoaufzeichnungen, heruntergeladene Wiedergabeclips und vom Benutzer erstellte Schnappschüsse. Sie werden nur in Ordnern oder Dateien gespeichert, die Sie über die macOS-Dateiauswahl auswählen, oder in einem Speicherordner, den Sie ausgewählt und mit einem sicherheitsbezogenen Lesezeichen autorisiert haben.</li>
 <li>Lokale Miniaturansichten, Fensterstatus, Benutzeroberflächeneinstellungen, ausgewählte Sprache, Status der Kaufstufe und andere App-Einstellungen. Diese verbleiben im App-Container auf Ihrem Mac.</li>
 </ul>

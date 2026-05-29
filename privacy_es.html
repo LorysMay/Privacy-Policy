@@ -47,7 +47,7 @@
 <div><strong>Aplicación</strong>: IPcamVision Pro</div>
 <div><strong>Revelador</strong>: LorysMay</div>
 <div><strong>Contacto</strong>: LorysMay@outlook.it</div>
-<div><strong>Última actualización</strong>: 25 de mayo de 2026</div>
+<div><strong>Última actualización</strong>: 29 de mayo de 2026</div>
 </div>
 <h2>Resumen</h2>
 <p>IPcamVision Pro es una aplicación local macOS para ver, grabar y administrar cámaras IP configuradas por el usuario, NVR y DVR. La aplicación no recopila datos personales para el desarrollador, no utiliza análisis, rastreadores de publicidad ni servicios de creación de perfiles, y no envía los datos de su cámara a ningún servidor de nuestra propiedad. La configuración del dispositivo, las credenciales, las grabaciones, las instantáneas y las preferencias permanecen en tu Mac a menos que elijas exportarlas o compartirlas.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Cámara, direcciones y configuración de NVR y DVR, incluidas direcciones IP o nombres de host, RTSP o URL de transmisión, puertos, perfiles de transmisión, marca PTZ, diseño de cuadrícula, configuración de reproducción y configuración de detección de movimiento. Estos valores se almacenan en las preferencias privadas de la aplicación mediante <code>UserDefaults</code> y están aislados por el entorno limitado de la aplicación macOS.</li>
 <li>Nombres de usuario de ONVIF y nombres de usuario del dispositivo. Estos se almacenan con la configuración del dispositivo en las preferencias privadas de la aplicación.</li>
-<li>Contraseñas ONVIF y contraseñas de dispositivos. Las contraseñas se almacenan en el área privada <code>UserDefaults</code> de la aplicación, codificada en Base64 para evitar problemas de serialización de la lista de propiedades. Base64 no es cifrado criptográfico; es un almacenamiento privado de aplicaciones protegido por el sandbox macOS. Si necesita protección contra alguien con acceso físico al disco, habilite FileVault en su Mac. Las contraseñas no se escriben en registros y no se envían al desarrollador ni a terceros.</li>
+<li>Contraseñas ONVIF y contraseñas de dispositivos. Las contraseñas se cifran con AES-256-GCM utilizando una clave maestra almacenada en el llavero de macOS, y luego se guardan en el área privada <code>UserDefaults</code> de la aplicación. La clave maestra se genera una sola vez y nunca sale del llavero. Las contraseñas nunca se almacenan en texto plano ni como Base64 en el disco. Las contraseñas no se escriben en registros y no se envían al desarrollador ni a terceros.</li>
 <li>Grabaciones de vídeo, clips de reproducción descargados e instantáneas creadas por el usuario. Se guardan únicamente en carpetas o archivos que usted elige a través del selector de archivos macOS, o en una carpeta para guardar que usted seleccionó y autorizó con un marcador de seguridad.</li>
 <li>Miniaturas locales, estado de la ventana, preferencias de interfaz, idioma seleccionado, estado del nivel de compra y otras configuraciones de la aplicación. Estos permanecen en el contenedor de aplicaciones de tu Mac.</li>
 </ul>

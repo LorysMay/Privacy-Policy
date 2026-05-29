@@ -47,7 +47,7 @@
 <div><strong>Uygulama</strong>: IPcamVision Pro</div>
 <div><strong>Geliştirici</strong>: LorysMay</div>
 <div><strong>Temas etmek</strong>: LorysMay@outlook.it</div>
-<div><strong>Son güncelleme</strong>: 25 Mayıs 2026</div>
+<div><strong>Son güncelleme</strong>: 29 Mayıs 2026</div>
 </div>
 <h2>Özet</h2>
 <p>IPcamVision Pro, kullanıcı tarafından yapılandırılan IP kameraları, NVR&#39;leri ve DVR&#39;leri görüntülemek, kaydetmek ve yönetmek için kullanılan yerel bir macOS uygulamasıdır. Uygulama, geliştiricinin kişisel verilerini toplamaz, analizleri, reklam izleyicileri veya profil oluşturma hizmetlerini kullanmaz ve kamera verilerinizi tarafımıza ait herhangi bir sunucuya göndermez. Cihaz yapılandırması, kimlik bilgileri, kayıtlar, anlık görüntüler ve tercihler, siz bunları dışa aktarmayı veya paylaşmayı seçmediğiniz sürece Mac&#39;inizde kalır.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>IP adresleri veya ana bilgisayar adları, RTSP veya akış URL&#39;leri, bağlantı noktaları, akış profilleri, PTZ markası, ızgara düzeni, oynatma ayarları ve hareket algılama ayarları dahil olmak üzere kamera, NVR ve DVR adresleri ve yapılandırması. Bu değerler, <code>UserDefaults</code> kullanılarak uygulamanın özel tercihlerinde saklanır ve macOS uygulama sanal alanı tarafından izole edilir.</li>
 <li>ONVIF kullanıcı adları ve cihaz kullanıcı adları. Bunlar, uygulamanın özel tercihlerinde cihaz yapılandırmasıyla birlikte saklanır.</li>
-<li>ONVIF şifreleri ve cihaz şifreleri. Parolalar, özellik listesi serileştirme sorunlarını önlemek için uygulamanın Base64 kodlu özel <code>UserDefaults</code> alanında saklanır. Base64 kriptografik şifreleme değildir; macOS sanal alanı tarafından korunan uygulamaya özel depolama alanıdır. Diske fiziksel erişimi olan birine karşı korumaya ihtiyacınız varsa Mac&#39;inizde FileVault&#39;yi etkinleştirin. Şifreler loglara yazılmaz ve geliştiriciye ya da üçüncü şahıslara gönderilmez.</li>
+<li>ONVIF şifreleri ve cihaz şifreleri. Parolalar, macOS Anahtarlık&#39;ta saklanan bir ana anahtar kullanılarak AES-256-GCM ile şifrelenir ve ardından uygulamanın özel <code>UserDefaults</code> alanına kaydedilir. Ana anahtar bir kez oluşturulur ve Anahtarlık&#39;ı asla terk etmez. Parolalar disk üzerinde hiçbir zaman düz metin veya Base64 olarak saklanmaz. Şifreler loglara yazılmaz ve geliştiriciye ya da üçüncü şahıslara gönderilmez.</li>
 <li>Kullanıcı tarafından oluşturulan video kayıtları, indirilen oynatma klipleri ve anlık görüntüler. Bunlar yalnızca macOS dosya seçici aracılığıyla seçtiğiniz klasörlere veya dosyalara veya seçtiğiniz ve güvenlik kapsamlı bir yer işaretiyle yetkilendirdiğiniz bir kaydetme klasörüne kaydedilir.</li>
 <li>Yerel küçük resimler, pencere durumu, arayüz tercihleri, seçilen dil, satın alma katmanı durumu ve diğer uygulama ayarları. Bunlar Mac&#39;inizdeki uygulama kapsayıcısında kalır.</li>
 </ul>

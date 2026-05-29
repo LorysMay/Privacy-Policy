@@ -47,7 +47,7 @@
 <div><strong>Sovellus</strong>: IPcamVision Pro</div>
 <div><strong>Kehittäjä</strong>: LorysMay</div>
 <div><strong>Ota yhteyttä</strong>: LorysMay@outlook.it</div>
-<div><strong>Viimeksi päivitetty</strong>: 25. toukokuuta 2026</div>
+<div><strong>Viimeksi päivitetty</strong>: 29. toukokuuta 2026</div>
 </div>
 <h2>Yhteenveto</h2>
 <p>IPcamVision Pro on paikallinen macOS-sovellus käyttäjän määrittämien IP-kameroiden, NVR- ja DVR-kameroiden katseluun, tallentamiseen ja hallintaan. Sovellus ei kerää henkilötietoja kehittäjälle, ei käytä analytiikkaa, mainosseurantaa tai profilointipalveluita, eikä lähetä kameratietojasi millekään omistamamme palvelimelle. Laitteen määritykset, tunnistetiedot, tallenteet, tilannekuvat ja asetukset pysyvät Macissasi, ellet päätä viedä tai jakaa niitä.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera-, NVR- ja DVR-osoitteet ja -asetukset, mukaan lukien IP-osoitteet tai isäntänimet, RTSP- tai stream-URL-osoitteet, portit, suoratoistoprofiilit, PTZ-brändi, ruudukon asettelu, toistoasetukset ja liikkeentunnistusasetukset. Nämä arvot tallennetaan sovelluksen yksityisiin asetuksiin <code>UserDefaults</code>:n avulla, ja ne eristetään macOS-sovelluksen hiekkalaatikolla.</li>
 <li>ONVIF-käyttäjätunnukset ja laitteen käyttäjätunnukset. Nämä tallennetaan laitteen asetusten kanssa sovelluksen yksityisiin asetuksiin.</li>
-<li>ONVIF-salasanat ja laitteiden salasanat. Salasanat tallennetaan sovelluksen yksityiselle <code>UserDefaults</code>-alueelle, joka on Base64-koodattu, jotta vältytään kiinteistöluetteloiden sarjoituksessa. Base64 ei ole kryptografinen salaus; se on sovellusyksityinen tallennustila, jota suojaa macOS-hiekkalaatikko. Jos tarvitset suojaa jotakuta vastaan, jolla on fyysinen pääsy levyyn, ota FileVault käyttöön Macissasi. Salasanoja ei kirjoiteta lokeihin, eikä niitä lähetetä kehittäjälle tai kolmansille osapuolille.</li>
+<li>ONVIF-salasanat ja laitteiden salasanat. Salasanat salataan AES-256-GCM:llä käyttäen macOS-avainnipussa tallennettua pääavainta, jonka jälkeen ne tallennetaan sovelluksen yksityiselle <code>UserDefaults</code>-alueelle. Pääavain luodaan kerran eikä se koskaan poistu avainnipusta. Salasanoja ei koskaan tallenneta selkokielisenä tai Base64-muodossa levylle. Salasanoja ei kirjoiteta lokeihin, eikä niitä lähetetä kehittäjälle tai kolmansille osapuolille.</li>
 <li>Käyttäjän luomat videotallenteet, ladatut toistoleikkeet ja tilannekuvat. Ne tallennetaan vain kansioihin tai tiedostoihin, jotka valitset macOS-tiedostovalitsimella, tai tallennuskansioon, jonka valitset ja valtuutit suojaustason kirjanmerkillä.</li>
 <li>Paikalliset pikkukuvat, ikkunan tila, käyttöliittymäasetukset, valittu kieli, ostotason tila ja muut sovellusasetukset. Nämä jäävät Macin sovellussäilöön.</li>
 </ul>

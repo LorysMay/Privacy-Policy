@@ -47,7 +47,7 @@
 <div><strong>aplikacija</strong>: IPcamVision Pro</div>
 <div><strong>Developer</strong>: LorysMay</div>
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Zadnje ažuriranje</strong>: 25. svibnja 2026.</div>
+<div><strong>Zadnje ažuriranje</strong>: 29. svibnja 2026.</div>
 </div>
 <h2>Sažetak</h2>
 <p>IPcamVision Pro je lokalna macOS aplikacija za pregled, snimanje i upravljanje korisnički konfiguriranim IP kamerama, NVRs i DVRs. Aplikacija ne prikuplja osobne podatke za razvojnog programera, ne koristi analitiku, alate za praćenje oglašavanja ili usluge profiliranja i ne šalje podatke o vašoj kameri bilo kojem poslužitelju u našem vlasništvu. Konfiguracija uređaja, vjerodajnice, snimke, snimke i postavke ostaju na vašem Macu osim ako ih ne odlučite izvesti ili podijeliti.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera, NVR i DVR adrese i konfiguracija, uključujući IP adrese ili imena hostova, RTSP ili URL-ove toka, portove, profile toka, PTZ marku, raspored mreže, postavke reprodukcije i postavke detekcije pokreta. Te su vrijednosti pohranjene u privatnim postavkama aplikacije pomoću <code>UserDefaults</code> i izolirane su sandboxom aplikacije macOS.</li>
 <li>ONVIF korisnička imena i korisnička imena uređaja. One su pohranjene s konfiguracijom uređaja u privatnim postavkama aplikacije.</li>
-<li>ONVIF lozinke i lozinke uređaja. Lozinke se pohranjuju u privatnom <code>UserDefaults</code> području aplikacije, kodiranom Base64 kako bi se izbjegli problemi serijalizacije popisa svojstava. Base64 nije kriptografska enkripcija; to je privatna pohrana aplikacije zaštićena sandboxom macOS. Ako trebate zaštitu od nekoga tko ima fizički pristup disku, omogućite FileVault na svom Macu. Lozinke se ne zapisuju u zapisnike i ne šalju se programeru ili trećim stranama.</li>
+<li>ONVIF lozinke i lozinke uređaja. Lozinke se šifriraju AES-256-GCM pomoću glavnog ključa pohranjenog u macOS Keychain, a zatim se pohranjuju u privatnom <code>UserDefaults</code> području aplikacije. Glavni ključ generira se jednom i nikad ne napušta Keychain. Lozinke se nikada ne pohranjuju kao otvoreni tekst ili Base64 na disku. Lozinke se ne zapisuju u zapisnike i ne šalju se programeru ili trećim stranama.</li>
 <li>Video zapisi, preuzeti isječci za reprodukciju i snimke koje je stvorio korisnik. Spremaju se samo u mape ili datoteke koje odaberete putem alata za odabir datoteka macOS ili u mapu za spremanje koju ste odabrali i autorizirali knjižnom oznakom sa sigurnosnim opsegom.</li>
 <li>Lokalne minijature, stanje prozora, postavke sučelja, odabrani jezik, stanje razine kupnje i druge postavke aplikacije. One ostaju u spremniku aplikacije na vašem Macu.</li>
 </ul>

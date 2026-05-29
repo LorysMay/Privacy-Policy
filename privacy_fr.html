@@ -47,7 +47,7 @@
 <div><strong>Application</strong>: IPcamVision Pro</div>
 <div><strong>Promoteur</strong>: LorysMay</div>
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Dernière mise à jour</strong>: 25 mai 2026</div>
+<div><strong>Dernière mise à jour</strong>: 29 mai 2026</div>
 </div>
 <h2>Résumé</h2>
 <p>IPcamVision Pro est une application locale macOS permettant de visualiser, d&#39;enregistrer et de gérer les caméras IP configurées par l&#39;utilisateur, les NVR et les DVR. L&#39;application ne collecte pas de données personnelles pour le développeur, n&#39;utilise pas de services d&#39;analyse, de suivi publicitaire ou de profilage, et n&#39;envoie les données de votre caméra à aucun serveur nous appartenant. La configuration de l&#39;appareil, les informations d&#39;identification, les enregistrements, les instantanés et les préférences restent sur votre Mac, sauf si vous choisissez de les exporter ou de les partager.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Adresses et configuration des caméras, NVR et DVR, y compris les adresses IP ou les noms d&#39;hôte, les URL RTSP ou de flux, les ports, les profils de flux, la marque PTZ, la disposition de la grille, les paramètres de lecture et les paramètres de détection de mouvement. Ces valeurs sont stockées dans les préférences privées de l&#39;application à l&#39;aide de <code>UserDefaults</code> et sont isolées par le bac à sable de l&#39;application macOS.</li>
 <li>Noms d’utilisateur ONVIF et noms d’utilisateur d’appareil. Ceux-ci sont stockés avec la configuration de l&#39;appareil dans les préférences privées de l&#39;application.</li>
-<li>Mots de passe ONVIF et mots de passe des appareils. Les mots de passe sont stockés dans la zone privée <code>UserDefaults</code> de l&#39;application, codés en Base64 pour éviter les problèmes de sérialisation de la liste de propriétés. Base64 n&#39;est pas un cryptage cryptographique; il s&#39;agit d&#39;un stockage privé d&#39;application protégé par le bac à sable macOS. Si vous avez besoin d&#39;une protection contre une personne ayant un accès physique au disque, activez FileVault sur votre Mac. Les mots de passe ne sont pas écrits dans les journaux et ne sont pas envoyés au développeur ou à des tiers.</li>
+<li>Mots de passe ONVIF et mots de passe des appareils. Les mots de passe sont chiffrés avec AES-256-GCM à l&#39;aide d&#39;une clé principale stockée dans le trousseau macOS, puis enregistrés dans la zone privée <code>UserDefaults</code> de l&#39;application. La clé principale est générée une seule fois et ne quitte jamais le trousseau. Les mots de passe ne sont jamais stockés en clair ni en Base64 sur le disque. Les mots de passe ne sont pas écrits dans les journaux et ne sont pas envoyés au développeur ou à des tiers.</li>
 <li>Enregistrements vidéo, clips de lecture téléchargés et instantanés créés par l&#39;utilisateur. Ils sont enregistrés uniquement dans les dossiers ou fichiers que vous choisissez via le sélecteur de fichiers macOS, ou dans un dossier de sauvegarde que vous avez sélectionné et autorisé avec un signet de sécurité.</li>
 <li>Miniatures locales, état de la fenêtre, préférences d&#39;interface, langue sélectionnée, état du niveau d&#39;achat et autres paramètres de l&#39;application. Ceux-ci restent dans le conteneur d&#39;applications sur votre Mac.</li>
 </ul>

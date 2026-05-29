@@ -47,7 +47,7 @@
 <div><strong>Aplicativo</strong>: IPcamVision Pro</div>
 <div><strong>Desenvolvedor</strong>: LorysMay</div>
 <div><strong>Contato</strong>: LorysMay@outlook.it</div>
-<div><strong>Última atualização</strong>: 25 de maio de 2026</div>
+<div><strong>Última atualização</strong>: 29 de maio de 2026</div>
 </div>
 <h2>Resumo</h2>
 <p>IPcamVision Pro é um aplicativo macOS local para visualizar, gravar e gerenciar câmeras IP configuradas pelo usuário, NVRs e DVRs. O aplicativo não coleta dados pessoais do desenvolvedor, não usa análises, rastreadores de publicidade ou serviços de criação de perfil e não envia os dados da sua câmera para nenhum servidor de nossa propriedade. A configuração do dispositivo, as credenciais, as gravações, os instantâneos e as preferências permanecem no seu Mac, a menos que você opte por exportá-los ou compartilhá-los.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Câmera, endereços e configuração de NVR e DVR, incluindo endereços IP ou nomes de host, RTSP ou URLs de fluxo, portas, perfis de fluxo, marca PTZ, layout de grade, configurações de reprodução e configurações de detecção de movimento. Esses valores são armazenados nas preferências privadas do aplicativo usando <code>UserDefaults</code> e são isolados pela sandbox do aplicativo macOS.</li>
 <li>Nomes de usuário ONVIF e nomes de usuário de dispositivos. Eles são armazenados com a configuração do dispositivo nas preferências privadas do aplicativo.</li>
-<li>Senhas ONVIF e senhas de dispositivos. As senhas são armazenadas na área <code>UserDefaults</code> privada do aplicativo, codificada em Base64 para evitar problemas de serialização da lista de propriedades. Base64 não é criptografia criptográfica; é um armazenamento privado de aplicativo protegido pela sandbox macOS. Se precisar de proteção contra alguém com acesso físico ao disco, habilite FileVault em seu Mac. As senhas não são gravadas nos logs e não são enviadas ao desenvolvedor ou a terceiros.</li>
+<li>Senhas ONVIF e senhas de dispositivos. As senhas são criptografadas com AES-256-GCM usando uma chave mestra armazenada no Keychain do macOS, depois salvas na área <code>UserDefaults</code> privada do aplicativo. A chave mestra é gerada uma única vez e nunca sai do Keychain. As senhas nunca são armazenadas em texto simples ou como Base64 no disco. As senhas não são gravadas nos logs e não são enviadas ao desenvolvedor ou a terceiros.</li>
 <li>Gravações de vídeo, clipes de reprodução baixados e instantâneos criados pelo usuário. Eles são salvos apenas em pastas ou arquivos escolhidos por meio do seletor de arquivos macOS ou em uma pasta salva que você selecionou e autorizou com um marcador com escopo de segurança.</li>
 <li>Miniaturas locais, estado da janela, preferências de interface, idioma selecionado, estado do nível de compra e outras configurações do aplicativo. Eles permanecem no contêiner do aplicativo no seu Mac.</li>
 </ul>

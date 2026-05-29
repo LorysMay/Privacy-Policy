@@ -47,7 +47,7 @@
 <div><strong>App</strong>: IPcamVision Pro</div>
 <div><strong>Vývojár</strong>: LorysMay</div>
 <div><strong>Kontaktovať</strong>: LorysMay@outlook.it</div>
-<div><strong>Posledná aktualizácia</strong>: 25. mája 2026</div>
+<div><strong>Posledná aktualizácia</strong>: 29. mája 2026</div>
 </div>
 <h2>Zhrnutie</h2>
 <p>IPcamVision Pro je lokálna aplikácia macOS na prezeranie, nahrávanie a správu užívateľom nakonfigurovaných IP kamier, NVR a DVR. Aplikácia nezhromažďuje osobné údaje pre vývojára, nepoužíva analytické, reklamné sledovacie služby ani profilovacie služby a neposiela údaje z vášho fotoaparátu na žiadny server, ktorý vlastníme. Konfigurácia zariadenia, prihlasovacie údaje, nahrávky, snímky a preferencie zostanú na vašom Macu, pokiaľ sa nerozhodnete ich exportovať alebo zdieľať.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Kamera, adresy a konfigurácia NVR a DVR vrátane IP adries alebo názvov hostiteľov, RTSP alebo stream URL, porty, profily streamu, značka PTZ, rozloženie mriežky, nastavenia prehrávania a nastavenia detekcie pohybu. Tieto hodnoty sú uložené v súkromných preferenciách aplikácie pomocou <code>UserDefaults</code> a sú izolované karanténou aplikácie macOS.</li>
 <li>Používateľské mená ONVIF a používateľské mená zariadení. Tieto sú uložené spolu s konfiguráciou zariadenia v súkromných predvoľbách aplikácie.</li>
-<li>Heslá ONVIF a heslá zariadení. Heslá sú uložené v súkromnej oblasti <code>UserDefaults</code> aplikácie, kódované Base64, aby sa predišlo problémom so serializáciou zoznamu vlastností. Base64 nie je kryptografické šifrovanie; je to súkromné ​​úložisko aplikácie chránené sandboxom macOS. Ak potrebujete ochranu pred niekým s fyzickým prístupom k disku, povoľte na svojom Macu FileVault. Heslá sa nezapisujú do denníkov a neposielajú sa vývojárom ani tretím stranám.</li>
+<li>Heslá ONVIF a heslá zariadení. Heslá sú šifrované pomocou AES-256-GCM s použitím hlavného kľúča uloženého v kľúčenke macOS a potom uložené v súkromnej oblasti <code>UserDefaults</code> aplikácie. Hlavný kľúč sa vygeneruje jedenkrát a nikdy neopustí kľúčenku. Heslá sa nikdy neukladajú ako čistý text ani ako Base64 na disku. Heslá sa nezapisujú do denníkov a neposielajú sa vývojárom ani tretím stranám.</li>
 <li>Videozáznamy, stiahnuté prehrávané klipy a snímky vytvorené používateľom. Ukladajú sa iba do priečinkov alebo súborov, ktoré si vyberiete pomocou výberu súborov macOS, alebo do priečinka na ukladanie, ktorý ste vybrali a autorizovali pomocou záložky s rozsahom zabezpečenia.</li>
 <li>Miestne miniatúry, stav okna, preferencie rozhrania, vybraný jazyk, stav nákupnej úrovne a ďalšie nastavenia aplikácie. Tie zostávajú v kontajneri aplikácie na vašom Macu.</li>
 </ul>

@@ -47,7 +47,7 @@
 <div><strong>Aplikacja</strong>: IPcamVision Pro</div>
 <div><strong>Wywoływacz</strong>: LorysMay</div>
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Ostatnia aktualizacja</strong>: 25 maja 2026</div>
+<div><strong>Ostatnia aktualizacja</strong>: 29 maja 2026</div>
 </div>
 <h2>Streszczenie</h2>
 <p>IPcamVision Pro to lokalna aplikacja macOS do przeglądania, nagrywania i zarządzania skonfigurowanymi przez użytkownika kamerami IP, NVR i DVR. Aplikacja nie gromadzi danych osobowych dla programisty, nie korzysta z narzędzi analitycznych, trackerów reklamowych ani usług profilowania i nie wysyła danych z Twojej kamery na żaden należący do nas serwer. Konfiguracja urządzenia, dane uwierzytelniające, nagrania, migawki i preferencje pozostają na komputerze Mac, chyba że zdecydujesz się je wyeksportować lub udostępnić.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Adresy i konfiguracja kamery, NVR i DVR, w tym adresy IP lub nazwy hostów, RTSP lub adresy URL strumieni, porty, profile strumieni, marka PTZ, układ siatki, ustawienia odtwarzania i ustawienia wykrywania ruchu. Wartości te są przechowywane w prywatnych preferencjach aplikacji przy użyciu <code>UserDefaults</code> i są izolowane przez piaskownicę aplikacji macOS.</li>
 <li>Nazwy użytkowników ONVIF i nazwy użytkowników urządzeń. Są one przechowywane wraz z konfiguracją urządzenia w prywatnych preferencjach aplikacji.</li>
-<li>Hasła ONVIF i hasła urządzeń. Hasła są przechowywane w prywatnym obszarze <code>UserDefaults</code> aplikacji i zakodowane w formacie Base64, aby uniknąć problemów z serializacją listy właściwości. Base64 nie jest szyfrowaniem kryptograficznym; jest to prywatna pamięć aplikacji chroniona przez piaskownicę macOS. Jeśli potrzebujesz ochrony przed osobą mającą fizyczny dostęp do dysku, włącz FileVault na swoim Macu. Hasła nie są zapisywane w logach i nie są wysyłane do programisty ani osób trzecich.</li>
+<li>Hasła ONVIF i hasła urządzeń. Hasła są szyfrowane za pomocą AES-256-GCM przy użyciu klucza głównego przechowywanego w pęku kluczy macOS, a następnie zapisywane w prywatnym obszarze <code>UserDefaults</code> aplikacji. Klucz główny jest generowany jednorazowo i nigdy nie opuszcza pęku kluczy. Hasła nigdy nie są przechowywane jako tekst jawny ani jako Base64 na dysku. Hasła nie są zapisywane w logach i nie są wysyłane do programisty ani osób trzecich.</li>
 <li>Nagrania wideo, pobrane klipy odtwarzające i migawki utworzone przez użytkownika. Są one zapisywane wyłącznie w folderach lub plikach wybranych za pomocą selektora plików macOS lub w folderze zapisu wybranym i autoryzowanym za pomocą zakładki o zakresie zabezpieczeń.</li>
 <li>Lokalne miniatury, stan okna, preferencje interfejsu, wybrany język, stan poziomu zakupu i inne ustawienia aplikacji. Pozostają one w kontenerze aplikacji na komputerze Mac.</li>
 </ul>

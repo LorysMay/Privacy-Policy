@@ -47,7 +47,7 @@
 <div><strong>Apl</strong>: IPcamVision Pro</div>
 <div><strong>pemaju</strong>: LorysMay</div>
 <div><strong>Kenalan</strong>: LorysMay@outlook.it</div>
-<div><strong>Kemas kini terakhir</strong>: 25 Mei 2026</div>
+<div><strong>Kemas kini terakhir</strong>: 29 Mei 2026</div>
 </div>
 <h2>Ringkasan</h2>
 <p>IPcamVision Pro ialah aplikasi macOS tempatan untuk melihat, merakam dan mengurus kamera IP yang dikonfigurasikan pengguna, NVRs dan DVRs. Apl ini tidak mengumpul data peribadi untuk pembangun, tidak menggunakan analitik, penjejak pengiklanan atau perkhidmatan pemprofilan dan tidak menghantar data kamera anda ke mana-mana pelayan yang dimiliki oleh kami. Konfigurasi peranti, bukti kelayakan, rakaman, syot kilat dan pilihan kekal pada Mac anda melainkan anda memilih untuk mengeksport atau berkongsinya.</p>
@@ -56,7 +56,7 @@
 <ul>
 <li>Alamat dan konfigurasi kamera, NVR dan DVR, termasuk alamat IP atau nama hos, RTSP atau URL strim, port, profil strim, jenama PTZ, susun atur grid, tetapan main balik dan tetapan pengesanan gerakan. Nilai ini disimpan dalam pilihan peribadi apl menggunakan <code>UserDefaults</code> dan diasingkan oleh kotak pasir aplikasi macOS.</li>
 <li>ONVIF nama pengguna dan nama pengguna peranti. Ini disimpan dengan konfigurasi peranti dalam pilihan peribadi apl.</li>
-<li>ONVIF kata laluan dan kata laluan peranti. Kata laluan disimpan dalam kawasan <code>UserDefaults</code> peribadi apl, dikodkan Base64 untuk mengelakkan isu siri senarai harta. Base64 bukan penyulitan kriptografi; ia adalah storan peribadi apl yang dilindungi oleh kotak pasir macOS. Jika anda memerlukan perlindungan terhadap seseorang yang mempunyai akses fizikal kepada cakera, dayakan FileVault pada Mac anda. Kata laluan tidak ditulis pada log dan tidak dihantar kepada pembangun atau pihak ketiga.</li>
+<li>ONVIF kata laluan dan kata laluan peranti. Kata laluan disulitkan dengan AES-256-GCM menggunakan kunci induk yang disimpan dalam Keychain macOS, kemudian disimpan dalam kawasan <code>UserDefaults</code> peribadi apl. Kunci induk dijana sekali sahaja dan tidak pernah meninggalkan Keychain. Kata laluan tidak pernah disimpan sebagai teks biasa atau Base64 pada cakera. Kata laluan tidak ditulis pada log dan tidak dihantar kepada pembangun atau pihak ketiga.</li>
 <li>Rakaman video, klip main balik yang dimuat turun dan syot kilat yang dibuat oleh pengguna. Ia disimpan hanya pada folder atau fail yang anda pilih melalui pemilih fail macOS, atau pada folder simpan yang anda pilih dan dibenarkan dengan penanda halaman skop keselamatan.</li>
 <li>Lakaran kenit tempatan, keadaan tetingkap, pilihan antara muka, bahasa yang dipilih, keadaan peringkat pembelian dan tetapan apl lain. Ini kekal dalam bekas apl pada Mac anda.</li>
 </ul>
