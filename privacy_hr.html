@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Politika privatnosti — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Politika privatnosti</h1>
 <div class="meta">
 <div><strong>aplikacija</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Developer</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Zadnje ažuriranje</strong>: 29. svibnja 2026.</div>
+</div>
+<div class="meta">
+<div><strong>Zadnje ažuriranje</strong>: 1. lipnja 2026.</div>
 </div>
 <h2>Sažetak</h2>
 <p>IPcamVision Pro je lokalna macOS aplikacija za pregled, snimanje i upravljanje korisnički konfiguriranim IP kamerama, NVRs i DVRs. Aplikacija ne prikuplja osobne podatke za razvojnog programera, ne koristi analitiku, alate za praćenje oglašavanja ili usluge profiliranja i ne šalje podatke o vašoj kameri bilo kojem poslužitelju u našem vlasništvu. Konfiguracija uređaja, vjerodajnice, snimke, snimke i postavke ostaju na vašem Macu osim ako ih ne odlučite izvesti ili podijeliti.</p>
 <h2>Podacima kojima aplikacija upravlja lokalno</h2>
 <p>Aplikacija obrađuje sljedeće podatke na vašem uređaju jer su potrebni za pružanje njezinih značajki:</p>
 <ul>
-<li>Kamera, NVR i DVR adrese i konfiguracija, uključujući IP adrese ili imena hostova, RTSP ili URL-ove toka, portove, profile toka, PTZ marku, raspored mreže, postavke reprodukcije i postavke detekcije pokreta. Te su vrijednosti pohranjene u privatnim postavkama aplikacije pomoću <code>UserDefaults</code> i izolirane su sandboxom aplikacije macOS.</li>
+<li>Kamera, NVR i DVR adrese i konfiguracija, uključujući IP adrese ili imena hostova, RTSP ili URL-ove toka, portove, profile toka, PTZ marku, raspored mreže, postavke reprodukcije i postavke detekcije pokreta. Te su vrijednosti pohranjene u privatnim postavkama aplikacije pomoću UserDefaults i izolirane su sandboxom aplikacije macOS.</li>
 <li>ONVIF korisnička imena i korisnička imena uređaja. One su pohranjene s konfiguracijom uređaja u privatnim postavkama aplikacije.</li>
-<li>ONVIF lozinke i lozinke uređaja. Lozinke se šifriraju AES-256-GCM pomoću glavnog ključa pohranjenog u macOS Keychain, a zatim se pohranjuju u privatnom <code>UserDefaults</code> području aplikacije. Glavni ključ generira se jednom i nikad ne napušta Keychain. Lozinke se nikada ne pohranjuju kao otvoreni tekst ili Base64 na disku. Lozinke se ne zapisuju u zapisnike i ne šalju se programeru ili trećim stranama.</li>
+<li>ONVIF lozinke i lozinke uređaja. Lozinke se šifriraju AES-256-GCM pomoću glavnog ključa pohranjenog u macOS Keychain, a zatim se pohranjuju u privatnom UserDefaults području aplikacije. Glavni ključ generira se jednom i nikad ne napušta Keychain. Lozinke se nikada ne pohranjuju kao otvoreni tekst ili Base64 na disku. Lozinke se ne zapisuju u zapisnike i ne šalju se programeru ili trećim stranama.</li>
 <li>Video zapisi, preuzeti isječci za reprodukciju i snimke koje je stvorio korisnik. Spremaju se samo u mape ili datoteke koje odaberete putem alata za odabir datoteka macOS ili u mapu za spremanje koju ste odabrali i autorizirali knjižnom oznakom sa sigurnosnim opsegom.</li>
 <li>Lokalne minijature, stanje prozora, postavke sučelja, odabrani jezik, stanje razine kupnje i druge postavke aplikacije. One ostaju u spremniku aplikacije na vašem Macu.</li>
 </ul>
 <h2>Detekcija pokreta i obavijesti</h2>
-<p>Detekcija pokreta nije obavezna i izvodi se lokalno na vašem Macu. Aplikacija analizira video okvire na uređaju, uključujući Apple Vision gdje je to dostupno, kako bi klasificirala kretanje kao što je kretanje osobe, vozila, životinje ili općenito. Okviri se ne učitavaju na Apple, razvojnom programeru ili bilo kojem poslužitelju treće strane za ovu značajku.</p>
-<p>Ako omogućite upozorenja o kretanju, aplikacija može zatražiti od macOS dopuštenje za obavijesti. Obavijesti dostavlja macOS i mogu uključivati ​​naziv kamere i otkriveni subjekt. Obavijesti možete onemogućiti u System Settings.</p>
+<p>Detekcija pokreta je opcionalna i izvodi se lokalno na vašem Macu. Aplikacija analizira video okvire na uređaju, uključujući Apple Vision kada je dostupan, kako bi klasificirala pokret kao osobu, vozilo, životinju ili opći pokret. Ova lokalna analiza ne prenosi okvire Appleu, razvojnom programeru niti na bilo koji poslužitelj u vlasništvu razvojnog programera.</p>
+<p>Ako uključite upozorenja o pokretu putem Telegrama, aplikacija šalje tekst upozorenja i, samo kada je uključena opcija fotografije, snimku pokreta na Telegram Bot API na <code>api.telegram.org</code>. Telegram vodi Telegram i nije poslužitelj u vlasništvu ili pod kontrolom razvojnog programera. Vi odlučujete hoćete li uključiti Telegram, hoće li se uključivati snimke i hoćete li postaviti automatski timer brisanja u postavkama aplikacije. Dostava i zadržavanje na Telegramu uređeni su pravilima Telegrama; automatsko brisanje može raditi samo dok je Mac uključen i aplikacija pokrenuta te podliježe Telegramovim ograničenjima brisanja.</p>
+<p>Za korištenje Telegram upozorenja stvarate ili konfigurirate vlastitog Telegram bota i u aplikaciju unosite token bota i Chat ID. Token bota i Chat ID spremaju se lokalno na Mac, ne šalju se razvojnom programeru i koriste se samo za kontaktiranje Telegram Bot API-ja kada su Telegram upozorenja uključena.</p>
+<p>Ako uključite macOS obavijesti o pokretu, aplikacija može zatražiti dopuštenje za obavijesti od macOS-a. Lokalne obavijesti isporučuje macOS i mogu sadržavati naziv kamere i otkriveni subjekt. Možete ih isključiti u Postavkama sustava.</p>
 <h2>Ono što aplikacija ne radi</h2>
 <ul>
 <li>Aplikacija ne prikuplja identifikatore kao što su IDFA, UDID, MAC adresa ili adresa e-pošte za programera.</li>
@@ -70,7 +79,7 @@
 <li>Aplikacija ne koristi SDK-ove za oglašavanje, SDK-ove za analizu ili usluge profiliranja.</li>
 <li>Aplikacija ne prenosi streamove s kamere, snimke, snimke, vjerodajnice ili konfiguraciju na bilo koji poslužitelj u našem vlasništvu.</li>
 <li>Aplikacija vas ne prati preko aplikacija ili web-mjesta.</li>
-<li>Aplikacija ne koristi dopuštenja za Mac kameru, mikrofon, lokaciju, kontakte, kalendare, Bluetooth ili biblioteku fotografija.</li>
+<li>Aplikacija ne koristi dozvole za Mac kameru, lokaciju, kontakte, kalendare, Bluetooth ili biblioteku Fotografije.</li>
 </ul>
 <h2>Mrežne komunikacije</h2>
 <p>Aplikacija uspostavlja samo mrežne veze potrebne za značajke koje koristite:</p>
@@ -78,23 +87,25 @@
 <li>Povezuje se izravno na kamere, NVR i DVR koje konfigurirate, bilo na vašoj lokalnoj mreži ili putem DDNS / port-forwarding. Ove veze mogu koristiti ONVIF preko HTTP ili HTTPS i RTSP tokova. Promet ide izravno između vašeg Maca i uređaja koji ste konfigurirali.</li>
 <li>Koristi tehnologije otkrivanja lokalne mreže kao što su Bonjour i WS-Discovery za pronalaženje kompatibilnih uređaja na vašem LAN-u kada tražite od aplikacije da traži.</li>
 <li>Kontaktira Apple StoreKit usluge za kupnje unutar aplikacije i provjere prava. Programer ne prima vaš Apple ID, broj kartice ili način plaćanja.</li>
-<li>Ako je omogućena sinkronizacija vremena reprodukcije, aplikacija može kontaktirati <code>pool.ntp.org</code> preko NTP kako bi izračunala pomak sata za točnu DVR reprodukciju. Ovaj se zahtjev ne koristi za praćenje i ne uključuje vjerodajnice vaše kamere ili konfiguraciju aplikacije.</li>
+<li>Ako je omogućena sinkronizacija vremena reprodukcije, aplikacija može kontaktirati pool.ntp.org preko NTP kako bi izračunala pomak sata za točnu DVR reprodukciju. Ovaj se zahtjev ne koristi za praćenje i ne uključuje vjerodajnice vaše kamere ili konfiguraciju aplikacije.</li>
+<li>Ako uključite upozorenja o pokretu putem Telegrama, aplikacija kontaktira Telegram Bot API putem HTTPS-a na <code>api.telegram.org</code> kako bi isporučila tekst upozorenja i, samo ako uključite foto upozorenja, odabranu snimku pokreta. Telegram je usluga treće strane kojom upravlja Telegram, a ne razvojni programer.</li>
 <li>Značajka Prijavi bug otvara vaš zadani klijent e-pošte s unaprijed ispunjenom porukom tek nakon što pritisnete Pošalji. Sama aplikacija ne učitava izvješće.</li>
 </ol>
 <h2>Sigurnost transporta</h2>
 <p>Mnoge IP kamere i DVR podržavaju samo obične HTTP, RTSP ili samopotpisane HTTPS certifikate. Iz tog razloga aplikacija dopušta veze s korisnički konfiguriranim uređajima s kamerama koji možda ne zadovoljavaju zadane postavke App Transport Security. Koristite pouzdane mreže, jake lozinke za kameru i HTTPS tamo gdje vaš uređaj to podržava.</p>
 <h2>Kupnje putem aplikacije</h2>
-<p>Značajke Pro i Unlimited otključane su putem Apple-ovog sustava kupnje unutar aplikacije koristeći StoreKit. Provjera se odvija putem API-ja Apple-a, uključujući <code>Transaction.currentEntitlements</code> i ažuriranja transakcija. Aplikacija lokalno pohranjuje samo rezultirajuće stanje prava kako bi mogla omogućiti kupljene značajke.</p>
+<p>Značajke Pro i Unlimited otključane su putem Apple-ovog sustava kupnje unutar aplikacije koristeći StoreKit. Provjera se odvija putem API-ja Apple-a, uključujući Transaction.currentEntitlements i ažuriranja transakcija. Aplikacija lokalno pohranjuje samo rezultirajuće stanje prava kako bi mogla omogućiti kupljene značajke.</p>
 <h2>Aplikacija traži dopuštenja</h2>
 <ul>
 <li>Local Network: zahtijeva macOS za otkrivanje i povezivanje s kamerama, NVRs i DVRs na vašoj lokalnoj mreži. Možete ga opozvati u System Settings → Privacy &amp; Security → Local Network.</li>
 <li>Pristup datoteci po izboru korisnika: koristi se kada odaberete gdje želite spremiti ili uvesti snimke, snimke ili datoteke sigurnosne kopije uređaja. Ako odaberete trajnu mapu za spremanje, aplikacija pohranjuje sigurnosnu oznaku za tu mapu. Aplikacija ne dobiva opći pristup ostatku vašeg diska.</li>
 <li>Desktop ili druge mape: koristi se samo kada izričito odaberete tu mapu kao odredište. Aplikacija ne zahtijeva širok pristup mapama Desktop, Documents ili Downloads.</li>
 <li>Obavijesti: izborno, koriste se za upozorenja o kretanju ako ih omogućite.</li>
+<li>Mikrofon: opcionalno, koristi se samo kada pokrenete dvosmjerni govor / talkback prema kompatibilnoj kameri. Pristup možete odbiti ili opozvati u Postavkama sustava.</li>
 <li>Touch ID, Face ID ili Mac lozinka: njima upravlja macOS do LocalAuthentication za osjetljive radnje kao što je otkrivanje lozinke kamere ili izvoz podataka uređaja. Aplikacija ne prima biometrijske podatke.</li>
 </ul>
 <h2>Izvoz, uvoz i sigurnosno kopiranje konfiguracija</h2>
-<p>Aplikacija može izvesti konfiguraciju uređaja u datoteku<code>.ipcamvisionprobackup</code> koju vi izradite i kojom upravljate. Trenutačni izvozi izostavljaju zasebno polje lozinke ONVIF. Međutim, ako ste ručno unijeli RTSP, DDNS ili URL streama koji već sadrži ugrađene vjerodajnice, taj URL može biti uključen u sigurnosnu kopiju jer je dio konfiguracije uređaja. Ako uvezete stariju sigurnosnu kopiju koja sadrži ONVIF lozinku, aplikacija ju može jednom pročitati kako bi je migrirala u privatnu pohranu aplikacije. Vi ste odgovorni za to gdje pohranjujete sigurnosne kopije datoteka.</p>
+<p>Aplikacija može izvesti konfiguraciju uređaja u datoteku.ipcamvisionprobackup koju vi izradite i kojom upravljate. Trenutačni izvozi izostavljaju zasebno polje lozinke ONVIF. Međutim, ako ste ručno unijeli RTSP, DDNS ili URL streama koji već sadrži ugrađene vjerodajnice, taj URL može biti uključen u sigurnosnu kopiju jer je dio konfiguracije uređaja. Ako uvezete stariju sigurnosnu kopiju koja sadrži ONVIF lozinku, aplikacija ju može jednom pročitati kako bi je migrirala u privatnu pohranu aplikacije. Vi ste odgovorni za to gdje pohranjujete sigurnosne kopije datoteka.</p>
 <h2>Prijavite značajku pogreške</h2>
 <p>Prozor Prijavi bug ne šalje podatke izravno iz aplikacije. Kada pritisnete Pošalji, aplikacija otvara vaš zadani klijent e-pošte s unaprijed ispunjenom e-poštom adresiranom na LorysMay@outlook.it. Vi odlučujete hoćete li ga poslati. E-pošta sadrži samo ono što ste upisali plus verziju aplikacije i macOS verziju za otklanjanje pogrešaka.</p>
 <h2>djeca</h2>
@@ -106,5 +117,5 @@
 <h2>Kontakt</h2>
 <p>Za pitanja o ovoj politici pišite na LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonska online verzija</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hr.html">https://lorysmay.github.io/Privacy-Policy/privacy_hr.html</a></p>
+<p>*Kanonska online verzija*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hr.html">https://lorysmay.github.io/Privacy-Policy/privacy_hr.html</a></p>
 </body></html>

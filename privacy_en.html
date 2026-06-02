@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Privacy Policy</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Developer</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Last updated</strong>: May 29, 2026</div>
+</div>
+<div class="meta">
+<div><strong>Last updated</strong>: June 1, 2026</div>
 </div>
 <h2>Summary</h2>
 <p>IPcamVision Pro is a local macOS app for viewing, recording and managing user-configured IP cameras, NVRs and DVRs. The app does not collect personal data for the developer, does not use analytics, advertising trackers or profiling services, and does not send your camera data to any server owned by us. Device configuration, credentials, recordings, snapshots and preferences stay on your Mac unless you choose to export or share them.</p>
 <h2>Data handled locally by the app</h2>
 <p>The app handles the following data on your device because it is needed to provide its features:</p>
 <ul>
-<li>Camera, NVR and DVR addresses and configuration, including IP addresses or host names, RTSP or stream URLs, ports, stream profiles, PTZ brand, grid layout, playback settings and motion-detection settings. These values are stored in the app&#39;s private preferences using <code>UserDefaults</code> and are isolated by the macOS app sandbox.</li>
-<li>ONVIF usernames and device usernames. These are stored with the device configuration in the app&#39;s private preferences.</li>
-<li>ONVIF passwords and device passwords. Passwords are encrypted with AES-256-GCM using a master key stored in the macOS Keychain, then saved to the app&#39;s private <code>UserDefaults</code> area. The master key is generated once and never leaves the Keychain. Passwords are never stored in plain text or as Base64 on disk. Passwords are not written to logs and are not sent to the developer or third parties.</li>
+<li>Camera, NVR and DVR addresses and configuration, including IP addresses or host names, RTSP or stream URLs, ports, stream profiles, PTZ brand, grid layout, playback settings and motion-detection settings. These values are stored in the app&#x27;s private preferences using UserDefaults and are isolated by the macOS app sandbox.</li>
+<li>ONVIF usernames and device usernames. These are stored with the device configuration in the app&#x27;s private preferences.</li>
+<li>ONVIF passwords and device passwords. Passwords are encrypted with AES-256-GCM using a master key stored in the macOS Keychain, then saved to the app&#x27;s private UserDefaults area. The master key is generated once and never leaves the Keychain. Passwords are never stored in plain text or as Base64 on disk. Passwords are not written to logs and are not sent to the developer or third parties.</li>
 <li>Video recordings, downloaded playback clips and snapshots created by the user. They are saved only to folders or files you choose through the macOS file picker, or to a save folder you selected and authorized with a security-scoped bookmark.</li>
 <li>Local thumbnails, window state, interface preferences, selected language, purchase tier state and other app settings. These remain in the app container on your Mac.</li>
 </ul>
 <h2>Motion detection and notifications</h2>
-<p>Motion detection is optional and runs locally on your Mac. The app analyzes video frames on-device, including with Apple Vision where available, to classify motion such as a person, vehicle, animal or generic movement. Frames are not uploaded to Apple, to the developer or to any third-party server for this feature.</p>
-<p>If you enable motion alerts, the app may ask macOS for notification permission. Notifications are delivered by macOS and can include the camera name and the detected subject. You can disable notifications in System Settings.</p>
+<p>Motion detection is optional and runs locally on your Mac. The app analyzes video frames on-device, including with Apple Vision where available, to classify motion such as a person, vehicle, animal or generic movement. This local analysis does not upload frames to Apple, to the developer or to any server owned by the developer.</p>
+<p>If you enable Telegram motion alerts, the app sends the alert text and, only when the photo option is enabled, the motion snapshot to the Telegram Bot API at <code>api.telegram.org</code>. Telegram is operated by Telegram and is not a server owned or controlled by the developer. You decide whether to enable Telegram alerts, whether snapshots are included, and whether to set an automatic deletion timer in the app settings. Telegram delivery and retention are governed by Telegram; automatic deletion can run only while your Mac is on and the app is running, and it is subject to Telegram&#x27;s deletion limits.</p>
+<p>To use Telegram alerts, you create or configure your own Telegram bot and enter your bot token and Chat ID in the app. The bot token and Chat ID are stored locally on your Mac, are not sent to the developer, and are used only to contact the Telegram Bot API when Telegram alerts are enabled.</p>
+<p>If you enable macOS motion notifications, the app may ask macOS for notification permission. Local notifications are delivered by macOS and can include the camera name and the detected subject. You can disable notifications in System Settings.</p>
 <h2>What the app does not do</h2>
 <ul>
 <li>The app does not collect identifiers such as IDFA, UDID, MAC address or email address for the developer.</li>
@@ -70,31 +79,33 @@
 <li>The app does not use advertising SDKs, analytics SDKs or profiling services.</li>
 <li>The app does not upload camera streams, snapshots, recordings, credentials or configuration to any server owned by us.</li>
 <li>The app does not track you across apps or websites.</li>
-<li>The app does not use the Mac camera, microphone, location, contacts, calendars, Bluetooth or Photos library permissions.</li>
+<li>The app does not use the Mac camera, location, contacts, calendars, Bluetooth or Photos library permissions.</li>
 </ul>
 <h2>Network communications</h2>
 <p>The app only makes network connections needed for the features you use:</p>
 <ol>
 <li>It connects directly to cameras, NVRs and DVRs that you configure, either on your local network or through DDNS / port-forwarding. These connections may use ONVIF over HTTP or HTTPS and RTSP streams. Traffic goes directly between your Mac and the device you configured.</li>
 <li>It uses local-network discovery technologies such as Bonjour and WS-Discovery to find compatible devices on your LAN when you ask the app to search.</li>
-<li>It contacts Apple&#39;s StoreKit services for in-app purchases and entitlement checks. The developer does not receive your Apple ID, card number or payment method.</li>
-<li>If playback time synchronization is enabled, the app may contact <code>pool.ntp.org</code> over NTP to calculate a clock offset for accurate DVR playback. This request is not used for tracking and does not include your camera credentials or app configuration.</li>
+<li>It contacts Apple&#x27;s StoreKit services for in-app purchases and entitlement checks. The developer does not receive your Apple ID, card number or payment method.</li>
+<li>If playback time synchronization is enabled, the app may contact pool.ntp.org over NTP to calculate a clock offset for accurate DVR playback. This request is not used for tracking and does not include your camera credentials or app configuration.</li>
+<li>If you enable Telegram motion alerts, the app contacts the Telegram Bot API over HTTPS at <code>api.telegram.org</code> to deliver the alert text and, only if you enable photo alerts, the selected motion snapshot. Telegram is a third-party service operated by Telegram, not by the developer.</li>
 <li>The Report a bug feature opens your default mail client with a pre-filled message only after you press Send. The app itself does not upload the report.</li>
 </ol>
 <h2>Transport security</h2>
 <p>Many IP cameras and DVRs only support plain HTTP, RTSP or self-signed HTTPS certificates. For that reason the app allows connections to user-configured camera devices that may not meet App Transport Security defaults. Use trusted networks, strong camera passwords and HTTPS where your device supports it.</p>
 <h2>In-app purchases</h2>
-<p>Pro and Unlimited features are unlocked through Apple&#39;s in-app purchase system using StoreKit. Verification happens through Apple&#39;s APIs, including <code>Transaction.currentEntitlements</code> and transaction updates. The app stores only the resulting entitlement state locally so it can enable the purchased features.</p>
+<p>Pro and Unlimited features are unlocked through Apple&#x27;s in-app purchase system using StoreKit. Verification happens through Apple&#x27;s APIs, including Transaction.currentEntitlements and transaction updates. The app stores only the resulting entitlement state locally so it can enable the purchased features.</p>
 <h2>Permissions requested by the app</h2>
 <ul>
 <li>Local Network: required by macOS to discover and connect to cameras, NVRs and DVRs on your local network. You can revoke it in System Settings → Privacy &amp; Security → Local Network.</li>
 <li>User-selected file access: used when you choose where to save or import recordings, snapshots or device backup files. If you choose a persistent save folder, the app stores a security-scoped bookmark for that folder. The app does not get general access to the rest of your disk.</li>
 <li>Desktop or other folders: used only when you explicitly choose that folder as a destination. The app does not request broad Desktop, Documents or Downloads folder access.</li>
 <li>Notifications: optional, used for motion alerts if you enable them.</li>
+<li>Microphone: optional, used only when you start two-way talk / talkback toward a compatible camera. You can deny or revoke microphone access in System Settings.</li>
 <li>Touch ID, Face ID or Mac password: handled by macOS through LocalAuthentication for sensitive actions such as revealing a camera password or exporting device data. The app does not receive biometric data.</li>
 </ul>
 <h2>Exporting, importing and backing up configurations</h2>
-<p>The app can export device configuration to a <code>.ipcamvisionprobackup</code> file that you create and manage. Current exports omit the separate ONVIF password field. However, if you manually entered an RTSP, DDNS or stream URL that already contains embedded credentials, that URL can be included in the backup because it is part of the device configuration. If you import an older backup that contains an ONVIF password, the app may read it once to migrate it into private app storage. You are responsible for where you store backup files.</p>
+<p>The app can export device configuration to a .ipcamvisionprobackup file that you create and manage. Current exports omit the separate ONVIF password field. However, if you manually entered an RTSP, DDNS or stream URL that already contains embedded credentials, that URL can be included in the backup because it is part of the device configuration. If you import an older backup that contains an ONVIF password, the app may read it once to migrate it into private app storage. You are responsible for where you store backup files.</p>
 <h2>Report a bug feature</h2>
 <p>The Report a bug window does not send data directly from the app. When you press Send, the app opens your default mail client with a pre-filled email addressed to LorysMay@outlook.it. You decide whether to send it. The email contains only what you typed plus app version and macOS version for debugging.</p>
 <h2>Children</h2>
@@ -106,5 +117,5 @@
 <h2>Contact</h2>
 <p>For questions about this policy, write to LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online version</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
+<p>*Canonical online version*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_en.html">https://lorysmay.github.io/Privacy-Policy/privacy_en.html</a></p>
 </body></html>

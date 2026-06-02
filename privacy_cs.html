@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zásady ochrany osobních údajů — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Zásady ochrany osobních údajů</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Vývojář</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Kontakt</strong>: LorysMay@outlook.it</div>
-<div><strong>Naposledy aktualizováno</strong>: 29. května 2026</div>
+</div>
+<div class="meta">
+<div><strong>Naposledy aktualizováno</strong>: 1. června 2026</div>
 </div>
 <h2>Shrnutí</h2>
 <p>IPcamVision Pro je místní aplikace macOS pro prohlížení, záznam a správu uživatelsky konfigurovaných IP kamer NVR a DVR. Aplikace neshromažďuje osobní údaje pro vývojáře, nepoužívá analytické, reklamní sledovače ani profilovací služby a neposílá data z vašich kamer na žádný server, který vlastníme. Konfigurace zařízení, přihlašovací údaje, nahrávky, snímky a předvolby zůstanou na vašem Macu, pokud se nerozhodnete je exportovat nebo sdílet.</p>
 <h2>Data zpracovávaná místně aplikací</h2>
 <p>Aplikace zpracovává následující data ve vašem zařízení, protože je potřebná k poskytování jejích funkcí:</p>
 <ul>
-<li>Kamera, adresy a konfigurace NVR a DVR, včetně IP adres nebo názvů hostitelů, RTSP nebo stream URL, porty, profily streamu, značka PTZ, rozložení mřížky, nastavení přehrávání a nastavení detekce pohybu. Tyto hodnoty jsou uloženy v soukromých předvolbách aplikace pomocí <code>UserDefaults</code> a jsou izolovány karanténou aplikace macOS.</li>
+<li>Kamera, adresy a konfigurace NVR a DVR, včetně IP adres nebo názvů hostitelů, RTSP nebo stream URL, porty, profily streamu, značka PTZ, rozložení mřížky, nastavení přehrávání a nastavení detekce pohybu. Tyto hodnoty jsou uloženy v soukromých předvolbách aplikace pomocí UserDefaults a jsou izolovány karanténou aplikace macOS.</li>
 <li>Uživatelská jména ONVIF a uživatelská jména zařízení. Ty jsou uloženy s konfigurací zařízení v soukromých předvolbách aplikace.</li>
-<li>Hesla ONVIF a hesla zařízení. Hesla jsou šifrována pomocí AES-256-GCM s použitím hlavního klíče uloženého v klíčence macOS a poté uložena v soukromé oblasti <code>UserDefaults</code> aplikace. Hlavní klíč je vygenerován jednou a nikdy klíčenku neopustí. Hesla nejsou nikdy uložena v prostém textu ani jako Base64 na disku. Hesla se nezapisují do protokolů a neodesílají se vývojáři ani třetím stranám.</li>
+<li>Hesla ONVIF a hesla zařízení. Hesla jsou šifrována pomocí AES-256-GCM s použitím hlavního klíče uloženého v klíčence macOS a poté uložena v soukromé oblasti UserDefaults aplikace. Hlavní klíč je vygenerován jednou a nikdy klíčenku neopustí. Hesla nejsou nikdy uložena v prostém textu ani jako Base64 na disku. Hesla se nezapisují do protokolů a neodesílají se vývojáři ani třetím stranám.</li>
 <li>Videonahrávky, stažené přehrávané klipy a snímky vytvořené uživatelem. Ukládají se pouze do složek nebo souborů, které si vyberete pomocí nástroje pro výběr souborů macOS, nebo do složky pro uložení, kterou jste vybrali a autorizovali pomocí záložky s rozsahem zabezpečení.</li>
 <li>Místní miniatury, stav okna, předvolby rozhraní, vybraný jazyk, stav nákupní úrovně a další nastavení aplikace. Ty zůstanou v kontejneru aplikace na vašem Macu.</li>
 </ul>
 <h2>Detekce pohybu a upozornění</h2>
-<p>Detekce pohybu je volitelná a běží lokálně na vašem Macu. Aplikace analyzuje snímky videa na zařízení, včetně Apple Vision, pokud je k dispozici, za účelem klasifikace pohybu, jako je pohyb osoby, vozidla, zvířete nebo obecný pohyb. Pro tuto funkci se rámce neodesílají do Apple, vývojáři ani na server třetí strany.</p>
-<p>Pokud povolíte upozornění na pohyb, aplikace může požádat macOS o povolení upozornění. Oznámení doručuje macOS a mohou obsahovat název kamery a detekovaný objekt. Oznámení můžete zakázat v System Settings.</p>
+<p>Detekce pohybu je volitelná a běží lokálně na vašem Macu. Aplikace analyzuje snímky videa přímo v zařízení, včetně Apple Vision, pokud je k dispozici, aby klasifikovala pohyb jako osobu, vozidlo, zvíře nebo obecný pohyb. Tato lokální analýza neodesílá snímky do Apple, vývojáři ani na žádný server vlastněný vývojářem.</p>
+<p>Pokud zapnete upozornění na pohyb přes Telegram, aplikace odešle text upozornění a pouze při zapnuté volbě fotografie také snímek pohybu do Telegram Bot API na <code>api.telegram.org</code>. Telegram provozuje společnost Telegram a nejde o server vlastněný ani kontrolovaný vývojářem. Sami rozhodujete, zda Telegram zapnete, zda budou přikládány snímky a zda v nastavení aplikace nastavíte časovač automatického odstranění. Doručení a uchování v Telegramu se řídí pravidly Telegramu; automatické odstranění může proběhnout pouze tehdy, když je Mac zapnutý a aplikace běží, a podléhá limitům Telegramu.</p>
+<p>Chcete-li používat upozornění Telegram, vytvoříte nebo nastavíte vlastního bota Telegram a v aplikaci zadáte token bota a Chat ID. Token bota a Chat ID se ukládají lokálně na Macu, neodesílají se vývojáři a používají se pouze ke kontaktování Telegram Bot API, když jsou upozornění Telegram zapnutá.</p>
+<p>Pokud zapnete upozornění na pohyb v macOS, aplikace může požádat macOS o oprávnění k oznámením. Lokální oznámení doručuje macOS a mohou obsahovat název kamery a detekovaný objekt. Můžete je vypnout v Nastavení systému.</p>
 <h2>Co aplikace nedělá</h2>
 <ul>
 <li>Aplikace neshromažďuje identifikátory, jako je IDFA, UDID, MAC adresa nebo e-mailová adresa vývojáře.</li>
@@ -70,7 +79,7 @@
 <li>Aplikace nepoužívá reklamní sady SDK, analytické sady SDK ani profilovací služby.</li>
 <li>Aplikace nenahrává streamy z kamery, snímky, nahrávky, přihlašovací údaje ani konfiguraci na žádný server, který vlastníme.</li>
 <li>Aplikace vás nesleduje napříč aplikacemi ani weby.</li>
-<li>Aplikace nepoužívá oprávnění k fotoaparátu, mikrofonu, poloze, kontaktům, kalendářům, Bluetooth ani ke knihovně Macu na Macu.</li>
+<li>Aplikace nepoužívá oprávnění ke kameře Macu, poloze, kontaktům, kalendářům, Bluetooth ani knihovně Fotky.</li>
 </ul>
 <h2>Síťové komunikace</h2>
 <p>Aplikace vytváří pouze síťová připojení potřebná pro funkce, které používáte:</p>
@@ -78,23 +87,25 @@
 <li>Připojuje se přímo ke kamerám NVR a DVR, které si nakonfigurujete, buď ve vaší místní síti, nebo prostřednictvím DDNS / přesměrování portů. Tato připojení mohou používat ONVIF přes HTTP nebo HTTPS a RTSP toky. Provoz jde přímo mezi vaším Macem a zařízením, které jste nakonfigurovali.</li>
 <li>Využívá technologie zjišťování místní sítě, jako jsou Bonjour a WS-Discovery, k nalezení kompatibilních zařízení ve vaší síti LAN, když požádáte aplikaci o vyhledávání.</li>
 <li>Kontaktuje služby StoreKit Apple pro nákupy v aplikaci a kontroly nároků. Vývojář neobdrží vaše ID Apple, číslo karty ani způsob platby.</li>
-<li>Pokud je povolena synchronizace času přehrávání, aplikace může kontaktovat <code>pool.ntp.org</code> přes NTP, aby vypočítala časový posun pro přesné přehrávání DVR. Tento požadavek se nepoužívá ke sledování a nezahrnuje přihlašovací údaje fotoaparátu ani konfiguraci aplikace.</li>
+<li>Pokud je povolena synchronizace času přehrávání, aplikace může kontaktovat pool.ntp.org přes NTP, aby vypočítala časový posun pro přesné přehrávání DVR. Tento požadavek se nepoužívá ke sledování a nezahrnuje přihlašovací údaje fotoaparátu ani konfiguraci aplikace.</li>
+<li>Pokud zapnete upozornění na pohyb přes Telegram, aplikace kontaktuje Telegram Bot API přes HTTPS na <code>api.telegram.org</code>, aby doručila text upozornění a pouze při zapnutých fotografických upozorněních vybraný snímek pohybu. Telegram je služba třetí strany provozovaná Telegramem, nikoli vývojářem.</li>
 <li>Funkce Nahlásit chybu otevře výchozího poštovního klienta s předvyplněnou zprávou až po stisknutí Odeslat. Samotná aplikace zprávu nenahraje.</li>
 </ol>
 <h2>Zabezpečení dopravy</h2>
 <p>Mnoho IP kamer a DVR podporuje pouze prosté certifikáty HTTP, RTSP nebo HTTPS s vlastním podpisem. Z tohoto důvodu aplikace umožňuje připojení k uživatelsky konfigurovaným kamerovým zařízením, která nemusí splňovat výchozí nastavení zabezpečení přenosu aplikace. Používejte důvěryhodné sítě, silná hesla kamer a HTTPS tam, kde to vaše zařízení podporuje.</p>
 <h2>Nákupy v aplikaci</h2>
-<p>Funkce Pro a Unlimited se odemykají prostřednictvím systému nákupu v aplikaci Apple pomocí StoreKit. Ověření probíhá prostřednictvím rozhraní API Apple, včetně <code>Transaction.currentEntitlements</code> a aktualizací transakcí. Aplikace místně ukládá pouze výsledný stav oprávnění, aby mohla aktivovat zakoupené funkce.</p>
+<p>Funkce Pro a Unlimited se odemykají prostřednictvím systému nákupu v aplikaci Apple pomocí StoreKit. Ověření probíhá prostřednictvím rozhraní API Apple, včetně Transaction.currentEntitlements a aktualizací transakcí. Aplikace místně ukládá pouze výsledný stav oprávnění, aby mohla aktivovat zakoupené funkce.</p>
 <h2>Oprávnění požadovaná aplikací</h2>
 <ul>
 <li>Local Network: vyžaduje macOS k vyhledávání a připojení k kamerám NVR a DVR ve vaší místní síti. Můžete jej odvolat v System Settings → Privacy &amp; Security → Local Network.</li>
 <li>Uživatelsky vybraný přístup k souboru: používá se, když zvolíte, kam chcete uložit nebo importovat nahrávky, snímky nebo soubory zálohy zařízení. Pokud zvolíte trvalou složku pro ukládání, aplikace pro tuto složku uloží záložku s rozsahem zabezpečení. Aplikace nezíská obecný přístup ke zbytku vašeho disku.</li>
 <li>Desktop nebo jiné složky: používá se pouze v případě, že tuto složku výslovně vyberete jako cíl. Aplikace nevyžaduje široký přístup ke složce Desktop, Documents nebo Downloads.</li>
 <li>Upozornění: volitelné, používá se pro upozornění na pohyb, pokud je povolíte.</li>
+<li>Mikrofon: volitelný, používá se pouze při spuštění obousměrného hovoru / talkbacku ke kompatibilní kameře. Přístup můžete odmítnout nebo odvolat v Nastavení systému.</li>
 <li>Heslo Touch ID, Face ID nebo Mac: zpracovává macOS až LocalAuthentication pro citlivé akce, jako je odhalení hesla kamery nebo export dat zařízení. Aplikace nepřijímá biometrické údaje.</li>
 </ul>
 <h2>Export, import a zálohování konfigurací</h2>
-<p>Aplikace může exportovat konfiguraci zařízení do souboru<code>.ipcamvisionprobackup</code>, který vytvoříte a spravujete. Aktuální exporty vynechávají samostatné pole hesla ONVIF. Pokud jste však ručně zadali adresu URL RTSP, DDNS nebo stream, která již obsahuje vložená pověření, může být tato adresa URL zahrnuta do zálohy, protože je součástí konfigurace zařízení. Pokud importujete starší zálohu, která obsahuje heslo ONVIF, aplikace si ji může jednou přečíst, aby ji migrovala do soukromého úložiště aplikace. Jste odpovědní za to, kam ukládáte záložní soubory.</p>
+<p>Aplikace může exportovat konfiguraci zařízení do souboru.ipcamvisionprobackup, který vytvoříte a spravujete. Aktuální exporty vynechávají samostatné pole hesla ONVIF. Pokud jste však ručně zadali adresu URL RTSP, DDNS nebo stream, která již obsahuje vložená pověření, může být tato adresa URL zahrnuta do zálohy, protože je součástí konfigurace zařízení. Pokud importujete starší zálohu, která obsahuje heslo ONVIF, aplikace si ji může jednou přečíst, aby ji migrovala do soukromého úložiště aplikace. Jste odpovědní za to, kam ukládáte záložní soubory.</p>
 <h2>Nahlásit chybu funkce</h2>
 <p>Okno Nahlásit chybu neodesílá data přímo z aplikace. Když stisknete Odeslat, aplikace otevře vašeho výchozího poštovního klienta s předvyplněným e-mailem adresovaným na LorysMay@outlook.it. Vy se rozhodnete, zda jej pošlete. E-mail obsahuje pouze to, co jste zadali, plus verzi aplikace a verzi macOS pro ladění.</p>
 <h2>Děti</h2>
@@ -106,5 +117,5 @@
 <h2>Kontakt</h2>
 <p>Máte-li dotazy týkající se těchto zásad, pište na adresu LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonická online verze</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_cs.html">https://lorysmay.github.io/Privacy-Policy/privacy_cs.html</a></p>
+<p>*Kanonická online verze*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_cs.html">https://lorysmay.github.io/Privacy-Policy/privacy_cs.html</a></p>
 </body></html>

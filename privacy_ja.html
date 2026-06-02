@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プライバシーポリシー — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>プライバシーポリシー</h1>
 <div class="meta">
 <div><strong>アプリ</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>開発者</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>接触</strong>: LorysMay@outlook.it</div>
-<div><strong>最終更新日</strong>: 2026年5月29日</div>
+</div>
+<div class="meta">
+<div><strong>最終更新日</strong>: 2026年6月1日</div>
 </div>
 <h2>まとめ</h2>
 <p>IPcamVision Pro は、ユーザー設定の IP カメラ、NVR および DVR を表示、記録、管理するためのローカル macOS アプリです。このアプリは開発者の個人データを収集せず、分析、広告トラッカー、またはプロファイリング サービスを使用せず、カメラ データを当社が所有するサーバーに送信しません。デバイス構成、認証情報、録音、スナップショット、環境設定は、エクスポートまたは共有を選択しない限り、Mac 上に残ります。</p>
 <h2>アプリがローカルで扱うデータ</h2>
 <p>アプリは、その機能を提供するために必要なため、デバイス上で次のデータを処理します。</p>
 <ul>
-<li>カメラ、NVR および DVR のアドレスと構成 (IP アドレスまたはホスト名、RTSP またはストリーム URL、ポート、ストリーム プロファイル、PTZ ブランド、グリッド レイアウト、再生設定、モーション検出設定を含む)。これらの値は、<code>UserDefaults</code> を使用してアプリのプライベート設定に保存され、macOS アプリ サンドボックスによって分離されます。</li>
+<li>カメラ、NVR および DVR のアドレスと構成 (IP アドレスまたはホスト名、RTSP またはストリーム URL、ポート、ストリーム プロファイル、PTZ ブランド、グリッド レイアウト、再生設定、モーション検出設定を含む)。これらの値は、UserDefaults を使用してアプリのプライベート設定に保存され、macOS アプリ サンドボックスによって分離されます。</li>
 <li>ONVIF ユーザー名とデバイス ユーザー名。これらは、デバイス設定とともにアプリのプライベート設定に保存されます。</li>
-<li>ONVIF パスワードとデバイス パスワード。パスワードは、macOS キーチェーンに保存されたマスターキーを使用して AES-256-GCM で暗号化され、アプリのプライベート <code>UserDefaults</code> 領域に保存されます。マスターキーは一度だけ生成され、キーチェーンから外に出ることはありません。パスワードは平文または Base64 形式でディスクに保存されることは一切ありません。パスワードはログに書き込まれず、開発者やサードパーティに送信されません。</li>
+<li>ONVIF パスワードとデバイス パスワード。パスワードは、macOS キーチェーンに保存されたマスターキーを使用して AES-256-GCM で暗号化され、アプリのプライベート UserDefaults 領域に保存されます。マスターキーは一度だけ生成され、キーチェーンから外に出ることはありません。パスワードは平文または Base64 形式でディスクに保存されることは一切ありません。パスワードはログに書き込まれず、開発者やサードパーティに送信されません。</li>
 <li>ビデオ録画、ダウンロードされた再生クリップ、およびユーザーが作成したスナップショット。これらは、macOS ファイル ピッカーで選択したフォルダーまたはファイル、またはセキュリティ スコープのブックマークで選択して承認した保存フォルダーにのみ保存されます。</li>
 <li>ローカルのサムネイル、ウィンドウの状態、インターフェイスの設定、選択した言語、購入層の状態、その他のアプリ設定。これらは Mac 上のアプリ コンテナに残ります。</li>
 </ul>
 <h2>動きの検出と通知</h2>
-<p>モーション検出はオプションであり、Mac 上でローカルに実行されます。このアプリは、Apple Vision が利用可能な場合を含め、デバイス上のビデオ フレームを分析して、人、車両、動物、または一般的な動きなどの動きを分類します。この機能のフレームは、Apple、開発者、またはサードパーティのサーバーにはアップロードされません。</p>
-<p>モーションアラートを有効にすると、アプリは macOS に通知の許可を求める場合があります。通知は macOS によって配信され、カメラ名と検出された被写体を含めることができます。 System Settings で通知を無効にすることができます。</p>
+<p>モーション検出は任意で、Mac 上でローカルに実行されます。アプリは Apple Vision が利用可能な場合を含め、デバイス上で映像フレームを分析し、人、車両、動物、一般的な動きとして分類します。このローカル分析では、フレームは Apple、開発者、または開発者所有のサーバーにアップロードされません。</p>
+<p>Telegram のモーション通知を有効にすると、アプリは通知テキストと、写真オプションが有効な場合に限りモーションスナップショットを <code>api.telegram.org</code> の Telegram Bot API に送信します。Telegram は Telegram が運営しており、開発者が所有または管理するサーバーではありません。Telegram を有効にするか、スナップショットを含めるか、アプリ設定で自動削除タイマーを設定するかはユーザーが決定します。Telegram での配信と保持は Telegram の規則に従います。自動削除は Mac の電源が入りアプリが実行中の場合にのみ実行でき、Telegram の削除制限の対象です。</p>
+<p>Telegramアラートを使用するには、自分のTelegramボットを作成または設定し、アプリにボットトークンとChat IDを入力します。ボットトークンとChat IDはMac上にローカル保存され、開発者には送信されず、Telegramアラートが有効な場合にTelegram Bot APIへ接続するためだけに使用されます。</p>
+<p>macOS のモーション通知を有効にすると、アプリは macOS に通知許可を求める場合があります。ローカル通知は macOS により配信され、カメラ名と検出された対象を含むことがあります。システム設定で無効にできます。</p>
 <h2>アプリがやらないこと</h2>
 <ul>
 <li>アプリは、開発者の IDFA、UDID、MAC アドレス、電子メール アドレスなどの識別子を収集しません。</li>
@@ -70,7 +79,7 @@
 <li>このアプリは、広告 SDK、分析 SDK、プロファイリング サービスを使用しません。</li>
 <li>このアプリは、カメラ ストリーム、スナップショット、録画、認証情報、構成を当社が所有するサーバーにアップロードしません。</li>
 <li>このアプリは、アプリや Web サイト間でユーザーを追跡しません。</li>
-<li>このアプリは、Mac のカメラ、マイク、位置情報、連絡先、カレンダー、Bluetooth、または写真ライブラリの権限を使用しません。</li>
+<li>アプリは Mac のカメラ、位置情報、連絡先、カレンダー、Bluetooth、写真ライブラリの権限を使用しません。</li>
 </ul>
 <h2>ネットワーク通信</h2>
 <p>アプリは、使用する機能に必要なネットワーク接続のみを行います。</p>
@@ -78,23 +87,25 @@
 <li>ローカル ネットワーク上または DDNS / ポート転送を通じて、設定したカメラ、NVR および DVR に直接接続します。これらの接続では、HTTP または HTTPS および RTSP ストリームを介して ONVIF を使用する場合があります。トラフィックは Mac と設定したデバイスの間で直接送られます。</li>
 <li>アプリに検索を依頼すると、Bonjour や WS-Discovery などのローカル ネットワーク検出テクノロジを使用して、LAN 上の互換性のあるデバイスを検索します。</li>
 <li>アプリ内購入と権利チェックのために Apple の StoreKit サービスに接続します。開発者は、Apple ID、カード番号、または支払い方法を受け取りません。</li>
-<li>再生時間の同期が有効な場合、アプリは NTP 経由で <code>pool.ntp.org</code> に接続して、正確な DVR 再生のためのクロック オフセットを計算することがあります。このリクエストは追跡には使用されず、カメラの認証情報やアプリ構成は含まれません。</li>
+<li>再生時間の同期が有効な場合、アプリは NTP 経由で pool.ntp.org に接続して、正確な DVR 再生のためのクロック オフセットを計算することがあります。このリクエストは追跡には使用されず、カメラの認証情報やアプリ構成は含まれません。</li>
+<li>Telegram のモーション通知を有効にすると、アプリは HTTPS で <code>api.telegram.org</code> の Telegram Bot API に接続し、通知テキストと、写真通知を有効にした場合のみ選択されたモーションスナップショットを送信します。Telegram は Telegram が運営する第三者サービスであり、開発者が運営するものではありません。</li>
 <li>バグを報告する機能では、[送信] を押した後にのみ、デフォルトのメール クライアントが開き、事前に入力されたメッセージが表示されます。アプリ自体はレポートをアップロードしません。</li>
 </ol>
 <h2>輸送のセキュリティ</h2>
 <p>多くの IP カメラと DVR は、プレーン HTTP、RTSP、または自己署名 HTTPS 証明書のみをサポートします。そのため、アプリでは、アプリ トランスポート セキュリティのデフォルトを満たしていない可能性があるユーザー構成のカメラ デバイスへの接続が許可されます。デバイスがサポートしている場合は、信頼できるネットワーク、強力なカメラ パスワード、および HTTPS を使用してください。</p>
 <h2>アプリ内購入</h2>
-<p>Pro および Unlimited の機能は、StoreKit を使用する Apple のアプリ内購入システムを通じてロック解除されます。検証は、<code>Transaction.currentEntitlements</code> やトランザクション更新などの Apple の API を通じて行われます。アプリは、購入した機能を有効にできるように、結果として得られる権利状態のみをローカルに保存します。</p>
+<p>Pro および Unlimited の機能は、StoreKit を使用する Apple のアプリ内購入システムを通じてロック解除されます。検証は、Transaction.currentEntitlements やトランザクション更新などの Apple の API を通じて行われます。アプリは、購入した機能を有効にできるように、結果として得られる権利状態のみをローカルに保存します。</p>
 <h2>アプリによって要求される権限</h2>
 <ul>
 <li>Local Network: ローカル ネットワーク上のカメラ、NVR および DVR を検出して接続するために、macOS によって必要となります。 System Settings→Privacy &amp; Security→Local Networkで取り消すことができます。</li>
 <li>ユーザー選択のファイル アクセス: 録画、スナップショット、またはデバイス バックアップ ファイルを保存またはインポートする場所を選択するときに使用されます。永続的な保存フォルダーを選択した場合、アプリはそのフォルダーのセキュリティスコープのブックマークを保存します。アプリはディスクの残りの部分に一般的にアクセスできません。</li>
 <li>Desktop またはその他のフォルダー: そのフォルダーを宛先として明示的に選択した場合にのみ使用されます。アプリは、広範囲の Desktop、Documents、または Downloads フォルダー アクセスを要求しません。</li>
 <li>通知: オプション。有効にした場合、モーション アラートに使用されます。</li>
+<li>マイク: 任意。対応カメラへの双方向通話 / talkback を開始した場合にのみ使用されます。システム設定で拒否または取り消すことができます。</li>
 <li>Touch ID、Face ID、または Mac パスワード: カメラのパスワードの公開やデバイス データのエクスポートなどの機密アクションの場合、macOS から LocalAuthentication によって処理されます。アプリは生体認証データを受信しません。</li>
 </ul>
 <h2>構成のエクスポート、インポート、およびバックアップ</h2>
-<p>アプリは、ユーザーが作成および管理する<code>.ipcamvisionprobackup</code> ファイルにデバイス構成をエクスポートできます。現在のエクスポートでは、別の ONVIF パスワード フィールドが省略されています。ただし、すでに埋め込み資格情報が含まれている RTSP、DDNS、またはストリーム URL を手動で入力した場合、その URL はデバイス構成の一部であるため、バックアップに含めることができます。 ONVIF パスワードを含む古いバックアップをインポートする場合、アプリはそれを 1 回読み取って、プライベート アプリ ストレージに移行することがあります。バックアップ ファイルを保存する場所については、お客様の責任となります。</p>
+<p>アプリは、ユーザーが作成および管理する.ipcamvisionprobackup ファイルにデバイス構成をエクスポートできます。現在のエクスポートでは、別の ONVIF パスワード フィールドが省略されています。ただし、すでに埋め込み資格情報が含まれている RTSP、DDNS、またはストリーム URL を手動で入力した場合、その URL はデバイス構成の一部であるため、バックアップに含めることができます。 ONVIF パスワードを含む古いバックアップをインポートする場合、アプリはそれを 1 回読み取って、プライベート アプリ ストレージに移行することがあります。バックアップ ファイルを保存する場所については、お客様の責任となります。</p>
 <h2>バグを報告する機能</h2>
 <p>[バグを報告] ウィンドウでは、アプリからデータが直接送信されません。 [送信] を押すと、アプリはデフォルトのメール クライアントを開き、LorysMay@outlook.it 宛ての事前入力メールが送信されます。送信するかどうかはあなたが決めます。電子メールには、入力した内容と、デバッグ用のアプリのバージョンと macOS バージョンのみが含まれます。</p>
 <h2>子供たち</h2>
@@ -106,5 +117,5 @@
 <h2>接触</h2>
 <p>このポリシーに関する質問については、LorysMay@outlook.it までお問い合わせください。</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>正規オンライン版</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ja.html">https://lorysmay.github.io/Privacy-Policy/privacy_ja.html</a></p>
+<p>*正規オンライン版*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_ja.html">https://lorysmay.github.io/Privacy-Policy/privacy_ja.html</a></p>
 </body></html>

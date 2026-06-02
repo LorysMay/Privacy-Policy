@@ -5,106 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gizlilik Politikası — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Gizlilik Politikası</h1>
 <div class="meta">
 <div><strong>Uygulama</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Geliştirici</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Temas etmek</strong>: LorysMay@outlook.it</div>
-<div><strong>Son güncelleme</strong>: 29 Mayıs 2026</div>
+</div>
+<div class="meta">
+<div><strong>Son güncelleme</strong>: 1 Haziran 2026</div>
 </div>
 <h2>Özet</h2>
-<p>IPcamVision Pro, kullanıcı tarafından yapılandırılan IP kameraları, NVR&#39;leri ve DVR&#39;leri görüntülemek, kaydetmek ve yönetmek için kullanılan yerel bir macOS uygulamasıdır. Uygulama, geliştiricinin kişisel verilerini toplamaz, analizleri, reklam izleyicileri veya profil oluşturma hizmetlerini kullanmaz ve kamera verilerinizi tarafımıza ait herhangi bir sunucuya göndermez. Cihaz yapılandırması, kimlik bilgileri, kayıtlar, anlık görüntüler ve tercihler, siz bunları dışa aktarmayı veya paylaşmayı seçmediğiniz sürece Mac&#39;inizde kalır.</p>
+<p>IPcamVision Pro, kullanıcı tarafından yapılandırılan IP kameraları, NVR&#x27;leri ve DVR&#x27;leri görüntülemek, kaydetmek ve yönetmek için kullanılan yerel bir macOS uygulamasıdır. Uygulama, geliştiricinin kişisel verilerini toplamaz, analizleri, reklam izleyicileri veya profil oluşturma hizmetlerini kullanmaz ve kamera verilerinizi tarafımıza ait herhangi bir sunucuya göndermez. Cihaz yapılandırması, kimlik bilgileri, kayıtlar, anlık görüntüler ve tercihler, siz bunları dışa aktarmayı veya paylaşmayı seçmediğiniz sürece Mac&#x27;inizde kalır.</p>
 <h2>Uygulama tarafından yerel olarak işlenen veriler</h2>
 <p>Uygulama, özelliklerini sağlamak için gerekli olduğundan cihazınızda aşağıdaki verileri işler:</p>
 <ul>
-<li>IP adresleri veya ana bilgisayar adları, RTSP veya akış URL&#39;leri, bağlantı noktaları, akış profilleri, PTZ markası, ızgara düzeni, oynatma ayarları ve hareket algılama ayarları dahil olmak üzere kamera, NVR ve DVR adresleri ve yapılandırması. Bu değerler, <code>UserDefaults</code> kullanılarak uygulamanın özel tercihlerinde saklanır ve macOS uygulama sanal alanı tarafından izole edilir.</li>
+<li>IP adresleri veya ana bilgisayar adları, RTSP veya akış URL&#x27;leri, bağlantı noktaları, akış profilleri, PTZ markası, ızgara düzeni, oynatma ayarları ve hareket algılama ayarları dahil olmak üzere kamera, NVR ve DVR adresleri ve yapılandırması. Bu değerler, UserDefaults kullanılarak uygulamanın özel tercihlerinde saklanır ve macOS uygulama sanal alanı tarafından izole edilir.</li>
 <li>ONVIF kullanıcı adları ve cihaz kullanıcı adları. Bunlar, uygulamanın özel tercihlerinde cihaz yapılandırmasıyla birlikte saklanır.</li>
-<li>ONVIF şifreleri ve cihaz şifreleri. Parolalar, macOS Anahtarlık&#39;ta saklanan bir ana anahtar kullanılarak AES-256-GCM ile şifrelenir ve ardından uygulamanın özel <code>UserDefaults</code> alanına kaydedilir. Ana anahtar bir kez oluşturulur ve Anahtarlık&#39;ı asla terk etmez. Parolalar disk üzerinde hiçbir zaman düz metin veya Base64 olarak saklanmaz. Şifreler loglara yazılmaz ve geliştiriciye ya da üçüncü şahıslara gönderilmez.</li>
+<li>ONVIF şifreleri ve cihaz şifreleri. Parolalar, macOS Anahtarlık&#x27;ta saklanan bir ana anahtar kullanılarak AES-256-GCM ile şifrelenir ve ardından uygulamanın özel UserDefaults alanına kaydedilir. Ana anahtar bir kez oluşturulur ve Anahtarlık&#x27;ı asla terk etmez. Parolalar disk üzerinde hiçbir zaman düz metin veya Base64 olarak saklanmaz. Şifreler loglara yazılmaz ve geliştiriciye ya da üçüncü şahıslara gönderilmez.</li>
 <li>Kullanıcı tarafından oluşturulan video kayıtları, indirilen oynatma klipleri ve anlık görüntüler. Bunlar yalnızca macOS dosya seçici aracılığıyla seçtiğiniz klasörlere veya dosyalara veya seçtiğiniz ve güvenlik kapsamlı bir yer işaretiyle yetkilendirdiğiniz bir kaydetme klasörüne kaydedilir.</li>
-<li>Yerel küçük resimler, pencere durumu, arayüz tercihleri, seçilen dil, satın alma katmanı durumu ve diğer uygulama ayarları. Bunlar Mac&#39;inizdeki uygulama kapsayıcısında kalır.</li>
+<li>Yerel küçük resimler, pencere durumu, arayüz tercihleri, seçilen dil, satın alma katmanı durumu ve diğer uygulama ayarları. Bunlar Mac&#x27;inizdeki uygulama kapsayıcısında kalır.</li>
 </ul>
 <h2>Hareket algılama ve bildirimler</h2>
-<p>Hareket algılama isteğe bağlıdır ve Mac&#39;inizde yerel olarak çalışır. Uygulama, hareketi kişi, araç, hayvan veya genel hareket olarak sınıflandırmak için, mevcut olduğunda Apple Vision de dahil olmak üzere cihazdaki video karelerini analiz eder. Bu özellik için çerçeveler Apple&#39;ye, geliştiriciye veya herhangi bir üçüncü taraf sunucuya yüklenmez.</p>
-<p>Hareket uyarılarını etkinleştirirseniz uygulama macOS&#39;den bildirim izni isteyebilir. Bildirimler macOS tarafından iletilir ve kamera adını ve tespit edilen konuyu içerebilir. System Settings&#39;de bildirimleri devre dışı bırakabilirsiniz.</p>
+<p>Hareket algılama isteğe bağlıdır ve Mac’inizde yerel olarak çalışır. Uygulama, mevcut olduğunda Apple Vision dahil olmak üzere video karelerini cihaz üzerinde analiz ederek hareketi kişi, araç, hayvan veya genel hareket olarak sınıflandırır. Bu yerel analiz kareleri Apple’a, geliştiriciye veya geliştiricinin sahip olduğu herhangi bir sunucuya yüklemez.</p>
+<p>Telegram hareket uyarılarını etkinleştirirseniz uygulama uyarı metnini ve yalnızca fotoğraf seçeneği açıksa hareket anlık görüntüsünü <code>api.telegram.org</code> adresindeki Telegram Bot API’ye gönderir. Telegram, Telegram tarafından işletilir ve geliştiricinin sahip olduğu veya kontrol ettiği bir sunucu değildir. Telegram’ı etkinleştirip etkinleştirmemeye, anlık görüntülerin eklenip eklenmeyeceğine ve uygulama ayarlarında otomatik silme zamanlayıcısı ayarlayıp ayarlamamaya siz karar verirsiniz. Telegram’daki teslim ve saklama Telegram kurallarına tabidir; otomatik silme yalnızca Mac açıkken ve uygulama çalışırken yapılabilir ve Telegram’ın silme sınırlarına tabidir.</p>
+<p>Telegram uyarılarını kullanmak için kendi Telegram botunuzu oluşturur veya yapılandırır, bot tokenını ve Chat ID değerini uygulamaya girersiniz. Bot tokenı ve Chat ID Mac&#x27;inizde yerel olarak saklanır, geliştiriciye gönderilmez ve yalnızca Telegram uyarıları etkin olduğunda Telegram Bot API ile iletişim kurmak için kullanılır.</p>
+<p>macOS hareket bildirimlerini etkinleştirirseniz uygulama macOS’tan bildirim izni isteyebilir. Yerel bildirimler macOS tarafından gönderilir ve kamera adını ve algılanan özneyi içerebilir. Bunları Sistem Ayarları’ndan kapatabilirsiniz.</p>
 <h2>Uygulama ne yapmaz</h2>
 <ul>
 <li>Uygulama, geliştiricinin IDFA, UDID, MAC adresi veya e-posta adresi gibi tanımlayıcılarını toplamaz.</li>
 <li>Uygulama, geliştiriciye telemetri, analiz, kullanım istatistikleri veya kilitlenme raporları göndermez.</li>
-<li>Uygulama, reklam SDK&#39;larını, analiz SDK&#39;larını veya profil oluşturma hizmetlerini kullanmaz.</li>
+<li>Uygulama, reklam SDK&#x27;larını, analiz SDK&#x27;larını veya profil oluşturma hizmetlerini kullanmaz.</li>
 <li>Uygulama, tarafımıza ait hiçbir sunucuya kamera yayınlarını, anlık görüntüleri, kayıtları, kimlik bilgilerini veya yapılandırmayı yüklemez.</li>
 <li>Uygulama sizi uygulamalarda veya web sitelerinde izlemez.</li>
-<li>Uygulama, Mac kamera, mikrofon, konum, kişiler, takvimler, Bluetooth veya Fotoğraflar kitaplığı izinlerini kullanmaz.</li>
+<li>Uygulama Mac kamerası, konum, kişiler, takvimler, Bluetooth veya Fotoğraflar arşivi izinlerini kullanmaz.</li>
 </ul>
 <h2>Ağ iletişimi</h2>
 <p>Uygulama yalnızca kullandığınız özellikler için gereken ağ bağlantılarını sağlar:</p>
 <ol>
-<li>Yerel ağınızda veya DDNS / bağlantı noktası yönlendirme yoluyla yapılandırdığınız kameralara, NVR&#39;lere ve DVR&#39;lere doğrudan bağlanır. Bu bağlantılar, HTTP veya HTTPS ve RTSP akışları üzerinden ONVIF kullanabilir. Trafik doğrudan Mac&#39;iniz ile yapılandırdığınız cihaz arasında gider.</li>
-<li>Uygulamadan arama yapmasını istediğinizde LAN&#39;ınızdaki uyumlu cihazları bulmak için Bonjour ve WS-Discovery gibi yerel ağ keşif teknolojilerini kullanır.</li>
-<li>Uygulama içi satın almalar ve yetki kontrolleri için Apple&#39;nin StoreKit hizmetleriyle iletişim kurar. Geliştirici Apple kimliğinizi, kart numaranızı veya ödeme yönteminizi almaz.</li>
-<li>Oynatma süresi senkronizasyonu etkinleştirilirse uygulama, doğru DVR oynatma için saat farkını hesaplamak amacıyla NTP üzerinden <code>pool.ntp.org</code> ile iletişime geçebilir. Bu istek izleme için kullanılmaz ve kamera kimlik bilgilerinizi veya uygulama yapılandırmanızı içermez.</li>
+<li>Yerel ağınızda veya DDNS / bağlantı noktası yönlendirme yoluyla yapılandırdığınız kameralara, NVR&#x27;lere ve DVR&#x27;lere doğrudan bağlanır. Bu bağlantılar, HTTP veya HTTPS ve RTSP akışları üzerinden ONVIF kullanabilir. Trafik doğrudan Mac&#x27;iniz ile yapılandırdığınız cihaz arasında gider.</li>
+<li>Uygulamadan arama yapmasını istediğinizde LAN&#x27;ınızdaki uyumlu cihazları bulmak için Bonjour ve WS-Discovery gibi yerel ağ keşif teknolojilerini kullanır.</li>
+<li>Uygulama içi satın almalar ve yetki kontrolleri için Apple&#x27;nin StoreKit hizmetleriyle iletişim kurar. Geliştirici Apple kimliğinizi, kart numaranızı veya ödeme yönteminizi almaz.</li>
+<li>Oynatma süresi senkronizasyonu etkinleştirilirse uygulama, doğru DVR oynatma için saat farkını hesaplamak amacıyla NTP üzerinden pool.ntp.org ile iletişime geçebilir. Bu istek izleme için kullanılmaz ve kamera kimlik bilgilerinizi veya uygulama yapılandırmanızı içermez.</li>
+<li>Telegram hareket uyarılarını etkinleştirirseniz uygulama, uyarı metnini ve yalnızca fotoğraflı uyarıları etkinleştirdiyseniz seçilen hareket anlık görüntüsünü iletmek için HTTPS üzerinden <code>api.telegram.org</code> adresindeki Telegram Bot API ile iletişim kurar. Telegram, geliştirici tarafından değil Telegram tarafından işletilen üçüncü taraf bir hizmettir.</li>
 <li>Hata bildirme özelliği, yalnızca Gönder tuşuna bastıktan sonra varsayılan posta istemcinizi önceden doldurulmuş bir mesajla açar. Uygulamanın kendisi raporu yüklemez.</li>
 </ol>
 <h2>Taşıma güvenliği</h2>
-<p>Birçok IP kamera ve DVR yalnızca düz HTTP, RTSP veya kendinden imzalı HTTPS sertifikalarını destekler. Bu nedenle uygulama, App Transport Security varsayılanlarını karşılamayabilecek, kullanıcı tarafından yapılandırılmış kamera cihazlarına bağlantı yapılmasına izin verir. Güvenilir ağları, güçlü kamera şifrelerini ve cihazınızın desteklediği HTTPS&#39;yi kullanın.</p>
+<p>Birçok IP kamera ve DVR yalnızca düz HTTP, RTSP veya kendinden imzalı HTTPS sertifikalarını destekler. Bu nedenle uygulama, App Transport Security varsayılanlarını karşılamayabilecek, kullanıcı tarafından yapılandırılmış kamera cihazlarına bağlantı yapılmasına izin verir. Güvenilir ağları, güçlü kamera şifrelerini ve cihazınızın desteklediği HTTPS&#x27;yi kullanın.</p>
 <h2>Uygulama içi satın almalar</h2>
-<p>Pro ve Unlimited özelliklerinin kilidi, StoreKit kullanılarak Apple&#39;nin uygulama içi satın alma sistemi aracılığıyla açılır. Doğrulama, <code>Transaction.currentEntitlements</code> ve işlem güncellemeleri dahil olmak üzere Apple&#39;nin API&#39;leri aracılığıyla gerçekleşir. Uygulama, satın alınan özellikleri etkinleştirebilmesi için yalnızca sonuçtaki yetkilendirme durumunu yerel olarak depolar.</p>
+<p>Pro ve Unlimited özelliklerinin kilidi, StoreKit kullanılarak Apple&#x27;nin uygulama içi satın alma sistemi aracılığıyla açılır. Doğrulama, Transaction.currentEntitlements ve işlem güncellemeleri dahil olmak üzere Apple&#x27;nin API&#x27;leri aracılığıyla gerçekleşir. Uygulama, satın alınan özellikleri etkinleştirebilmesi için yalnızca sonuçtaki yetkilendirme durumunu yerel olarak depolar.</p>
 <h2>Uygulamanın istediği izinler</h2>
 <ul>
-<li>Local Network: Yerel ağınızdaki kameraları, NVR&#39;leri ve DVR&#39;leri keşfedip bunlara bağlanmak için macOS tarafından gereklidir. Bunu System Settings → Privacy &amp; Security → Local Network seçeneğinden iptal edebilirsiniz.</li>
+<li>Local Network: Yerel ağınızdaki kameraları, NVR&#x27;leri ve DVR&#x27;leri keşfedip bunlara bağlanmak için macOS tarafından gereklidir. Bunu System Settings → Privacy &amp; Security → Local Network seçeneğinden iptal edebilirsiniz.</li>
 <li>Kullanıcı tarafından seçilen dosya erişimi: kayıtları, anlık görüntüleri veya cihaz yedekleme dosyalarını nereye kaydedeceğinizi veya içe aktaracağınızı seçtiğinizde kullanılır. Kalıcı bir kaydetme klasörü seçerseniz uygulama, bu klasör için güvenlik kapsamlı bir yer işareti saklar. Uygulama, diskinizin geri kalanına genel erişim sağlayamıyor.</li>
 <li>Desktop veya diğer klasörler: yalnızca bu klasörü hedef olarak açıkça seçtiğinizde kullanılır. Uygulama, geniş Desktop, Documents veya Downloads klasör erişimi talep etmez.</li>
 <li>Bildirimler: isteğe bağlı, etkinleştirirseniz hareket uyarıları için kullanılır.</li>
+<li>Mikrofon: isteğe bağlıdır, yalnızca uyumlu bir kameraya iki yönlü konuşma / talkback başlattığınızda kullanılır. Erişimi Sistem Ayarları’ndan reddedebilir veya geri alabilirsiniz.</li>
 <li>Touch ID, Face ID veya Mac parolası: Bir kamera parolasını açığa çıkarmak veya cihaz verilerini dışa aktarmak gibi hassas eylemler için macOS aracılığıyla LocalAuthentication aracılığıyla işlenir. Uygulama biyometrik verileri almıyor.</li>
 </ul>
 <h2>Yapılandırmaları dışa aktarma, içe aktarma ve yedekleme</h2>
-<p>Uygulama, cihaz yapılandırmasını oluşturduğunuz ve yönettiğiniz bir<code>.ipcamvisionprobackup</code> dosyasına aktarabilir. Mevcut dışa aktarımlarda ayrı ONVIF şifre alanı atlanır. Ancak, zaten katıştırılmış kimlik bilgileri içeren bir RTSP, DDNS veya akış URL&#39;sini manuel olarak girdiyseniz bu URL, cihaz yapılandırmasının bir parçası olduğundan yedeklemeye dahil edilebilir. ONVIF parolası içeren eski bir yedeği içe aktarırsanız uygulama, onu özel uygulama depolama alanına taşımak için onu bir kez okuyabilir. Yedekleme dosyalarını nerede saklayacağınızdan siz sorumlusunuz.</p>
+<p>Uygulama, cihaz yapılandırmasını oluşturduğunuz ve yönettiğiniz bir.ipcamvisionprobackup dosyasına aktarabilir. Mevcut dışa aktarımlarda ayrı ONVIF şifre alanı atlanır. Ancak, zaten katıştırılmış kimlik bilgileri içeren bir RTSP, DDNS veya akış URL&#x27;sini manuel olarak girdiyseniz bu URL, cihaz yapılandırmasının bir parçası olduğundan yedeklemeye dahil edilebilir. ONVIF parolası içeren eski bir yedeği içe aktarırsanız uygulama, onu özel uygulama depolama alanına taşımak için onu bir kez okuyabilir. Yedekleme dosyalarını nerede saklayacağınızdan siz sorumlusunuz.</p>
 <h2>Hata bildirme özelliği</h2>
-<p>Hata bildir penceresi doğrudan uygulamadan veri göndermez. Gönder&#39;e bastığınızda uygulama, LorysMay@outlook.it adresine önceden doldurulmuş bir e-postayla varsayılan posta istemcinizi açar. Gönderip göndermeyeceğinize siz karar verin. E-posta yalnızca yazdıklarınızı ve hata ayıklama için uygulama sürümünü ve macOS sürümünü içerir.</p>
+<p>Hata bildir penceresi doğrudan uygulamadan veri göndermez. Gönder&#x27;e bastığınızda uygulama, LorysMay@outlook.it adresine önceden doldurulmuş bir e-postayla varsayılan posta istemcinizi açar. Gönderip göndermeyeceğinize siz karar verin. E-posta yalnızca yazdıklarınızı ve hata ayıklama için uygulama sürümünü ve macOS sürümünü içerir.</p>
 <h2>Çocuklar</h2>
 <p>Uygulama genel bir kitleye yöneliktir. Uygulama, geliştirici için veri toplamadığı için reşit olmayan kişiler hakkında bilerek veri toplamıyoruz.</p>
 <h2>Veri saklama ve silme</h2>
-<p>Uygulama tarafından işlenen veriler siz silene kadar Mac&#39;inizde kalır. Uygulama verilerini Settings → Reset data&#39;den kaldırabilir, oluşturulan kayıtları ve anlık görüntüleri kayıtlı klasörlerinden silebilir veya uygulamayı kaldırabilirsiniz.</p>
+<p>Uygulama tarafından işlenen veriler siz silene kadar Mac&#x27;inizde kalır. Uygulama verilerini Settings → Reset data&#x27;den kaldırabilir, oluşturulan kayıtları ve anlık görüntüleri kayıtlı klasörlerinden silebilir veya uygulamayı kaldırabilirsiniz.</p>
 <h2>Bu politikadaki değişiklikler</h2>
 <p>Gelecekteki değişiklikler uygulamada ve uygun olduğunda standart çevrimiçi gizlilik politikası sayfasında yayınlanacaktır. Politika güncellendiğinde Son güncelleme tarihi değişecektir.</p>
 <h2>Temas etmek</h2>
 <p>Bu politikayla ilgili sorularınız için LorysMay@outlook.it adresine yazın.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonik çevrimiçi sürüm</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_tr.html">https://lorysmay.github.io/Privacy-Policy/privacy_tr.html</a></p>
+<p>*Kanonik çevrimiçi sürüm*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_tr.html">https://lorysmay.github.io/Privacy-Policy/privacy_tr.html</a></p>
 </body></html>

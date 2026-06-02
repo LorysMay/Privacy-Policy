@@ -5,96 +5,107 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacybeleid — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Privacybeleid</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Ontwikkelaar</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Contact</strong>: LorysMay@outlook.it</div>
-<div><strong>Laatst bijgewerkt</strong>: 29 mei 2026</div>
+</div>
+<div class="meta">
+<div><strong>Laatst bijgewerkt</strong>: 1 juni 2026</div>
 </div>
 <h2>Samenvatting</h2>
-<p>IPcamVision Pro is een lokale macOS-app voor het bekijken, opnemen en beheren van door de gebruiker geconfigureerde IP-camera&#39;s, NVR&#39;s en DVR&#39;s. De app verzamelt geen persoonlijke gegevens voor de ontwikkelaar, maakt geen gebruik van analyses, advertentietrackers of profileringsdiensten en verzendt uw cameragegevens niet naar een server die eigendom is van ons. Apparaatconfiguratie, inloggegevens, opnamen, momentopnamen en voorkeuren blijven op uw Mac staan, tenzij u ervoor kiest ze te exporteren of te delen.</p>
+<p>IPcamVision Pro is een lokale macOS-app voor het bekijken, opnemen en beheren van door de gebruiker geconfigureerde IP-camera&#x27;s, NVR&#x27;s en DVR&#x27;s. De app verzamelt geen persoonlijke gegevens voor de ontwikkelaar, maakt geen gebruik van analyses, advertentietrackers of profileringsdiensten en verzendt uw cameragegevens niet naar een server die eigendom is van ons. Apparaatconfiguratie, inloggegevens, opnamen, momentopnamen en voorkeuren blijven op uw Mac staan, tenzij u ervoor kiest ze te exporteren of te delen.</p>
 <h2>Gegevens lokaal verwerkt door de app</h2>
 <p>De app verwerkt de volgende gegevens op uw apparaat omdat deze nodig zijn om de functies ervan te kunnen leveren:</p>
 <ul>
-<li>Camera-, NVR- en DVR-adressen en configuratie, inclusief IP-adressen of hostnamen, RTSP- of stream-URL&#39;s, poorten, streamprofielen, PTZ-merk, rasterindeling, afspeelinstellingen en instellingen voor bewegingsdetectie. Deze waarden worden opgeslagen in de privévoorkeuren van de app met behulp van <code>UserDefaults</code> en worden geïsoleerd door de macOS app-sandbox.</li>
+<li>Camera-, NVR- en DVR-adressen en configuratie, inclusief IP-adressen of hostnamen, RTSP- of stream-URL&#x27;s, poorten, streamprofielen, PTZ-merk, rasterindeling, afspeelinstellingen en instellingen voor bewegingsdetectie. Deze waarden worden opgeslagen in de privévoorkeuren van de app met behulp van UserDefaults en worden geïsoleerd door de macOS app-sandbox.</li>
 <li>ONVIF-gebruikersnamen en apparaatgebruikersnamen. Deze worden opgeslagen bij de apparaatconfiguratie in de privévoorkeuren van de app.</li>
-<li>ONVIF-wachtwoorden en apparaatwachtwoorden. Wachtwoorden worden versleuteld met AES-256-GCM met een hoofdsleutel die is opgeslagen in de macOS Sleutelhanger, en vervolgens opgeslagen in het privé <code>UserDefaults</code>-gebied van de app. De hoofdsleutel wordt eenmalig gegenereerd en verlaat nooit de Sleutelhanger. Wachtwoorden worden nooit opgeslagen als platte tekst of Base64 op schijf. Wachtwoorden worden niet in logs geschreven en niet naar de ontwikkelaar of derden verzonden.</li>
+<li>ONVIF-wachtwoorden en apparaatwachtwoorden. Wachtwoorden worden versleuteld met AES-256-GCM met een hoofdsleutel die is opgeslagen in de macOS Sleutelhanger, en vervolgens opgeslagen in het privé UserDefaults-gebied van de app. De hoofdsleutel wordt eenmalig gegenereerd en verlaat nooit de Sleutelhanger. Wachtwoorden worden nooit opgeslagen als platte tekst of Base64 op schijf. Wachtwoorden worden niet in logs geschreven en niet naar de ontwikkelaar of derden verzonden.</li>
 <li>Video-opnamen, gedownloade afspeelclips en snapshots gemaakt door de gebruiker. Ze worden alleen opgeslagen in mappen of bestanden die u kiest via de macOS-bestandskiezer, of in een opslagmap die u hebt geselecteerd en geautoriseerd met een op beveiliging gerichte bladwijzer.</li>
 <li>Lokale miniaturen, vensterstatus, interfacevoorkeuren, geselecteerde taal, aankoopniveaustatus en andere app-instellingen. Deze blijven in de app-container op uw Mac.</li>
 </ul>
 <h2>Bewegingsdetectie en meldingen</h2>
-<p>Bewegingsdetectie is optioneel en draait lokaal op uw Mac. De app analyseert videoframes op het apparaat, inclusief met Apple Vision indien beschikbaar, om bewegingen te classificeren zoals een persoon, voertuig, dier of algemene beweging. Voor deze functie worden frames niet geüpload naar Apple, naar de ontwikkelaar of naar een server van derden.</p>
-<p>Als u bewegingswaarschuwingen inschakelt, kan de app macOS om toestemming voor meldingen vragen. Meldingen worden geleverd door macOS en kunnen de cameranaam en het gedetecteerde onderwerp bevatten. U kunt meldingen uitschakelen in System Settings.</p>
+<p>Bewegingsdetectie is optioneel en draait lokaal op uw Mac. De app analyseert videoframes op het apparaat, inclusief met Apple Vision waar beschikbaar, om beweging te classificeren als persoon, voertuig, dier of algemene beweging. Deze lokale analyse uploadt geen frames naar Apple, naar de ontwikkelaar of naar een server die eigendom is van de ontwikkelaar.</p>
+<p>Als u Telegram-bewegingsmeldingen inschakelt, verzendt de app de meldingstekst en, alleen wanneer de foto-optie is ingeschakeld, de bewegingssnapshot naar de Telegram Bot API op <code>api.telegram.org</code>. Telegram wordt beheerd door Telegram en is geen server die eigendom is van of wordt beheerd door de ontwikkelaar. U beslist of Telegram wordt ingeschakeld, of snapshots worden meegestuurd en of u in de app-instellingen een timer voor automatische verwijdering instelt. Levering en bewaring bij Telegram vallen onder Telegram; automatische verwijdering kan alleen plaatsvinden terwijl de Mac aan staat en de app actief is, en is onderworpen aan de verwijderlimieten van Telegram.</p>
+<p>Om Telegram-waarschuwingen te gebruiken, maakt of configureert u uw eigen Telegram-bot en voert u het bot-token en de Chat ID in de app in. Het bot-token en de Chat ID worden lokaal op uw Mac opgeslagen, worden niet naar de ontwikkelaar verzonden en worden alleen gebruikt om de Telegram Bot API te contacteren wanneer Telegram-waarschuwingen zijn ingeschakeld.</p>
+<p>Als u macOS-bewegingsmeldingen inschakelt, kan de app macOS om toestemming voor meldingen vragen. Lokale meldingen worden door macOS geleverd en kunnen de cameranaam en het gedetecteerde onderwerp bevatten. U kunt ze uitschakelen in Systeeminstellingen.</p>
 <h2>Wat de app niet doet</h2>
 <ul>
 <li>De app verzamelt geen identificatiegegevens zoals IDFA, UDID, MAC-adres of e-mailadres voor de ontwikkelaar.</li>
 <li>De app verzendt geen telemetrie, analyses, gebruiksstatistieken of crashrapporten naar de ontwikkelaar.</li>
-<li>De app maakt geen gebruik van advertentie-SDK&#39;s, analyse-SDK&#39;s of profileringsservices.</li>
+<li>De app maakt geen gebruik van advertentie-SDK&#x27;s, analyse-SDK&#x27;s of profileringsservices.</li>
 <li>De app uploadt geen camerastreams, momentopnamen, opnames, inloggegevens of configuratie naar een server die eigendom is van ons.</li>
 <li>De app volgt u niet tussen apps of websites.</li>
-<li>De app maakt geen gebruik van de Mac-camera, microfoon, locatie, contacten, agenda&#39;s, Bluetooth of Foto&#39;s-bibliotheekmachtigingen.</li>
+<li>De app gebruikt geen machtigingen voor de Mac-camera, locatie, contacten, agenda&#x27;s, Bluetooth of Fotobibliotheek.</li>
 </ul>
 <h2>Netwerkcommunicatie</h2>
 <p>De app maakt alleen netwerkverbindingen die nodig zijn voor de functies die u gebruikt:</p>
 <ol>
-<li>Het maakt rechtstreeks verbinding met camera&#39;s, NVR&#39;s en DVR&#39;s die u configureert, hetzij op uw lokale netwerk, hetzij via DDNS / port-forwarding. Deze verbindingen kunnen ONVIF gebruiken via HTTP- of HTTPS- en RTSP-streams. Verkeer gaat rechtstreeks tussen uw Mac en het apparaat dat u hebt geconfigureerd.</li>
+<li>Het maakt rechtstreeks verbinding met camera&#x27;s, NVR&#x27;s en DVR&#x27;s die u configureert, hetzij op uw lokale netwerk, hetzij via DDNS / port-forwarding. Deze verbindingen kunnen ONVIF gebruiken via HTTP- of HTTPS- en RTSP-streams. Verkeer gaat rechtstreeks tussen uw Mac en het apparaat dat u hebt geconfigureerd.</li>
 <li>Het maakt gebruik van technologieën voor het ontdekken van lokale netwerken, zoals Bonjour en WS-Discovery, om compatibele apparaten op uw LAN te vinden wanneer u de app vraagt ​​om te zoeken.</li>
 <li>Het maakt contact met de StoreKit-services van Apple voor in-app-aankopen en controles van rechten. De ontwikkelaar ontvangt uw Apple-ID, kaartnummer of betaalmethode niet.</li>
-<li>Als synchronisatie van de afspeeltijd is ingeschakeld, kan de app contact opnemen met <code>pool.ntp.org</code> via NTP om een ​​klokafwijking te berekenen voor nauwkeurige DVR-weergave. Dit verzoek wordt niet gebruikt voor tracking en omvat niet uw cameragegevens of app-configuratie.</li>
+<li>Als synchronisatie van de afspeeltijd is ingeschakeld, kan de app contact opnemen met pool.ntp.org via NTP om een ​​klokafwijking te berekenen voor nauwkeurige DVR-weergave. Dit verzoek wordt niet gebruikt voor tracking en omvat niet uw cameragegevens of app-configuratie.</li>
+<li>Als u Telegram-bewegingsmeldingen inschakelt, neemt de app via HTTPS contact op met de Telegram Bot API op <code>api.telegram.org</code> om de meldingstekst en, alleen als fotomeldingen zijn ingeschakeld, de geselecteerde bewegingssnapshot te leveren. Telegram is een externe dienst van Telegram, niet van de ontwikkelaar.</li>
 <li>De functie Een bug melden opent uw standaard e-mailclient met een vooraf ingevuld bericht pas nadat u op Verzenden hebt gedrukt. De app zelf uploadt het rapport niet.</li>
 </ol>
 <h2>Transportbeveiliging</h2>
-<p>Veel IP-camera&#39;s en DVR&#39;s ondersteunen alleen gewone HTTP-, RTSP- of zelfondertekende HTTPS-certificaten. Om die reden staat de app verbindingen toe met door de gebruiker geconfigureerde camera-apparaten die mogelijk niet voldoen aan de standaardinstellingen van App Transport Security. Gebruik vertrouwde netwerken, sterke camerawachtwoorden en HTTPS waar uw apparaat dit ondersteunt.</p>
+<p>Veel IP-camera&#x27;s en DVR&#x27;s ondersteunen alleen gewone HTTP-, RTSP- of zelfondertekende HTTPS-certificaten. Om die reden staat de app verbindingen toe met door de gebruiker geconfigureerde camera-apparaten die mogelijk niet voldoen aan de standaardinstellingen van App Transport Security. Gebruik vertrouwde netwerken, sterke camerawachtwoorden en HTTPS waar uw apparaat dit ondersteunt.</p>
 <h2>In-app-aankopen</h2>
-<p>De Pro- en Unlimited-functies worden ontgrendeld via het in-app-aankoopsysteem van Apple met behulp van StoreKit. Verificatie vindt plaats via de API&#39;s van Apple, waaronder <code>Transaction.currentEntitlements</code> en transactie-updates. De app slaat alleen de resulterende rechtenstatus lokaal op, zodat de aangeschafte functies kunnen worden ingeschakeld.</p>
+<p>De Pro- en Unlimited-functies worden ontgrendeld via het in-app-aankoopsysteem van Apple met behulp van StoreKit. Verificatie vindt plaats via de API&#x27;s van Apple, waaronder Transaction.currentEntitlements en transactie-updates. De app slaat alleen de resulterende rechtenstatus lokaal op, zodat de aangeschafte functies kunnen worden ingeschakeld.</p>
 <h2>Machtigingen gevraagd door de app</h2>
 <ul>
-<li>Local Network: vereist door macOS om camera&#39;s, NVR&#39;s en DVR&#39;s op uw lokale netwerk te ontdekken en er verbinding mee te maken. U kunt het intrekken in System Settings → Privacy &amp; Security → Local Network.</li>
+<li>Local Network: vereist door macOS om camera&#x27;s, NVR&#x27;s en DVR&#x27;s op uw lokale netwerk te ontdekken en er verbinding mee te maken. U kunt het intrekken in System Settings → Privacy &amp; Security → Local Network.</li>
 <li>Door de gebruiker geselecteerde bestandstoegang: wordt gebruikt wanneer u kiest waar u opnamen, momentopnamen of back-upbestanden van apparaten wilt opslaan of importeren. Als u een permanente opslagmap kiest, slaat de app een op beveiliging gerichte bladwijzer voor die map op. De app krijgt geen algemene toegang tot de rest van uw schijf.</li>
 <li>Desktop of andere mappen: alleen gebruikt als u die map expliciet als bestemming kiest. De app vraagt ​​geen brede toegang tot de mappen Desktop, Documents of Downloads.</li>
 <li>Meldingen: optioneel, gebruikt voor bewegingswaarschuwingen als u deze inschakelt.</li>
+<li>Microfoon: optioneel, alleen gebruikt wanneer u tweewegspraak / talkback start naar een compatibele camera. U kunt toegang weigeren of intrekken in Systeeminstellingen.</li>
 <li>Touch ID, Face ID of Mac-wachtwoord: afgehandeld door macOS tot en met LocalAuthentication voor gevoelige acties zoals het onthullen van een camerawachtwoord of het exporteren van apparaatgegevens. De app ontvangt geen biometrische gegevens.</li>
 </ul>
 <h2>Configuraties exporteren, importeren en back-uppen</h2>
-<p>De app kan de apparaatconfiguratie exporteren naar een<code>.ipcamvisionprobackup</code>-bestand dat u maakt en beheert. Bij huidige exporten wordt het afzonderlijke ONVIF-wachtwoordveld weggelaten. Als u echter handmatig een RTSP-, DDNS- of stream-URL hebt ingevoerd die al ingebedde inloggegevens bevat, kan die URL worden opgenomen in de back-up omdat deze deel uitmaakt van de apparaatconfiguratie. Als u een oudere back-up importeert die een ONVIF-wachtwoord bevat, kan de app deze één keer lezen om deze naar de privé-app-opslag te migreren. U bent verantwoordelijk voor waar u back-upbestanden opslaat.</p>
+<p>De app kan de apparaatconfiguratie exporteren naar een.ipcamvisionprobackup-bestand dat u maakt en beheert. Bij huidige exporten wordt het afzonderlijke ONVIF-wachtwoordveld weggelaten. Als u echter handmatig een RTSP-, DDNS- of stream-URL hebt ingevoerd die al ingebedde inloggegevens bevat, kan die URL worden opgenomen in de back-up omdat deze deel uitmaakt van de apparaatconfiguratie. Als u een oudere back-up importeert die een ONVIF-wachtwoord bevat, kan de app deze één keer lezen om deze naar de privé-app-opslag te migreren. U bent verantwoordelijk voor waar u back-upbestanden opslaat.</p>
 <h2>Rapporteer een bugfunctie</h2>
 <p>Het venster Een bug rapporteren verzendt geen gegevens rechtstreeks vanuit de app. Wanneer u op Verzenden drukt, opent de app uw standaard e-mailclient met een vooraf ingevulde e-mail geadresseerd aan LorysMay@outlook.it. Jij beslist of je het verzendt. De e-mail bevat alleen wat u hebt getypt, plus de app-versie en de macOS-versie voor foutopsporing.</p>
 <h2>Kinderen</h2>
@@ -106,5 +117,5 @@
 <h2>Contact</h2>
 <p>Voor vragen over dit beleid kunt u schrijven naar LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonieke online versie</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_nl.html">https://lorysmay.github.io/Privacy-Policy/privacy_nl.html</a></p>
+<p>*Canonieke online versie*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_nl.html">https://lorysmay.github.io/Privacy-Policy/privacy_nl.html</a></p>
 </body></html>

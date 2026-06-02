@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sekretesspolicy — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Sekretesspolicy</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Framkallare</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Kontakta</strong>: LorysMay@outlook.it</div>
-<div><strong>Senast uppdaterad</strong>: 29 maj 2026</div>
+</div>
+<div class="meta">
+<div><strong>Senast uppdaterad</strong>: 1 juni 2026</div>
 </div>
 <h2>Sammanfattning</h2>
 <p>IPcamVision Pro är en lokal macOS-app för visning, inspelning och hantering av användarkonfigurerade IP-kameror, NVR och DVR. Appen samlar inte in personuppgifter för utvecklaren, använder inte analyser, reklamspårare eller profileringstjänster och skickar inte din kameradata till någon server som ägs av oss. Enhetskonfiguration, autentiseringsuppgifter, inspelningar, ögonblicksbilder och inställningar stannar på din Mac om du inte väljer att exportera eller dela dem.</p>
 <h2>Data hanteras lokalt av appen</h2>
 <p>Appen hanterar följande data på din enhet eftersom den behövs för att tillhandahålla dess funktioner:</p>
 <ul>
-<li>Kamera-, NVR- och DVR-adresser och konfiguration, inklusive IP-adresser eller värdnamn, RTSP- eller stream-URL:er, portar, stream-profiler, PTZ-märke, rutnätslayout, uppspelningsinställningar och inställningar för rörelsedetektering. Dessa värden lagras i appens privata inställningar med <code>UserDefaults</code> och isoleras av macOS app-sandlådan.</li>
+<li>Kamera-, NVR- och DVR-adresser och konfiguration, inklusive IP-adresser eller värdnamn, RTSP- eller stream-URL:er, portar, stream-profiler, PTZ-märke, rutnätslayout, uppspelningsinställningar och inställningar för rörelsedetektering. Dessa värden lagras i appens privata inställningar med UserDefaults och isoleras av macOS app-sandlådan.</li>
 <li>ONVIF användarnamn och enhetsanvändarnamn. Dessa lagras med enhetskonfigurationen i appens privata inställningar.</li>
-<li>ONVIF lösenord och enhetslösenord. Lösenord krypteras med AES-256-GCM med hjälp av en huvudnyckel lagrad i macOS Nyckelring, och sparas sedan i appens privata <code>UserDefaults</code>-område. Huvudnyckeln genereras en gång och lämnar aldrig Nyckelringen. Lösenord lagras aldrig som klartext eller Base64 på disken. Lösenord skrivs inte till loggar och skickas inte till utvecklaren eller tredje part.</li>
+<li>ONVIF lösenord och enhetslösenord. Lösenord krypteras med AES-256-GCM med hjälp av en huvudnyckel lagrad i macOS Nyckelring, och sparas sedan i appens privata UserDefaults-område. Huvudnyckeln genereras en gång och lämnar aldrig Nyckelringen. Lösenord lagras aldrig som klartext eller Base64 på disken. Lösenord skrivs inte till loggar och skickas inte till utvecklaren eller tredje part.</li>
 <li>Videoinspelningar, nedladdade uppspelningsklipp och ögonblicksbilder skapade av användaren. De sparas endast i mappar eller filer som du väljer via macOS filväljaren, eller i en sparamapp som du har valt och auktoriserat med ett bokmärke med säkerhetsomfattning.</li>
 <li>Lokala miniatyrer, fönsterstatus, gränssnittsinställningar, valt språk, köpnivåstatus och andra appinställningar. Dessa finns kvar i appbehållaren på din Mac.</li>
 </ul>
 <h2>Rörelsedetektering och aviseringar</h2>
-<p>Rörelsedetektering är valfritt och körs lokalt på din Mac. Appen analyserar videoramar på enheten, inklusive med Apple Vision där det är tillgängligt, för att klassificera rörelse som en person, fordon, djur eller generisk rörelse. Ramar laddas inte upp till Apple, till utvecklaren eller till någon tredjepartsserver för denna funktion.</p>
-<p>Om du aktiverar rörelsevarningar kan appen be macOS om tillstånd för meddelanden. Meddelanden levereras av macOS och kan inkludera kameranamnet och det upptäckta motivet. Du kan inaktivera aviseringar i System Settings.</p>
+<p>Rörelsedetektering är valfritt och körs lokalt på din Mac. Appen analyserar videoramar på enheten, inklusive med Apple Vision där det är tillgängligt, för att klassificera rörelse som person, fordon, djur eller allmän rörelse. Denna lokala analys laddar inte upp ramar till Apple, till utvecklaren eller till någon server som ägs av utvecklaren.</p>
+<p>Om du aktiverar rörelsevarningar via Telegram skickar appen varningstexten och, endast när fotoalternativet är aktiverat, rörelsesnapshoten till Telegram Bot API på <code>api.telegram.org</code>. Telegram drivs av Telegram och är inte en server som ägs eller kontrolleras av utvecklaren. Du bestämmer om Telegram ska aktiveras, om snapshots ska inkluderas och om en timer för automatisk radering ska ställas in i appens inställningar. Leverans och lagring hos Telegram regleras av Telegram; automatisk radering kan endast köras när Macen är på och appen körs, och omfattas av Telegrams raderingsgränser.</p>
+<p>För att använda Telegram-varningar skapar eller konfigurerar du din egen Telegram-bot och anger bot-token och Chat ID i appen. Bot-token och Chat ID sparas lokalt på din Mac, skickas inte till utvecklaren och används endast för att kontakta Telegram Bot API när Telegram-varningar är aktiverade.</p>
+<p>Om du aktiverar macOS-rörelseaviseringar kan appen be macOS om aviseringsbehörighet. Lokala aviseringar levereras av macOS och kan innehålla kameranamnet och det upptäckta motivet. Du kan stänga av dem i Systeminställningar.</p>
 <h2>Vad appen inte gör</h2>
 <ul>
 <li>Appen samlar inte in identifierare som IDFA, UDID, MAC-adress eller e-postadress för utvecklaren.</li>
@@ -70,7 +79,7 @@
 <li>Appen använder inte reklam-SDK:er, analys-SDK:er eller profileringstjänster.</li>
 <li>Appen laddar inte upp kameraströmmar, ögonblicksbilder, inspelningar, referenser eller konfigurationer till någon server som ägs av oss.</li>
 <li>Appen spårar dig inte över appar eller webbplatser.</li>
-<li>Appen använder inte Mac-kamera, mikrofon, plats, kontakter, kalendrar, Bluetooth eller fotobiblioteksbehörigheter.</li>
+<li>Appen använder inte behörigheter för Mac-kamera, plats, kontakter, kalendrar, Bluetooth eller bildbibliotek.</li>
 </ul>
 <h2>Nätverkskommunikation</h2>
 <p>Appen gör bara nätverksanslutningar som behövs för de funktioner du använder:</p>
@@ -78,23 +87,25 @@
 <li>Den ansluts direkt till kameror, NVR och DVR som du konfigurerar, antingen på ditt lokala nätverk eller via DDNS / port-forwarding. Dessa anslutningar kan använda ONVIF över HTTP eller HTTPS och RTSP strömmar. Trafiken går direkt mellan din Mac och den enhet du har konfigurerat.</li>
 <li>Den använder lokalt nätverksupptäcktsteknik som Bonjour och WS-Discovery för att hitta kompatibla enheter på ditt LAN när du ber appen att söka.</li>
 <li>Den kontaktar Apple:s StoreKit-tjänster för köp i appar och kontroller av rättigheter. Utvecklaren får inte ditt Apple ID, kortnummer eller betalningsmetod.</li>
-<li>Om synkronisering av uppspelningstid är aktiverad kan appen kontakta <code>pool.ntp.org</code> via NTP för att beräkna en klockförskjutning för exakt DVR-uppspelning. Den här begäran används inte för spårning och inkluderar inte dina kamerauppgifter eller appkonfiguration.</li>
+<li>Om synkronisering av uppspelningstid är aktiverad kan appen kontakta pool.ntp.org via NTP för att beräkna en klockförskjutning för exakt DVR-uppspelning. Den här begäran används inte för spårning och inkluderar inte dina kamerauppgifter eller appkonfiguration.</li>
+<li>Om du aktiverar rörelsevarningar via Telegram kontaktar appen Telegram Bot API via HTTPS på <code>api.telegram.org</code> för att leverera varningstexten och, endast om fotovarningar är aktiverade, den valda rörelsesnapshoten. Telegram är en tredjepartstjänst som drivs av Telegram, inte av utvecklaren.</li>
 <li>Funktionen Rapportera ett fel öppnar din standard e-postklient med ett förifyllt meddelande först efter att du tryckt på Skicka. Appen själv laddar inte upp rapporten.</li>
 </ol>
 <h2>Transportsäkerhet</h2>
 <p>Många IP-kameror och DVR stöder endast vanliga HTTP, RTSP eller självsignerade HTTPS-certifikat. Av den anledningen tillåter appen anslutningar till användarkonfigurerade kameraenheter som kanske inte uppfyller standardinställningarna för App Transport Security. Använd betrodda nätverk, starka kameralösenord och HTTPS där din enhet stöder det.</p>
 <h2>Inköp i appen</h2>
-<p>Pro- och Unlimited-funktionerna låses upp genom Apples köpsystem i appen med StoreKit. Verifiering sker genom Apple:s API:er, inklusive <code>Transaction.currentEntitlements</code> och transaktionsuppdateringar. Appen lagrar endast den resulterande behörighetsstatusen lokalt så att den kan aktivera de köpta funktionerna.</p>
+<p>Pro- och Unlimited-funktionerna låses upp genom Apples köpsystem i appen med StoreKit. Verifiering sker genom Apple:s API:er, inklusive Transaction.currentEntitlements och transaktionsuppdateringar. Appen lagrar endast den resulterande behörighetsstatusen lokalt så att den kan aktivera de köpta funktionerna.</p>
 <h2>Behörigheter som begärs av appen</h2>
 <ul>
 <li>Local Network: krävs av macOS för att upptäcka och ansluta till kameror, NVR och DVR i ditt lokala nätverk. Du kan återkalla det i System Settings → Privacy &amp; Security → Local Network.</li>
 <li>Användarvald filåtkomst: används när du väljer var du vill spara eller importera inspelningar, ögonblicksbilder eller säkerhetskopieringsfiler på enheten. Om du väljer en beständig spara-mapp, lagrar appen ett säkerhetsomfattat bokmärke för den mappen. Appen får inte allmän åtkomst till resten av din disk.</li>
 <li>Desktop eller andra mappar: används endast när du uttryckligen väljer den mappen som destination. Appen begär inte bred åtkomst till mappen Desktop, Documents eller Downloads.</li>
 <li>Aviseringar: valfritt, används för rörelsevarningar om du aktiverar dem.</li>
+<li>Mikrofon: valfritt, används endast när du startar tvåvägsljud / talkback till en kompatibel kamera. Du kan neka eller återkalla åtkomst i Systeminställningar.</li>
 <li>Touch ID, Face ID eller Mac-lösenord: hanteras av macOS till LocalAuthentication för känsliga åtgärder som att avslöja ett kameralösenord eller exportera enhetsdata. Appen tar inte emot biometrisk data.</li>
 </ul>
 <h2>Exportera, importera och säkerhetskopiera konfigurationer</h2>
-<p>Appen kan exportera enhetskonfiguration till en<code>.ipcamvisionprobackup</code>-fil som du skapar och hanterar. Aktuell export utelämnar det separata lösenordsfältet ONVIF. Men om du manuellt angav en RTSP, DDNS eller stream-URL som redan innehåller inbäddade autentiseringsuppgifter, kan den URL:en inkluderas i säkerhetskopian eftersom den är en del av enhetskonfigurationen. Om du importerar en äldre säkerhetskopia som innehåller ett ONVIF-lösenord kan appen läsa den en gång för att migrera den till privat applagring. Du ansvarar för var du lagrar säkerhetskopior.</p>
+<p>Appen kan exportera enhetskonfiguration till en.ipcamvisionprobackup-fil som du skapar och hanterar. Aktuell export utelämnar det separata lösenordsfältet ONVIF. Men om du manuellt angav en RTSP, DDNS eller stream-URL som redan innehåller inbäddade autentiseringsuppgifter, kan den URL:en inkluderas i säkerhetskopian eftersom den är en del av enhetskonfigurationen. Om du importerar en äldre säkerhetskopia som innehåller ett ONVIF-lösenord kan appen läsa den en gång för att migrera den till privat applagring. Du ansvarar för var du lagrar säkerhetskopior.</p>
 <h2>Rapportera en buggfunktion</h2>
 <p>Fönstret Rapportera ett fel skickar inte data direkt från appen. När du trycker på Skicka öppnar appen din standardpostklient med en förifylld e-post adresserad till LorysMay@outlook.it. Du bestämmer om du vill skicka den. E-postmeddelandet innehåller bara det du skrivit plus appversion och macOS-version för felsökning.</p>
 <h2>Barn</h2>
@@ -106,5 +117,5 @@
 <h2>Kontakta</h2>
 <p>För frågor om denna policy, skriv till LorysMay@outlook.it.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Kanonisk onlineversion</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_sv.html">https://lorysmay.github.io/Privacy-Policy/privacy_sv.html</a></p>
+<p>*Kanonisk onlineversion*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_sv.html">https://lorysmay.github.io/Privacy-Policy/privacy_sv.html</a></p>
 </body></html>

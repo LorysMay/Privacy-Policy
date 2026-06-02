@@ -5,64 +5,73 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adatvédelmi szabályzat — IPcamVision Pro</title>
 <style>
-      :root { color-scheme: light dark; }
+      :root {
+        color-scheme: light dark;
+        --page-bg: #fff;
+        --text-fg: #111;
+        --heading-fg: #111;
+        --muted-fg: #666;
+        --link-fg: #0066cc;
+        --rule-fg: rgba(128,128,128,.25);
+        --code-bg: #f1f1f1;
+        --code-fg: #111;
+        --code-border: rgba(128,128,128,.28);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --page-bg: #1a1a1a;
+          --text-fg: #ececec;
+          --heading-fg: #fff;
+          --muted-fg: #aaa;
+          --link-fg: #4ea1ff;
+          --rule-fg: rgba(255,255,255,.22);
+          --code-bg: #2c2c2c;
+          --code-fg: #f4f4f4;
+          --code-border: rgba(255,255,255,.24);
+        }
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                      "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.55;
-        max-width: 760px;
-        margin: 2.4em auto;
-        padding: 0 1.4em 4em;
-        color: #111;
-        background: #fff;
+        line-height: 1.55; max-width: 760px; margin: 2.4em auto; padding: 0 1.4em 4em; color: var(--text-fg); background: var(--page-bg);
       }
-      h1 { font-size: 1.9em; margin-top: 0; }
-      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: .25em; }
-      p, li { font-size: 0.97em; }
-      ul, ol { padding-left: 1.3em; }
-      li { margin-bottom: .35em; }
-      code {
-        background: #f1f1f1;
-        color: #111;
-        padding: 1px 5px;
-        border-radius: 3px;
-        font-size: .9em;
-      }
-      .meta { color: #666; font-size: .92em; margin-bottom: 1.6em; }
-      a { color: #0066cc; }
-
-      /* Dark mode: dichiarato DOPO le regole light per vincere per source order. */
-      @media (prefers-color-scheme: dark) {
-        body { background: #1a1a1a; color: #ececec; }
-        h1, h2 { color: #fff; }
-        code { background: #2c2c2c; color: #ececec; }
-        .meta { color: #aaa; }
-        a { color: #4ea1ff; }
-      }
+      h1 { font-size: 1.9em; margin-top: 0; color: var(--heading-fg); }
+      h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--rule-fg); padding-bottom: .25em; color: var(--heading-fg); }
+      p, li { font-size: 0.97em; } ul, ol { padding-left: 1.3em; } li { margin-bottom: .35em; }
+      code { background: var(--code-bg); color: var(--code-fg); border: 1px solid var(--code-border); padding: 1px 5px; border-radius: 3px; font-size: .9em; }
+      .meta { color: var(--muted-fg); font-size: .92em; margin-bottom: 1.6em; } a { color: var(--link-fg); }
 </style>
 </head>
 <body>
 <h1>Adatvédelmi szabályzat</h1>
 <div class="meta">
 <div><strong>App</strong>: IPcamVision Pro</div>
+</div>
+<div class="meta">
 <div><strong>Fejlesztő</strong>: LorysMay</div>
+</div>
+<div class="meta">
 <div><strong>Érintkezés</strong>: LorysMay@outlook.it</div>
-<div><strong>Utoljára frissítve</strong>: 2026. május 29.</div>
+</div>
+<div class="meta">
+<div><strong>Utoljára frissítve</strong>: 2026. június 1.</div>
 </div>
 <h2>Összegzés</h2>
 <p>A IPcamVision Pro egy helyi macOS alkalmazás a felhasználó által konfigurált IP-kamerák, NVR és DVR megtekintésére, rögzítésére és kezelésére. Az alkalmazás nem gyűjt személyes adatokat a fejlesztő számára, nem használ elemzőket, hirdetéskövetőket vagy profilalkotási szolgáltatásokat, és nem küldi el a kamera adatait a tulajdonunkban lévő szerverekre. Az eszközkonfiguráció, a hitelesítési adatok, a felvételek, a pillanatképek és a beállítások a Mac-en maradnak, hacsak nem exportálja vagy megosztja őket.</p>
 <h2>Az alkalmazás által helyileg kezelt adatok</h2>
 <p>Az alkalmazás a következő adatokat kezeli az eszközén, mert ezek szükségesek a funkcióinak biztosításához:</p>
 <ul>
-<li>Kamera, NVR és DVR címek és konfigurációk, beleértve az IP-címeket vagy gazdagépneveket, RTSP vagy adatfolyam URL-eket, portokat, adatfolyam-profilokat, PTZ márkát, rácselrendezést, lejátszási beállításokat és mozgásérzékelési beállításokat. Ezeket az értékeket a rendszer az alkalmazás privát beállításaiban tárolja a <code>UserDefaults</code> használatával, és a macOS alkalmazás homokozója izolálja őket.</li>
+<li>Kamera, NVR és DVR címek és konfigurációk, beleértve az IP-címeket vagy gazdagépneveket, RTSP vagy adatfolyam URL-eket, portokat, adatfolyam-profilokat, PTZ márkát, rácselrendezést, lejátszási beállításokat és mozgásérzékelési beállításokat. Ezeket az értékeket a rendszer az alkalmazás privát beállításaiban tárolja a UserDefaults használatával, és a macOS alkalmazás homokozója izolálja őket.</li>
 <li>ONVIF felhasználónevek és eszközfelhasználónevek. Ezeket az eszköz konfigurációjával együtt tárolja az alkalmazás privát beállításaiban.</li>
-<li>ONVIF jelszavak és eszközjelszavak. A jelszavak AES-256-GCM titkosítással vannak védve, a macOS Kulcstartóban tárolt főkulcs segítségével, majd az alkalmazás privát <code>UserDefaults</code> területén vannak mentve. A főkulcs egyszer jön létre, és soha nem hagyja el a Kulcstartót. A jelszavak soha nem tárolódnak egyszerű szövegként vagy Base64 formátumban a lemezen. A jelszavakat nem írják a naplókba, és nem küldik el a fejlesztőnek vagy harmadik feleknek.</li>
+<li>ONVIF jelszavak és eszközjelszavak. A jelszavak AES-256-GCM titkosítással vannak védve, a macOS Kulcstartóban tárolt főkulcs segítségével, majd az alkalmazás privát UserDefaults területén vannak mentve. A főkulcs egyszer jön létre, és soha nem hagyja el a Kulcstartót. A jelszavak soha nem tárolódnak egyszerű szövegként vagy Base64 formátumban a lemezen. A jelszavakat nem írják a naplókba, és nem küldik el a fejlesztőnek vagy harmadik feleknek.</li>
 <li>A felhasználó által készített videofelvételek, letöltött lejátszási klipek és pillanatképek. A rendszer csak a macOS fájlválasztóval kiválasztott mappákba vagy fájlba menti őket, vagy egy olyan mentési mappába, amelyet kiválasztott és biztonsági hatókörű könyvjelzővel engedélyezett.</li>
 <li>Helyi bélyegképek, ablak állapota, interfész beállításai, kiválasztott nyelv, vásárlási szint állapota és egyéb alkalmazásbeállítások. Ezek a Mac alkalmazástárolójában maradnak.</li>
 </ul>
 <h2>Mozgásérzékelés és értesítések</h2>
-<p>A mozgásérzékelés nem kötelező, és helyileg fut a Mac számítógépen. Az alkalmazás elemzi a videokockákat az eszközön, beleértve a Apple Vision-t is, ahol elérhető, hogy osztályozza a mozgást, például személyt, járművet, állatot vagy általános mozgást. Ehhez a funkcióhoz a rendszer nem tölti fel a kereteket a Apple-re, a fejlesztőre vagy bármely harmadik fél szerverére.</p>
-<p>Ha engedélyezi a mozgási figyelmeztetéseket, az alkalmazás értesítési engedélyt kérhet a macOS-től. Az értesítéseket a macOS szállítja, és tartalmazhatja a kamera nevét és az észlelt témát. A System Settings-ben letilthatja az értesítéseket.</p>
+<p>A mozgásérzékelés opcionális, és helyben fut a Macen. Az alkalmazás az eszközön elemzi a videó képkockáit, beleértve az Apple Vision használatát is, ha elérhető, hogy a mozgást személynek, járműnek, állatnak vagy általános mozgásnak minősítse. Ez a helyi elemzés nem tölt fel képkockákat az Apple-höz, a fejlesztőhöz vagy a fejlesztő tulajdonában lévő szerverre.</p>
+<p>Ha engedélyezi a Telegram mozgásriasztásokat, az alkalmazás elküldi a riasztás szövegét és, csak ha a fotó opció be van kapcsolva, a mozgás pillanatképét a Telegram Bot API-nak a <code>api.telegram.org</code> címen. A Telegramot a Telegram üzemelteti, és nem a fejlesztő tulajdonában lévő vagy általa kezelt szerver. Ön dönti el, hogy engedélyezi-e a Telegramot, tartalmazzon-e pillanatképeket, és beállít-e automatikus törlési időzítőt az alkalmazás beállításaiban. A Telegramon történő kézbesítésre és megőrzésre a Telegram szabályai vonatkoznak; az automatikus törlés csak akkor futhat, ha a Mac be van kapcsolva és az alkalmazás fut, és a Telegram törlési korlátai érvényesek rá.</p>
+<p>A Telegram-riasztások használatához létrehozza vagy beállítja saját Telegram-botját, majd megadja az alkalmazásban a bot tokenjét és a Chat ID-t. A bot tokenje és a Chat ID helyben, a Macen tárolódik, nem kerül elküldésre a fejlesztőnek, és csak a Telegram Bot API elérésére használjuk, amikor a Telegram-riasztások engedélyezve vannak.</p>
+<p>Ha engedélyezi a macOS mozgásértesítéseket, az alkalmazás értesítési engedélyt kérhet a macOS-től. A helyi értesítéseket a macOS kézbesíti, és tartalmazhatják a kamera nevét és az észlelt tárgyat. Kikapcsolhatja őket a Rendszerbeállításokban.</p>
 <h2>Mit nem csinál az alkalmazás</h2>
 <ul>
 <li>Az alkalmazás nem gyűjt azonosítókat, például IDFA-t, UDID-t, MAC-címet vagy e-mail-címet a fejlesztő számára.</li>
@@ -70,7 +79,7 @@
 <li>Az alkalmazás nem használ hirdetési SDK-kat, elemzési SDK-kat vagy profilalkotási szolgáltatásokat.</li>
 <li>Az alkalmazás nem tölt fel kamerafolyamokat, pillanatfelvételeket, felvételeket, hitelesítési adatokat vagy konfigurációkat a tulajdonunkban lévő szerverekre.</li>
 <li>Az alkalmazás nem követi Önt az alkalmazások vagy webhelyek között.</li>
-<li>Az alkalmazás nem használja a Mac kamera, mikrofon, hely, névjegyek, naptárak, Bluetooth vagy Photos könyvtár engedélyeit.</li>
+<li>Az alkalmazás nem használja a Mac kamera, helyzet, kontaktok, naptárak, Bluetooth vagy Fotók könyvtár engedélyeit.</li>
 </ul>
 <h2>Hálózati kommunikáció</h2>
 <p>Az alkalmazás csak az Ön által használt funkciókhoz szükséges hálózati kapcsolatokat hoz létre:</p>
@@ -78,23 +87,25 @@
 <li>Közvetlenül csatlakozik az Ön által konfigurált kamerákhoz, NVR-ekhez és DVR-ekhez, akár a helyi hálózaton, akár a DDNS / port-továbbításon keresztül. Ezek a kapcsolatok használhatják a ONVIF HTTP vagy HTTPS és RTSP adatfolyamokat. A forgalom közvetlenül a Mac és a konfigurált eszköz között folyik.</li>
 <li>Helyi hálózatfelderítési technológiákat (például Bonjour és WS-Discovery) használ, hogy kompatibilis eszközöket találjon a LAN-on, amikor arra kéri az alkalmazást, hogy keressen.</li>
 <li>Felveszi a kapcsolatot a Apple StoreKit szolgáltatásaival az alkalmazáson belüli vásárlásokhoz és a jogosultság ellenőrzéséhez. A fejlesztő nem kapja meg az Ön Apple azonosítóját, kártyaszámát vagy fizetési módját.</li>
-<li>Ha a lejátszási idő szinkronizálása engedélyezett, az alkalmazás kapcsolatba léphet a <code>pool.ntp.org</code>-vel a NTP-n keresztül, hogy kiszámítsa az óraeltolást a DVR pontos lejátszásához. Ezt a kérést nem használják nyomon követésre, és nem tartalmazza a kamera hitelesítő adatait vagy az alkalmazás konfigurációját.</li>
+<li>Ha a lejátszási idő szinkronizálása engedélyezett, az alkalmazás kapcsolatba léphet a pool.ntp.org-vel a NTP-n keresztül, hogy kiszámítsa az óraeltolást a DVR pontos lejátszásához. Ezt a kérést nem használják nyomon követésre, és nem tartalmazza a kamera hitelesítő adatait vagy az alkalmazás konfigurációját.</li>
+<li>Ha engedélyezi a Telegram mozgásriasztásokat, az alkalmazás HTTPS-en keresztül kapcsolatba lép a Telegram Bot API-val a <code>api.telegram.org</code> címen, hogy kézbesítse a riasztás szövegét és, csak ha engedélyezi a fotós riasztásokat, a kiválasztott mozgás pillanatképet. A Telegram harmadik féltől származó szolgáltatás, amelyet a Telegram üzemeltet, nem a fejlesztő.</li>
 <li>A Hibajelentés funkció csak a Küldés megnyomása után nyitja meg az alapértelmezett levelezőprogramot egy előre kitöltött üzenettel. Maga az alkalmazás nem tölti fel a jelentést.</li>
 </ol>
 <h2>Szállítás biztonsága</h2>
 <p>Sok IP-kamera és DVR csak az egyszerű HTTP, RTSP vagy önaláírt HTTPS tanúsítványokat támogatja. Emiatt az alkalmazás lehetővé teszi a csatlakozást a felhasználó által konfigurált kameraeszközökhöz, amelyek esetleg nem felelnek meg az App Transport Security alapértelmezett beállításainak. Használjon megbízható hálózatokat, erős kamerajelszavakat és HTTPS-t, ahol az eszköz támogatja.</p>
 <h2>Alkalmazáson belüli vásárlások</h2>
-<p>A Pro és Unlimited funkciók a Apple alkalmazáson belüli vásárlási rendszerén keresztül érhetők el a StoreKit használatával. Az ellenőrzés a Apple API-jain keresztül történik, beleértve a <code>Transaction.currentEntitlements</code>-t és a tranzakciós frissítéseket. Az alkalmazás csak a kapott jogosultsági állapotot tárolja helyileg, így engedélyezni tudja a megvásárolt funkciókat.</p>
+<p>A Pro és Unlimited funkciók a Apple alkalmazáson belüli vásárlási rendszerén keresztül érhetők el a StoreKit használatával. Az ellenőrzés a Apple API-jain keresztül történik, beleértve a Transaction.currentEntitlements-t és a tranzakciós frissítéseket. Az alkalmazás csak a kapott jogosultsági állapotot tárolja helyileg, így engedélyezni tudja a megvásárolt funkciókat.</p>
 <h2>Az alkalmazás által kért engedélyek</h2>
 <ul>
 <li>Local Network: a macOS számára szükséges a kamerák, NVR és DVR kamerák felfedezéséhez és csatlakoztatásához a helyi hálózaton. A System Settings → Privacy &amp; Security → Local Network menüpontban visszavonhatja.</li>
 <li>Felhasználó által kiválasztott fájlhozzáférés: akkor használható, ha kiválasztja, hogy hova mentse vagy importálja a felvételeket, pillanatképeket vagy az eszköz biztonsági másolatait. Ha állandó mentési mappát választ, az alkalmazás biztonsági hatókörű könyvjelzőt tárol az adott mappához. Az alkalmazás nem kap általános hozzáférést a lemez többi részéhez.</li>
 <li>Desktop vagy más mappák: csak akkor használatos, ha kifejezetten ezt a mappát választja célként. Az alkalmazás nem kér széles körű hozzáférést a Desktop, Documents vagy Downloads mappákhoz.</li>
 <li>Értesítések: opcionális, mozgási riasztásokhoz használatos, ha engedélyezi őket.</li>
+<li>Mikrofon: opcionális, csak akkor használatos, amikor kétirányú beszédet / talkbacket indít egy kompatibilis kamerához. A hozzáférést megtagadhatja vagy visszavonhatja a Rendszerbeállításokban.</li>
 <li>Touch ID, Face ID vagy Mac jelszó: a macOS-től LocalAuthentication-ig kezeli az olyan érzékeny műveletekhez, mint a kamerajelszó felfedése vagy az eszközadatok exportálása. Az alkalmazás nem kap biometrikus adatokat.</li>
 </ul>
 <h2>Konfigurációk exportálása, importálása és biztonsági mentése</h2>
-<p>Az alkalmazás exportálhatja az eszközkonfigurációt egy Ön által létrehozott és kezelt<code>.ipcamvisionprobackup</code> fájlba. A jelenlegi exportálásból kimarad a különálló ONVIF jelszómező. Ha azonban manuálisan adott meg egy RTSP, DDNS vagy adatfolyam URL-címet, amely már tartalmaz beágyazott hitelesítő adatokat, akkor ez az URL szerepelhet a biztonsági másolatban, mivel az eszközkonfiguráció része. Ha egy régebbi biztonsági másolatot importál, amely ONVIF jelszót tartalmaz, az alkalmazás egyszer elolvashatja azt, hogy áttelepítse a privát alkalmazástárhelyre. Ön felelős azért, hogy hol tárolja a biztonsági mentési fájlokat.</p>
+<p>Az alkalmazás exportálhatja az eszközkonfigurációt egy Ön által létrehozott és kezelt.ipcamvisionprobackup fájlba. A jelenlegi exportálásból kimarad a különálló ONVIF jelszómező. Ha azonban manuálisan adott meg egy RTSP, DDNS vagy adatfolyam URL-címet, amely már tartalmaz beágyazott hitelesítő adatokat, akkor ez az URL szerepelhet a biztonsági másolatban, mivel az eszközkonfiguráció része. Ha egy régebbi biztonsági másolatot importál, amely ONVIF jelszót tartalmaz, az alkalmazás egyszer elolvashatja azt, hogy áttelepítse a privát alkalmazástárhelyre. Ön felelős azért, hogy hol tárolja a biztonsági mentési fájlokat.</p>
 <h2>Hibajelentés bejelentése</h2>
 <p>A Hibajelentés ablak nem küld adatokat közvetlenül az alkalmazásból. Ha megnyomja a Küldés gombot, az alkalmazás megnyitja az alapértelmezett levelezőprogramot egy előre kitöltött e-mail-címmel a LorysMay@outlook.it címre. Ön dönti el, hogy elküldi-e. Az e-mail csak azt tartalmazza, amit beírt, valamint az alkalmazásverziót és a macOS verziót a hibakereséshez.</p>
 <h2>Gyermekek</h2>
@@ -106,5 +117,5 @@
 <h2>Érintkezés</h2>
 <p>Ha kérdése van a szabályzattal kapcsolatban, írjon a LorysMay@outlook.it címre.</p>
 <hr style="margin-top:2.5em;border:none;border-top:1px solid rgba(128,128,128,.25)">
-<p style="font-size:.82em;color:#888;margin-top:1em"><em>Canonical online verzió</em>: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hu.html">https://lorysmay.github.io/Privacy-Policy/privacy_hu.html</a></p>
+<p>*Canonical online verzió*: <a href="https://lorysmay.github.io/Privacy-Policy/privacy_hu.html">https://lorysmay.github.io/Privacy-Policy/privacy_hu.html</a></p>
 </body></html>
